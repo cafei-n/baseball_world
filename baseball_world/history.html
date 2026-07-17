@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Ranking History</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+        <style>
+
+            body{
+                font-family:Arial,sans-serif;
+                margin:30px;
+                background:#fafafa;
+            }
+
+            h1{
+                text-align:center;
+            }
+
+            h2{
+                margin-top:40px;
+            }
+
+            .control{
+                margin:25px auto;
+                width:95%;
+                max-width:1000px;
+                display:flex;
+                flex-wrap:wrap;
+                gap:15px;
+                align-items:center;
+                justify-content:center;
+            }
+
+            .control label{
+                font-weight:bold;
+            }
+
+            canvas{
+                background:white;
+                border:1px solid #ccc;
+                padding:10px;
+            }
+
+            .chart-container{
+                width:95%;
+                max-width:1400px;
+                height:600px;
+                margin:40px auto 80px auto;
+                position:relative;
+            }
+
+            .video-container{
+                width:95%;
+                max-width:1200px;
+                margin:auto;
+            }
+
+            .update-date{
+                width:90%;
+                margin:10px auto 30px auto;
+                text-align:right;
+                font-size:14px;
+                color:#666;
+            }
+
+            video{
+                width:100%;
+                border:1px solid #ccc;
+                border-radius:5px;
+            }
+
+            button{
+                padding:8px 20px;
+                cursor:pointer;
+            }
+
+            select,input{
+                padding:5px;
+            }
+
+            #chart{
+                width:100%!important;
+                height:650px!important;
+            }
+
+            @media(max-width:700px){
+                .control{
+                    flex-direction:column;
+                }
+            }
+
+            /* ===========================
+            ヘッダー
+            =========================== */
+
+            .header{
+
+                display:flex;
+
+                justify-content:space-between;
+
+                align-items:center;
+
+                padding:15px 25px;
+
+                background:#333;
+
+            }
+
+            .logo{
+
+                color:white;
+
+                text-decoration:none;
+
+                font-size:24px;
+
+                font-weight:bold;
+
+            }
+
+            .menu-button{
+
+                background:none;
+
+                border:none;
+
+                color:white;
+
+                font-size:30px;
+
+                cursor:pointer;
+
+            }
+
+            /* ===========================
+            メニュー
+            =========================== */
+
+            .menu{
+
+                display:none;
+
+                background:#444;
+
+            }
+
+            .menu a{
+
+                display:block;
+
+                color:white;
+
+                text-decoration:none;
+
+                padding:15px 25px;
+
+            }
+
+            .menu a:hover{
+
+                background:#666;
+
+            }
+
+        </style>
+
+    </head>
+
+<body>
+
+    <header class="header">
+
+    <a href="index.html" class="logo">
+        世界野球ランキング
+    </a>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+<nav id="menu" class="menu">
+
+    <a href="index.html">
+        ランキング
+    </a>
+
+    <a href="history.html">
+        グラフ・アニメーション
+    </a>
+
+</nav>
+
+<h1>野球ランキングチャート</h1>
+
+<div class="control">
+
+    <label>
+        開始日
+    </label>
+
+    <input
+        type="date"
+        id="startDate"
+    >
+
+    <label>
+        終了日
+    </label>
+
+    <input
+        type="date"
+        id="endDate"
+    >
+
+    <label>
+        表示
+    </label>
+
+    <select id="graphType">
+
+    <option value="rank">
+        順位
+    </option>
+
+    <option value="point">
+        ポイント
+    </option>
+
+    </select>
+        <button onclick="showHistory()">
+            更新
+        </button>
+
+</div>
+
+<div class="control">
+
+    <label>
+        表示国
+    </label>
+
+    <select
+        id="teamSelector"
+        multiple
+        size="5"
+    >
+
+    </select>
+
+</div>
+
+<div id="lastUpdate" class="update-date">
+</div>
+
+<div class="chart-container">
+
+    <canvas
+        id="chart"
+    ></canvas>
+
+</div>
+
+<h1>動く世界ランキング</h1>
+
+<div class="control">
+
+    <label>
+        動画
+    </label>
+
+    <select id="movieType">
+
+    <option value="ranking">
+        順位
+    </option>
+
+    <option value="point">
+        ポイント
+    </option>
+
+    </select>
+
+    <label>
+        期間
+    </label>
+
+    <select id="moviePeriod">
+
+    <option value="month">
+        1か月
+    </option>
+
+    <option value="year">
+        1年
+    </option>
+
+    <option value="4year">
+        4年
+    </option>
+
+    </select>
+
+    <button onclick="updateMovie()">
+        表示
+    </button>
+
+</div>
+
+<div class="video-container">
+
+    <video
+        id="rankingMovie"
+        controls
+        preload="metadata"
+    >
+
+    <source
+        src="movie/ranking_year.mp4"
+        type="video/mp4"
+    >
+    </video>
+
+</div>
+
+
+<script src="js/history.js"></script>
+
+</body>
+
+</html>
