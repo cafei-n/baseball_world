@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <title>World Baseball Ranking</title>
+
+        <style>
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+            }
+
+            h1 {
+                text-align:center;
+            }
+
+            table {
+                width:80%;
+                margin:auto;
+                border-collapse:collapse;
+            }
+
+
+            th {
+                background:#333;
+                color:white;
+                padding:10px;
+            }
+
+            td {
+                border:1px solid #ccc;
+                padding:8px;
+                text-align:center;
+            }
+
+            tr:nth-child(even){
+                background:#f5f5f5;
+            }
+
+            .rank {
+                font-weight:bold;
+            }
+
+            .change-up {
+                color: green;
+                font-weight: bold;
+            }
+
+            .change-down {
+                color: red;
+                font-weight: bold;
+            }
+
+            .change-same {
+                color: gray;
+                font-weight: bold;
+            }
+
+
+            .change-new {
+                color: blue;
+                font-weight: bold;
+            }
+
+            .point-up {
+                color: green;
+                font-weight: bold;
+            }
+
+            .point-down {
+                color: red;
+                font-weight: bold;
+            }
+
+            .point-same {
+                color: gray;
+                font-weight: bold;
+            }
+
+           .update-date{
+                width:90%;
+                margin:10px auto 30px auto;
+                text-align:right;
+                font-size:14px;
+                color:#666;
+            }
+
+            /* ===========================
+            ヘッダー
+            =========================== */
+
+            .header{
+
+                display:flex;
+
+                justify-content:space-between;
+
+                align-items:center;
+
+                padding:15px 25px;
+
+                background:#333;
+
+            }
+
+            .logo{
+
+                color:white;
+
+                text-decoration:none;
+
+                font-size:24px;
+
+                font-weight:bold;
+
+            }
+
+            .menu-button{
+
+                background:none;
+
+                border:none;
+
+                color:white;
+
+                font-size:30px;
+
+                cursor:pointer;
+
+            }
+
+            /* ===========================
+            メニュー
+            =========================== */
+
+            .menu{
+
+                display:none;
+
+                background:#444;
+
+            }
+
+            .menu a{
+
+                display:block;
+
+                color:white;
+
+                text-decoration:none;
+
+                padding:15px 25px;
+
+            }
+
+            .menu a:hover{
+
+                background:#666;
+
+            }
+
+        </style>
+
+    </head>
+
+<body>
+
+    <header class="header">
+
+    <a href="index.html" class="logo">
+        世界野球ランキング
+    </a>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+<nav id="menu" class="menu">
+
+    <a href="index.html">
+        世界ランキング
+    </a>
+
+    <a href="history.html">
+        グラフ・アニメーション
+    </a>
+
+</nav>
+
+<h1>世界ランキング</h1>
+
+<div>
+    <label>
+        日付指定：
+    </label>
+
+    <input type="date" id="dateSelect">
+
+    <button onclick="showDateRanking()">
+        表示
+    </button>
+    
+</div>
+
+<div>
+
+    <label>
+        比較期間：
+    </label>
+
+    <select id="comparePeriod">
+
+    <option value="month">
+        1か月
+    </option>
+
+    <option value="year">
+        1年
+    </option>
+
+    <option value="4year">
+        4年
+    </option>
+
+    </select>
+
+     <div id="lastUpdate" class="update-date"></div>
+
+</div>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+        <th>順位</th>
+        <th>国</th>
+        <th>ポイント</th>
+        <th>前回とのポイント差</th>
+        <th>前回との順位差</th>
+
+        </tr>
+
+    </thead>
+
+
+    <tbody id="ranking">
+
+    </tbody>
+
+
+</table>
+
+<script src="js/index.js"></script>
+
+</body>
+
+</html>

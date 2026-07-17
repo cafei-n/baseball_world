@@ -1,0 +1,137 @@
+﻿date,game_id,team,before_rank,before,after,change,opponent,opponent_before,result,tournament,importance,expected
+2026-03-05,788120,Australia,16,1387.33,1476.77,89.44,Chinese Taipei,1593.43,W,World Baseball Classic Pool Play,100.0,0.312
+2026-03-05,788120,Chinese Taipei,4,1593.43,1503.99,-89.44,Australia,1387.33,L,World Baseball Classic Pool Play,100.0,0.688
+2026-03-06,788114,Chinese Taipei,8,1503.99,1479.45,-24.53,Japan,1929.25,L,World Baseball Classic Pool Play,100.0,0.1636
+2026-03-06,788114,Japan,1,1929.25,1953.78,24.53,Chinese Taipei,1503.99,W,World Baseball Classic Pool Play,100.0,0.8364
+2026-03-06,788139,Panama,7,1504.52,1437.88,-66.64,Cuba,1446.59,L,World Baseball Classic Pool Play,100.0,0.5553
+2026-03-06,788139,Cuba,12,1446.59,1513.24,66.64,Panama,1504.52,W,World Baseball Classic Pool Play,100.0,0.4447
+2026-03-06,788110,Venezuela,4,1578.2,1637.4,59.2,Netherlands,1497.14,W,World Baseball Classic Pool Play,100.0,0.5772
+2026-03-06,788110,Netherlands,9,1497.14,1437.94,-59.2,Venezuela,1578.2,L,World Baseball Classic Pool Play,100.0,0.4228
+2026-03-06,788129,Great Britain,20,1338.54,1292.42,-46.13,Mexico,1550.07,L,World Baseball Classic Pool Play,100.0,0.3075
+2026-03-06,788129,Mexico,5,1550.07,1596.19,46.13,Great Britain,1338.54,W,World Baseball Classic Pool Play,100.0,0.6925
+2026-03-06,788136,Colombia,6,1521.22,1434.3,-86.92,Puerto Rico,1437.68,L,World Baseball Classic Pool Play,100.0,0.5795
+2026-03-06,788136,Puerto Rico,13,1437.68,1524.6,86.92,Colombia,1521.22,W,World Baseball Classic Pool Play,100.0,0.4205
+2026-03-06,788105,Dominican Republic,14,1396.38,1486.02,89.63,Nicaragua,1499.39,W,World Baseball Classic Pool Play,100.0,0.4024
+2026-03-06,788105,Nicaragua,8,1499.39,1409.76,-89.63,Dominican Republic,1396.38,L,World Baseball Classic Pool Play,100.0,0.5976
+2026-03-06,788128,Brazil,16,1388.6,1359.5,-29.09,United States of America,1759.8,L,World Baseball Classic Pool Play,100.0,0.194
+2026-03-06,788128,United States of America,2,1759.8,1788.89,29.09,Brazil,1388.6,W,World Baseball Classic Pool Play,100.0,0.806
+2026-03-07,788118,Japan,1,1953.78,1979.56,25.77,Republic of Korea,1615.97,W,World Baseball Classic Pool Play,100.0,0.7852
+2026-03-07,788118,Republic of Korea,4,1615.97,1590.2,-25.77,Japan,1953.78,L,World Baseball Classic Pool Play,100.0,0.2148
+2026-03-07,788138,Canada,16,1380.5,1463.22,82.72,Colombia,1434.3,W,World Baseball Classic Pool Play,100.0,0.4486
+2026-03-07,788138,Colombia,13,1434.3,1351.59,-82.72,Canada,1380.5,L,World Baseball Classic Pool Play,100.0,0.5514
+2026-03-07,788108,Netherlands,12,1437.94,1489.97,52.03,Nicaragua,1409.76,W,World Baseball Classic Pool Play,100.0,0.527
+2026-03-07,788108,Nicaragua,14,1409.76,1357.73,-52.03,Netherlands,1437.94,L,World Baseball Classic Pool Play,100.0,0.473
+2026-03-07,788126,Italy,14,1391.26,1461.69,70.44,Brazil,1359.5,W,World Baseball Classic Pool Play,100.0,0.5304
+2026-03-07,788126,Brazil,17,1359.5,1289.07,-70.44,Italy,1391.26,L,World Baseball Classic Pool Play,100.0,0.4696
+2026-03-07,788137,Puerto Rico,6,1524.6,1570.53,45.93,Panama,1437.88,W,World Baseball Classic Pool Play,100.0,0.5824
+2026-03-07,788137,Panama,14,1437.88,1391.95,-45.93,Puerto Rico,1524.6,L,World Baseball Classic Pool Play,100.0,0.4176
+2026-03-07,788107,Venezuela,3,1637.4,1662.43,25.03,Israel,1218.4,W,World Baseball Classic Pool Play,100.0,0.8331
+2026-03-07,788107,Israel,22,1218.4,1193.37,-25.03,Venezuela,1637.4,L,World Baseball Classic Pool Play,100.0,0.1669
+2026-03-07,788127,United States of America,2,1788.89,1808.32,19.43,Great Britain,1292.42,W,World Baseball Classic Pool Play,100.0,0.8705
+2026-03-07,788127,Great Britain,19,1292.42,1272.99,-19.43,United States of America,1788.89,L,World Baseball Classic Pool Play,100.0,0.1295
+2026-03-08,788113,Republic of Korea,5,1590.2,1523.68,-66.51,Chinese Taipei,1479.45,L,World Baseball Classic Pool Play,100.0,0.6047
+2026-03-08,788113,Chinese Taipei,10,1479.45,1545.97,66.51,Republic of Korea,1590.2,W,World Baseball Classic Pool Play,100.0,0.3953
+2026-03-08,788109,Japan,1,1979.56,1993.51,13.95,Australia,1476.77,W,World Baseball Classic Pool Play,100.0,0.8732
+2026-03-08,788109,Australia,11,1476.77,1462.82,-13.95,Japan,1979.56,L,World Baseball Classic Pool Play,100.0,0.1268
+2026-03-08,788135,Cuba,8,1513.24,1558.7,45.46,Colombia,1351.59,W,World Baseball Classic Pool Play,100.0,0.6503
+2026-03-08,788135,Colombia,18,1351.59,1306.13,-45.46,Cuba,1513.24,L,World Baseball Classic Pool Play,100.0,0.3497
+2026-03-08,788106,Dominican Republic,10,1486.02,1561.58,75.57,Netherlands,1489.97,W,World Baseball Classic Pool Play,100.0,0.4962
+2026-03-08,788106,Netherlands,9,1489.97,1414.4,-75.57,Dominican Republic,1486.02,L,World Baseball Classic Pool Play,100.0,0.5038
+2026-03-08,788124,Italy,12,1461.69,1504.14,42.44,Great Britain,1272.99,W,World Baseball Classic Pool Play,100.0,0.6735
+2026-03-08,788124,Great Britain,20,1272.99,1230.55,-42.44,Italy,1461.69,L,World Baseball Classic Pool Play,100.0,0.3265
+2026-03-08,788104,Israel,23,1193.37,1291.26,97.9,Nicaragua,1357.73,W,World Baseball Classic Pool Play,100.0,0.3473
+2026-03-08,788104,Nicaragua,17,1357.73,1259.83,-97.9,Israel,1193.37,L,World Baseball Classic Pool Play,100.0,0.6527
+2026-03-08,788134,Canada,11,1463.22,1400.74,-62.47,Panama,1391.95,L,World Baseball Classic Pool Play,100.0,0.568
+2026-03-08,788134,Panama,14,1391.95,1454.42,62.47,Canada,1463.22,W,World Baseball Classic Pool Play,100.0,0.432
+2026-03-08,788125,Mexico,4,1596.19,1631.49,35.29,Brazil,1289.07,W,World Baseball Classic Pool Play,100.0,0.7647
+2026-03-08,788125,Brazil,19,1289.07,1253.77,-35.29,Mexico,1596.19,L,World Baseball Classic Pool Play,100.0,0.2353
+2026-03-09,788112,Australia,11,1462.82,1396.54,-66.28,Republic of Korea,1523.68,L,World Baseball Classic Pool Play,100.0,0.4419
+2026-03-09,788112,Republic of Korea,9,1523.68,1589.97,66.28,Australia,1462.82,W,World Baseball Classic Pool Play,100.0,0.5581
+2026-03-09,788103,Israel,18,1291.26,1252.02,-39.25,Dominican Republic,1561.58,L,World Baseball Classic Pool Play,100.0,0.2617
+2026-03-09,788103,Dominican Republic,7,1561.58,1600.83,39.25,Israel,1291.26,W,World Baseball Classic Pool Play,100.0,0.7383
+2026-03-09,788133,Panama,11,1454.42,1384.18,-70.24,Colombia,1306.13,L,World Baseball Classic Pool Play,100.0,0.6386
+2026-03-09,788133,Colombia,17,1306.13,1376.37,70.24,Panama,1454.42,W,World Baseball Classic Pool Play,100.0,0.3614
+2026-03-09,788123,Great Britain,22,1230.55,1308.89,78.34,Brazil,1253.77,W,World Baseball Classic Pool Play,100.0,0.4777
+2026-03-09,788123,Brazil,20,1253.77,1175.43,-78.34,Great Britain,1230.55,L,World Baseball Classic Pool Play,100.0,0.5223
+2026-03-09,788131,Puerto Rico,7,1570.53,1634.06,63.52,Cuba,1558.7,W,World Baseball Classic Pool Play,100.0,0.5114
+2026-03-09,788131,Cuba,8,1558.7,1495.17,-63.52,Puerto Rico,1570.53,L,World Baseball Classic Pool Play,100.0,0.4886
+2026-03-09,788099,Nicaragua,20,1259.83,1235.22,-24.61,Venezuela,1662.43,L,World Baseball Classic Pool Play,100.0,0.1758
+2026-03-09,788099,Venezuela,3,1662.43,1687.04,24.61,Nicaragua,1259.83,W,World Baseball Classic Pool Play,100.0,0.8242
+2026-03-09,788122,United States of America,2,1808.32,1848.7,40.39,Mexico,1631.49,W,World Baseball Classic Pool Play,100.0,0.6634
+2026-03-09,788122,Mexico,5,1631.49,1591.1,-40.39,United States of America,1808.32,L,World Baseball Classic Pool Play,100.0,0.3366
+2026-03-10,788102,Netherlands,11,1414.4,1323.27,-91.13,Israel,1252.02,L,World Baseball Classic Pool Play,100.0,0.6509
+2026-03-10,788102,Israel,20,1252.02,1343.15,91.13,Netherlands,1414.4,W,World Baseball Classic Pool Play,100.0,0.3491
+2026-03-10,788132,Puerto Rico,4,1634.06,1555.96,-78.1,Canada,1400.74,L,World Baseball Classic Pool Play,100.0,0.71
+2026-03-10,788132,Canada,11,1400.74,1478.84,78.1,Puerto Rico,1634.06,W,World Baseball Classic Pool Play,100.0,0.29
+2026-03-10,788119,United States of America,2,1848.7,1753.96,-94.75,Italy,1504.14,L,World Baseball Classic Pool Play,100.0,0.7896
+2026-03-10,788119,Italy,9,1504.14,1598.88,94.75,United States of America,1848.7,W,World Baseball Classic Pool Play,100.0,0.2104
+2026-03-11,788130,Cuba,10,1495.17,1417.82,-77.35,Canada,1478.84,L,World Baseball Classic Pool Play,100.0,0.5157
+2026-03-11,788130,Canada,11,1478.84,1556.19,77.35,Cuba,1495.17,W,World Baseball Classic Pool Play,100.0,0.4843
+2026-03-11,788121,Mexico,6,1591.1,1517.22,-73.88,Italy,1598.88,L,World Baseball Classic Pool Play,100.0,0.4925
+2026-03-11,788121,Italy,5,1598.88,1672.76,73.88,Mexico,1591.1,W,World Baseball Classic Pool Play,100.0,0.5075
+2026-03-11,788101,Venezuela,3,1687.04,1617.21,-69.84,Dominican Republic,1600.83,L,World Baseball Classic Pool Play,100.0,0.582
+2026-03-11,788101,Dominican Republic,5,1600.83,1670.67,69.84,Venezuela,1687.04,W,World Baseball Classic Pool Play,100.0,0.418
+2026-03-13,788095,Dominican Republic,4,1670.67,1734.15,63.48,Republic of Korea,1589.97,W,World Baseball Classic Quarterfinals,100.0,0.5768
+2026-03-13,788095,Republic of Korea,6,1589.97,1526.49,-63.48,Dominican Republic,1670.67,L,World Baseball Classic Quarterfinals,100.0,0.4232
+2026-03-13,788100,Canada,6,1556.19,1517.93,-38.26,United States of America,1753.96,L,World Baseball Classic Quarterfinals,100.0,0.3189
+2026-03-13,788100,United States of America,2,1753.96,1792.22,38.26,Canada,1556.19,W,World Baseball Classic Quarterfinals,100.0,0.6811
+2026-03-14,788098,Italy,4,1672.76,1719.54,46.77,Puerto Rico,1555.96,W,World Baseball Classic Quarterfinals,100.0,0.6102
+2026-03-14,788098,Puerto Rico,6,1555.96,1509.18,-46.77,Italy,1672.76,L,World Baseball Classic Quarterfinals,100.0,0.3898
+2026-03-14,788097,Japan,1,1993.51,1888.32,-105.18,Venezuela,1617.21,L,World Baseball Classic Quarterfinals,100.0,0.8091
+2026-03-14,788097,Venezuela,5,1617.21,1722.39,105.18,Japan,1993.51,W,World Baseball Classic Quarterfinals,100.0,0.1909
+2026-03-15,788096,Dominican Republic,3,1734.15,1685.25,-48.9,United States of America,1792.22,L,World Baseball Classic Semifinals,100.0,0.4445
+2026-03-15,788096,United States of America,2,1792.22,1841.12,48.9,Dominican Republic,1734.15,W,World Baseball Classic Semifinals,100.0,0.5555
+2026-03-16,788093,Italy,4,1719.54,1659.87,-59.67,Venezuela,1722.39,L,World Baseball Classic Semifinals,100.0,0.4973
+2026-03-16,788093,Venezuela,3,1722.39,1782.06,59.67,Italy,1719.54,W,World Baseball Classic Semifinals,100.0,0.5027
+2026-03-17,788094,United States of America,2,1841.12,1779.91,-61.21,Venezuela,1782.06,L,World Baseball Classic Finals,100.0,0.5564
+2026-03-17,788094,Venezuela,3,1782.06,1843.27,61.21,United States of America,1841.12,W,World Baseball Classic Finals,100.0,0.4436
+2026-04-20 08:00:00,199292,Curaçao,23,1191.36,1192.1,0.74,Argentina,1181.99,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.509
+2026-04-20 08:00:00,199292,Argentina,24,1181.99,1181.26,-0.74,Curaçao,1191.36,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.491
+2026-04-20 11:00:00,199293,Brazil,25,1175.43,1174.96,-0.47,Colombia,1376.37,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3162
+2026-04-20 11:00:00,199293,Colombia,14,1376.37,1376.84,0.47,Brazil,1175.43,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6838
+2026-04-20 14:00:00,199294,Panama,13,1384.18,1384.45,0.27,Peru,984.64,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.8225
+2026-04-20 14:00:00,199294,Peru,39,984.64,984.37,-0.27,Panama,1384.18,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.1775
+2026-04-21 08:00:00,199295,Curaçao,23,1192.1,1191.43,-0.67,Brazil,1174.96,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.5164
+2026-04-21 08:00:00,199295,Brazil,25,1174.96,1175.63,0.67,Curaçao,1192.1,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.4836
+2026-04-21 11:00:00,199296,Peru,39,984.37,984.1,-0.27,Colombia,1376.84,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.1815
+2026-04-21 11:00:00,199296,Colombia,14,1376.84,1377.11,0.27,Peru,984.37,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.8185
+2026-04-21 14:00:00,199297,Argentina,24,1181.26,1180.78,-0.47,Panama,1384.45,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3144
+2026-04-21 14:00:00,199297,Panama,13,1384.45,1384.92,0.47,Argentina,1181.26,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6856
+2026-04-22 08:00:00,199298,Peru,39,984.1,983.63,-0.47,Curaçao,1191.43,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.311
+2026-04-22 08:00:00,199298,Curaçao,23,1191.43,1191.89,0.47,Peru,984.1,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.689
+2026-04-22 11:00:00,199299,Brazil,25,1175.63,1176.19,0.56,Argentina,1180.78,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.4951
+2026-04-22 11:00:00,199299,Argentina,24,1180.78,1180.23,-0.56,Brazil,1175.63,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.5049
+2026-04-22 14:00:00,199300,Colombia,14,1377.11,1376.38,-0.74,Panama,1384.92,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.4925
+2026-04-22 14:00:00,199300,Panama,13,1384.92,1385.66,0.74,Colombia,1377.11,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.5075
+2026-04-23 08:00:00,199301,Argentina,24,1180.23,1179.75,-0.48,Colombia,1376.38,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3202
+2026-04-23 08:00:00,199301,Colombia,14,1376.38,1376.86,0.48,Argentina,1180.23,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6798
+2026-04-23 11:00:00,199302,Brazil,25,1176.19,1176.67,0.48,Peru,983.63,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6768
+2026-04-23 11:00:00,199302,Peru,39,983.63,983.15,-0.48,Brazil,1176.19,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3232
+2026-04-23 14:00:00,199303,Panama,13,1385.66,1386.14,0.48,Curaçao,1191.89,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6778
+2026-04-23 14:00:00,199303,Curaçao,23,1191.89,1191.41,-0.48,Panama,1385.66,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3222
+2026-04-24 08:00:00,199304,Colombia,14,1376.86,1377.22,0.36,Curaçao,1191.41,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6708
+2026-04-24 08:00:00,199304,Curaçao,23,1191.41,1191.05,-0.36,Colombia,1376.86,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3292
+2026-04-24 11:00:00,199305,Peru,39,983.15,983.96,0.82,Argentina,1179.75,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3198
+2026-04-24 11:00:00,199305,Argentina,24,1179.75,1178.93,-0.82,Peru,983.15,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6802
+2026-04-24 14:00:00,199306,Panama,13,1386.14,1386.54,0.4,Brazil,1176.67,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.6908
+2026-04-24 14:00:00,199306,Brazil,25,1176.67,1176.27,-0.4,Panama,1386.14,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.3092
+2026-04-25 08:00:00,199307,Brazil,25,1176.27,1175.54,-0.73,Curaçao,1191.05,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.4858
+2026-04-25 08:00:00,199307,Curaçao,23,1191.05,1191.78,0.73,Brazil,1176.27,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.5142
+2026-04-25 11:00:00,199308,Panama,13,1386.54,1387.13,0.59,Colombia,1377.22,W,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.5089
+2026-04-25 11:00:00,199308,Colombia,14,1377.22,1376.63,-0.59,Panama,1386.54,L,IV Juegos Sudamericanos de la Juventud - Panamá 2026 - Beisbol Masculino,1.0,0.4911
+2026-06-11 19:00:00,201840,Guatemala,43,916.83,923.08,6.25,Costa Rica,988.71,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.4315
+2026-06-11 19:00:00,201840,Costa Rica,38,988.71,982.46,-6.25,Guatemala,916.83,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.5685
+2026-06-12 11:00:00,201839,Honduras,44,885.7,877.95,-7.75,El Salvador,784.15,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.5962
+2026-06-12 11:00:00,201839,El Salvador,54,784.15,791.9,7.75,Honduras,885.7,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.4038
+2026-06-12 15:00:00,201841,Costa Rica,39,982.46,986.87,4.41,Honduras,877.95,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.5989
+2026-06-12 15:00:00,201841,Honduras,44,877.95,873.54,-4.41,Costa Rica,982.46,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.4011
+2026-06-12 19:00:00,201846,El Salvador,54,791.9,786.25,-5.65,Guatemala,923.08,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.3767
+2026-06-12 19:00:00,201846,Guatemala,43,923.08,928.73,5.65,El Salvador,791.9,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.6233
+2026-06-13 15:00:00,201842,El Salvador,54,786.25,795.14,8.89,Costa Rica,986.87,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.3165
+2026-06-13 15:00:00,201842,Costa Rica,38,986.87,977.99,-8.89,El Salvador,786.25,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.6835
+2026-06-13 19:00:00,201843,Guatemala,43,928.73,934.1,5.37,Honduras,873.54,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.5528
+2026-06-13 19:00:00,201843,Honduras,44,873.54,868.17,-5.37,Guatemala,928.73,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.4472
+2026-06-14 08:00:00,201844,Costa Rica,39,977.99,970.14,-7.85,Honduras,868.17,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.6038
+2026-06-14 08:00:00,201844,Honduras,44,868.17,876.02,7.85,Costa Rica,977.99,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.3962
+2026-06-14 11:00:00,201845,Guatemala,42,934.1,938.54,4.44,El Salvador,795.14,W,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.6303
+2026-06-14 11:00:00,201845,El Salvador,53,795.14,790.7,-4.44,Guatemala,934.1,L,Copa Centroamericana de Béisbol Masculino 2026,10.0,0.3697
