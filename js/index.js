@@ -112,6 +112,8 @@ function showLatestRanking(){
 
     currentDate = latest;
 
+    document.getElementById("dateSelect").value = latest;
+
     displayRanking(
         getRanking(latest)
     );
@@ -125,6 +127,11 @@ function showDateRanking(){
         document.getElementById(
             "dateSelect"
         ).value;
+
+    // 日付が空なら現在表示中の日付を使う
+    if(date==""){
+        date = currentDate;
+    }
 
     currentDate = date;
 
@@ -271,7 +278,9 @@ function displayRanking(data){
                 ${row.rank}
             </td>
             <td>
+                <a href="country.html?team=${encodeURIComponent(row.team)}">
                 ${nameMap[row.team] ?? row.team}
+                </a>
             </td>
             <td>
                 ${row.point}

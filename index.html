@@ -193,6 +193,10 @@
         グラフ・アニメーション
     </a>
 
+    <a href="country.html">
+        国別戦績
+    </a>
+
 </nav>
 
 <h1>世界ランキング</h1>
@@ -202,12 +206,10 @@
         日付指定：
     </label>
 
-    <input type="date" id="dateSelect">
+    <input type="date" id="dateSelect"
+        onchange="showDateRanking()"
+    >
 
-    <button onclick="showDateRanking()">
-        表示
-    </button>
-    
 </div>
 
 <div>
@@ -216,20 +218,13 @@
         比較期間：
     </label>
 
-    <select id="comparePeriod">
-
-    <option value="month">
-        1か月
-    </option>
-
-    <option value="year">
-        1年
-    </option>
-
-    <option value="4year">
-        4年
-    </option>
-
+    <select
+        id="comparePeriod"
+        onchange="showDateRanking()"
+    >
+        <option value="month">1か月</option>
+        <option value="year">1年</option>
+        <option value="4year">4年</option>
     </select>
 
      <div id="lastUpdate" class="update-date"></div>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>country Ranking</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+    body{
+
+        font-family:Arial,sans-serif;
+        margin:20px;
+    }
+
+    /* ===========================
+    ヘッダー
+    =========================== */
+
+    .header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 25px;
+        background:#333;
+    }
+
+    .logo{
+        color:white;
+        text-decoration:none;
+        font-size:24px;
+        font-weight:bold;
+    }
+
+    .menu-button{
+        background:none;
+        border:none;
+        color:white;
+        font-size:30px;
+        cursor:pointer;
+    }
+
+    /* ===========================
+    メニュー
+    =========================== */
+
+    .menu{
+        display:none;
+        background:#444;
+    }
+
+    .menu a{
+        display:block;
+        color:white;
+        text-decoration:none;
+        padding:15px 25px;
+    }
+
+    .menu a:hover{
+        background:#666;
+    }
+
+    h2{
+
+        text-align:center;
+    }
+
+    #updateDate{
+
+        text-align:center;
+        color:#666;
+        margin-bottom:20px;
+    }
+
+    .summary{
+
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+        margin-bottom:30px;
+    }
+
+    .card{
+
+        border:1px solid #cccccc;
+        border-radius:10px;
+        padding:15px;
+        text-align:center;
+        background:#fafafa;
+    }
+
+    .card h3{
+
+        margin:0;
+        font-size:16px;
+        color:#666;
+    }
+
+    .card p{
+
+        font-size:26px;
+        margin:10px 0 0;
+        font-weight:bold;
+    }
+
+    .chart-container{
+
+        width:100%;
+        height:500px;
+        margin-bottom:40px;
+    }
+
+    .table-section{
+
+        margin-top:40px;
+    }
+
+    table{
+
+        width:100%;
+        border-collapse:collapse;
+    }
+
+    th{
+
+        background:#333;
+        color:white;
+        padding:8px;
+    }
+
+    td{
+
+        border:1px solid #ccc;
+        padding:8px;
+        text-align:center;
+    }
+
+    tr:nth-child(even){
+
+        background:#f5f5f5;
+    }
+
+    @media(max-width:800px){
+
+    .summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .chart-container{
+
+        height:350px;
+
+    }
+
+    }
+
+    </style>
+
+    </head>
+
+<body>
+
+    <header class="header">
+
+    <a href="index.html" class="logo">
+        世界野球ランキング
+    </a>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+<nav id="menu" class="menu">
+
+    <a href="index.html">
+        ランキング
+    </a>
+
+    <a href="history.html">
+        グラフ・アニメーション
+    </a>
+
+    <a href="country.html">
+        国別戦績
+    </a>
+
+</nav>
+
+<h2 id="countryName">
+
+Loading...
+
+</h2>
+
+
+<div class="control">
+
+    <label>
+        表示国
+    </label>
+
+    <select
+        id="teamSelector"
+        size="1"
+        onchange="changeCountry()"
+    >
+    </select>
+
+</div>
+
+<div id="updateDate">
+
+更新日：
+
+</div>
+
+<div class="summary">
+
+<div class="card">
+<h3>現在順位</h3>
+<p id="currentRank">-</p>
+</div>
+
+<div class="card">
+<h3>最高順位</h3>
+<p id="bestRank">-</p>
+</div>
+
+<div class="card">
+<h3>最低順位</h3>
+<p id="worstRank">-</p>
+</div>
+
+<div class="card">
+<h3>現在ポイント</h3>
+<p id="currentPoint">-</p>
+</div>
+
+<div class="card">
+<h3>最高ポイント</h3>
+<p id="bestPoint">-</p>
+</div>
+
+<div class="card">
+<h3>最低ポイント</h3>
+<p id="worstPoint">-</p>
+</div>
+
+</div>
+
+<h2>順位・ポイント推移</h2>
+
+<div class="control">
+
+    <label>表示</label>
+
+    <select id="graphType">
+
+        <option value="rank">
+            順位
+        </option>
+
+        <option value="point">
+            ポイント
+        </option>
+
+    </select>
+
+</div>
+
+<div class="chart-container">
+
+    <canvas id="historyChart"></canvas>
+
+</div>
+
+<div class="table-section">
+
+<h2>
+
+最近の試合
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>日付</th>
+<th>結果</th>
+<th>スコア</th>
+<th>相手</th>
+<th>ポイント変化</th>
+<th>大会</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recentGames">
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="table-section">
+
+<h2>
+
+大会別成績
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>大会</th>
+<th>試合</th>
+<th>勝</th>
+<th>敗</th>
+<th>分</th>
+<th>勝率</th>
+<th>ポイント増減</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tournamentStats">
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="table-section">
+
+<h2>
+
+年代別成績
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>年代</th>
+<th>試合</th>
+<th>勝</th>
+<th>敗</th>
+<th>分</th>
+<th>勝率</th>
+<th>ポイント増減</th>
+
+</tr>
+
+</thead>
+
+<tbody id="ageStats">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+document.getElementById("menuButton").onclick=function(){
+
+const menu=document.getElementById("menuList");
+
+menu.style.display=
+menu.style.display==="block"
+?"none"
+:"block";
+
+};
+
+</script>
+
+<script src="js/country.js"></script>
+
+</body>
+
+</html>

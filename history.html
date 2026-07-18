@@ -208,6 +208,10 @@
         グラフ・アニメーション
     </a>
 
+    <a href="country.html">
+        国別戦績
+    </a>
+
 </nav>
 
 <h1>野球ランキングチャート</h1>
@@ -221,6 +225,7 @@
     <input
         type="date"
         id="startDate"
+        onchange="showHistory()"
     >
 
     <label>
@@ -230,13 +235,16 @@
     <input
         type="date"
         id="endDate"
+        onchange="showHistory()"
     >
 
     <label>
         表示
     </label>
 
-    <select id="graphType">
+    <select id="graphType" 
+        onchange="showHistory()">
+    </select>
 
     <option value="rank">
         順位
@@ -245,11 +253,6 @@
     <option value="point">
         ポイント
     </option>
-
-    </select>
-        <button onclick="showHistory()">
-            更新
-        </button>
 
 </div>
 
@@ -263,6 +266,7 @@
         id="teamSelector"
         multiple
         size="5"
+        onchange="showHistory()"
     >
 
     </select>
