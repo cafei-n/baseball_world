@@ -515,6 +515,16 @@ def process_game(
         game["away_score"]
     )
 
+    home_result = result_text(
+        home_score,
+        away_score
+    )
+
+    away_result = result_text(
+        away_score,
+        home_score
+    )
+
     diff = abs(
         home_score - away_score
     )
@@ -575,7 +585,7 @@ def process_game(
         round(home_change,2),
         away,
         round(away_before,2),
-        "W" if home_score > away_score else "L",
+        home_result,
         home_score,
         away_score,
         tournament,
@@ -593,7 +603,7 @@ def process_game(
         round(away_change,2),
         home,
         round(home_before,2),
-        "W" if away_score > home_score else "L",
+        away_result,
         away_score,
         home_score,
         tournament,
@@ -812,6 +822,17 @@ def print_ranking(
             f"{team:30s} "
             f"{point:.2f}"
         )
+
+# 試合結果判定
+def result_text(my_score, opponent_score):
+
+    if my_score > opponent_score:
+        return "W"
+
+    elif my_score < opponent_score:
+        return "L"
+
+    return "D"
 
 # =====================================
 # メイン処理

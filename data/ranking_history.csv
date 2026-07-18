@@ -767,8 +767,8 @@
 2022-09-18 11:30:00,100903,United States of America,3,1591.64,1595.33,3.68,Chinese Taipei,1619.0,W,5,1,XXX U-18 Baseball World Cup 2021,5.0,0.4738
 2022-09-18 15:00:00,100902,Republic of Korea,4,1578.77,1575.41,-3.37,Japan,1598.85,L,2,6,XXX U-18 Baseball World Cup 2021,5.0,0.4808
 2022-09-18 15:00:00,100902,Japan,2,1598.85,1602.21,3.37,Republic of Korea,1578.77,W,6,2,XXX U-18 Baseball World Cup 2021,5.0,0.5192
-2022-09-19,718887,Germany,23,1256.75,1243.88,-12.87,South Africa,1119.47,L,0,0,World Baseball Classic Qualifiers,100.0,0.6287
-2022-09-19,718887,South Africa,31,1119.47,1132.34,12.87,Germany,1256.75,L,0,0,World Baseball Classic Qualifiers,100.0,0.3713
+2022-09-19,718887,Germany,23,1256.75,1243.88,-12.87,South Africa,1119.47,D,0,0,World Baseball Classic Qualifiers,100.0,0.6287
+2022-09-19,718887,South Africa,31,1119.47,1132.34,12.87,Germany,1256.75,D,0,0,World Baseball Classic Qualifiers,100.0,0.3713
 2022-09-20,718885,Czechia,17,1370.75,1424.04,53.29,Germany,1243.88,W,8,4,World Baseball Classic Qualifiers,100.0,0.6194
 2022-09-20,718885,Germany,23,1243.88,1190.59,-53.29,Czechia,1370.75,L,4,8,World Baseball Classic Qualifiers,100.0,0.3806
 2022-09-20,718883,Great Britain,16,1393.61,1453.81,60.2,Spain,1442.98,W,10,9,World Baseball Classic Qualifiers,100.0,0.4528
@@ -1301,122 +1301,122 @@
 2023-06-20 15:00:00,121348,Argentina,21,1217.06,1209.01,-8.05,Panama,1478.41,L,2,7,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group B 2023,20.0,0.2684
 2023-06-21 11:00:00,121349,Panama,10,1486.47,1494.16,7.69,Argentina,1209.01,W,9,3,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group B 2023,20.0,0.7436
 2023-06-21 11:00:00,121349,Argentina,22,1209.01,1201.32,-7.69,Panama,1486.47,L,3,9,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group B 2023,20.0,0.2564
-2023-06-24 09:30:00,121468,Cuba,7,1545.15,1547.71,2.56,Mexico,1681.84,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.3718
-2023-06-24 09:30:00,121468,Mexico,3,1681.84,1679.27,-2.56,Cuba,1545.15,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.6282
+2023-06-24 09:30:00,121468,Cuba,7,1545.15,1547.71,2.56,Mexico,1681.84,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.3718
+2023-06-24 09:30:00,121468,Mexico,3,1681.84,1679.27,-2.56,Cuba,1545.15,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.6282
 2023-06-24 09:30:00,121849,Cuba,7,1547.71,1537.17,-10.54,Mexico,1679.27,L,0,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3764
 2023-06-24 09:30:00,121849,Mexico,3,1679.27,1689.81,10.54,Cuba,1547.71,W,4,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6236
-2023-06-24 13:00:00,121469,Venezuela,4,1606.81,1604.95,-1.87,Puerto Rico,1508.4,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5933
-2023-06-24 13:00:00,121469,Puerto Rico,8,1508.4,1510.26,1.87,Venezuela,1606.81,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4067
+2023-06-24 13:00:00,121469,Venezuela,4,1606.81,1604.95,-1.87,Puerto Rico,1508.4,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5933
+2023-06-24 13:00:00,121469,Puerto Rico,8,1508.4,1510.26,1.87,Venezuela,1606.81,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4067
 2023-06-24 13:00:00,121850,Venezuela,4,1604.95,1613.97,9.02,Puerto Rico,1510.26,W,4,3,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5899
 2023-06-24 13:00:00,121850,Puerto Rico,8,1510.26,1501.24,-9.02,Venezuela,1604.95,L,3,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4101
-2023-06-24 16:30:00,121470,Nicaragua,22,1206.69,1211.4,4.71,Dominican Republic,1472.93,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2647
-2023-06-24 16:30:00,121470,Dominican Republic,11,1472.93,1468.22,-4.71,Nicaragua,1206.69,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7353
+2023-06-24 16:30:00,121470,Nicaragua,22,1206.69,1211.4,4.71,Dominican Republic,1472.93,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2647
+2023-06-24 16:30:00,121470,Dominican Republic,11,1472.93,1468.22,-4.71,Nicaragua,1206.69,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7353
 2023-06-24 16:30:00,121851,Nicaragua,21,1211.4,1205.42,-5.98,Dominican Republic,1468.22,L,5,6,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.2718
 2023-06-24 16:30:00,121851,Dominican Republic,11,1468.22,1474.2,5.98,Nicaragua,1211.4,W,6,5,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.7282
-2023-06-24 20:00:00,121471,El Salvador,72,547.39,553.38,5.99,Curaçao,907.82,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2005
-2023-06-24 20:00:00,121471,Curaçao,44,907.82,901.83,-5.99,El Salvador,547.39,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7995
+2023-06-24 20:00:00,121471,El Salvador,72,547.39,553.38,5.99,Curaçao,907.82,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2005
+2023-06-24 20:00:00,121471,Curaçao,44,907.82,901.83,-5.99,El Salvador,547.39,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7995
 2023-06-24 20:00:00,121852,El Salvador,72,553.38,547.14,-6.24,Curaçao,901.83,L,4,12,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.208
 2023-06-24 20:00:00,121852,Curaçao,44,901.83,908.07,6.24,El Salvador,553.38,W,12,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.792
-2023-06-25 09:30:00,121800,Dominican Republic,11,1474.2,1476.82,2.62,Venezuela,1613.97,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.369
-2023-06-25 09:30:00,121800,Venezuela,4,1613.97,1611.35,-2.62,Dominican Republic,1474.2,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.631
+2023-06-25 09:30:00,121800,Dominican Republic,11,1474.2,1476.82,2.62,Venezuela,1613.97,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.369
+2023-06-25 09:30:00,121800,Venezuela,4,1613.97,1611.35,-2.62,Dominican Republic,1474.2,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.631
 2023-06-25 09:30:00,121853,Dominican Republic,11,1476.82,1467.1,-9.72,Venezuela,1611.35,L,2,5,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3737
 2023-06-25 09:30:00,121853,Venezuela,4,1611.35,1621.07,9.72,Dominican Republic,1476.82,W,5,2,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6263
-2023-06-25 13:00:00,121801,Curaçao,44,908.07,916.43,8.36,Cuba,1537.17,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0821
-2023-06-25 13:00:00,121801,Cuba,7,1537.17,1528.81,-8.36,Curaçao,908.07,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9179
+2023-06-25 13:00:00,121801,Curaçao,44,908.07,916.43,8.36,Cuba,1537.17,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0821
+2023-06-25 13:00:00,121801,Cuba,7,1537.17,1528.81,-8.36,Curaçao,908.07,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9179
 2023-06-25 13:00:00,121854,Curaçao,41,916.43,914.34,-2.09,Cuba,1528.81,L,2,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0871
 2023-06-25 13:00:00,121854,Cuba,7,1528.81,1530.9,2.09,Curaçao,916.43,W,4,2,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9129
-2023-06-25 16:30:00,121803,Puerto Rico,9,1501.24,1496.1,-5.14,Nicaragua,1205.42,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7568
-2023-06-25 16:30:00,121803,Nicaragua,22,1205.42,1210.55,5.14,Puerto Rico,1501.24,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2432
+2023-06-25 16:30:00,121803,Puerto Rico,9,1501.24,1496.1,-5.14,Nicaragua,1205.42,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7568
+2023-06-25 16:30:00,121803,Nicaragua,22,1205.42,1210.55,5.14,Puerto Rico,1501.24,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2432
 2023-06-25 16:30:00,121855,Puerto Rico,9,1496.1,1478.12,-17.99,Nicaragua,1210.55,L,1,3,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.7495
 2023-06-25 16:30:00,121855,Nicaragua,22,1210.55,1228.54,17.99,Puerto Rico,1496.1,W,3,1,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.2505
-2023-06-25 20:00:00,121804,Mexico,3,1689.81,1680.06,-9.75,El Salvador,547.14,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9877
-2023-06-25 20:00:00,121804,El Salvador,72,547.14,556.9,9.75,Mexico,1689.81,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0123
+2023-06-25 20:00:00,121804,Mexico,3,1689.81,1680.06,-9.75,El Salvador,547.14,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9877
+2023-06-25 20:00:00,121804,El Salvador,72,547.14,556.9,9.75,Mexico,1689.81,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0123
 2023-06-25 20:00:00,121856,Mexico,3,1680.06,1680.43,0.37,El Salvador,556.9,W,4,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9867
 2023-06-25 20:00:00,121856,El Salvador,71,556.9,556.52,-0.37,Mexico,1680.06,L,0,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0133
-2023-06-26 09:30:00,121805,Dominican Republic,11,1467.1,1467.31,0.21,Puerto Rico,1478.12,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4894
-2023-06-26 09:30:00,121805,Puerto Rico,10,1478.12,1477.9,-0.21,Dominican Republic,1467.1,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5106
-2023-06-26 09:30:00,121857,Dominican Republic,11,1467.31,1467.52,0.2,Puerto Rico,1477.9,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4898
-2023-06-26 09:30:00,121857,Puerto Rico,10,1477.9,1477.7,-0.2,Dominican Republic,1467.31,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5102
-2023-06-26 13:00:00,121807,Curaçao,41,914.34,923.34,9.0,Mexico,1680.43,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0502
-2023-06-26 13:00:00,121807,Mexico,3,1680.43,1671.43,-9.0,Curaçao,914.34,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9498
-2023-06-26 13:00:00,121858,Curaçao,41,923.34,932.26,8.93,Mexico,1671.43,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0536
-2023-06-26 13:00:00,121858,Mexico,3,1671.43,1662.51,-8.93,Curaçao,923.34,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9464
-2023-06-26 16:30:00,121806,Cuba,7,1530.9,1532.62,1.71,Venezuela,1621.07,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4143
-2023-06-26 16:30:00,121806,Venezuela,4,1621.07,1619.36,-1.71,Cuba,1530.9,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5857
-2023-06-26 20:00:00,121808,El Salvador,71,556.52,565.11,8.59,Nicaragua,1228.54,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0705
-2023-06-26 20:00:00,121808,Nicaragua,20,1228.54,1219.95,-8.59,El Salvador,556.52,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9295
-2023-06-26 20:00:00,121860,El Salvador,71,565.11,573.62,8.5,Nicaragua,1219.95,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0749
-2023-06-26 20:00:00,121860,Nicaragua,20,1219.95,1211.45,-8.5,El Salvador,565.11,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9251
-2023-06-27 09:30:00,121809,Venezuela,4,1619.36,1610.69,-8.66,Curaçao,932.26,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9332
-2023-06-27 09:30:00,121809,Curaçao,41,932.26,940.93,8.66,Venezuela,1619.36,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0668
-2023-06-27 13:00:00,121810,Nicaragua,21,1211.45,1218.44,6.99,Mexico,1662.51,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1505
-2023-06-27 13:00:00,121810,Mexico,3,1662.51,1655.52,-6.99,Nicaragua,1211.45,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8495
+2023-06-26 09:30:00,121805,Dominican Republic,11,1467.1,1467.31,0.21,Puerto Rico,1478.12,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4894
+2023-06-26 09:30:00,121805,Puerto Rico,10,1478.12,1477.9,-0.21,Dominican Republic,1467.1,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5106
+2023-06-26 09:30:00,121857,Dominican Republic,11,1467.31,1467.52,0.2,Puerto Rico,1477.9,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4898
+2023-06-26 09:30:00,121857,Puerto Rico,10,1477.9,1477.7,-0.2,Dominican Republic,1467.31,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5102
+2023-06-26 13:00:00,121807,Curaçao,41,914.34,923.34,9.0,Mexico,1680.43,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0502
+2023-06-26 13:00:00,121807,Mexico,3,1680.43,1671.43,-9.0,Curaçao,914.34,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9498
+2023-06-26 13:00:00,121858,Curaçao,41,923.34,932.26,8.93,Mexico,1671.43,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0536
+2023-06-26 13:00:00,121858,Mexico,3,1671.43,1662.51,-8.93,Curaçao,923.34,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9464
+2023-06-26 16:30:00,121806,Cuba,7,1530.9,1532.62,1.71,Venezuela,1621.07,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4143
+2023-06-26 16:30:00,121806,Venezuela,4,1621.07,1619.36,-1.71,Cuba,1530.9,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5857
+2023-06-26 20:00:00,121808,El Salvador,71,556.52,565.11,8.59,Nicaragua,1228.54,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0705
+2023-06-26 20:00:00,121808,Nicaragua,20,1228.54,1219.95,-8.59,El Salvador,556.52,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9295
+2023-06-26 20:00:00,121860,El Salvador,71,565.11,573.62,8.5,Nicaragua,1219.95,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0749
+2023-06-26 20:00:00,121860,Nicaragua,20,1219.95,1211.45,-8.5,El Salvador,565.11,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9251
+2023-06-27 09:30:00,121809,Venezuela,4,1619.36,1610.69,-8.66,Curaçao,932.26,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9332
+2023-06-27 09:30:00,121809,Curaçao,41,932.26,940.93,8.66,Venezuela,1619.36,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0668
+2023-06-27 13:00:00,121810,Nicaragua,21,1211.45,1218.44,6.99,Mexico,1662.51,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1505
+2023-06-27 13:00:00,121810,Mexico,3,1662.51,1655.52,-6.99,Nicaragua,1211.45,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8495
 2023-06-27 14:30:00,121861,Venezuela,4,1610.69,1590.26,-20.44,Curaçao,940.93,L,3,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9289
 2023-06-27 14:30:00,121861,Curaçao,41,940.93,961.36,20.44,Venezuela,1610.69,W,4,3,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0711
-2023-06-27 16:30:00,121811,Puerto Rico,10,1477.7,1478.75,1.05,Cuba,1532.62,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4475
-2023-06-27 16:30:00,121811,Cuba,7,1532.62,1531.57,-1.05,Puerto Rico,1477.7,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5525
+2023-06-27 16:30:00,121811,Puerto Rico,10,1477.7,1478.75,1.05,Cuba,1532.62,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4475
+2023-06-27 16:30:00,121811,Cuba,7,1532.62,1531.57,-1.05,Puerto Rico,1477.7,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5525
 2023-06-27 17:30:00,121862,Mexico,3,1655.52,1660.24,4.72,Nicaragua,1218.44,W,7,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.8426
 2023-06-27 17:30:00,121862,Nicaragua,20,1218.44,1213.72,-4.72,Mexico,1655.52,L,0,7,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.1574
-2023-06-27 20:00:00,121812,Dominican Republic,11,1467.52,1458.15,-9.37,El Salvador,573.62,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9686
-2023-06-27 20:00:00,121812,El Salvador,71,573.62,582.99,9.37,Dominican Republic,1467.52,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0314
+2023-06-27 20:00:00,121812,Dominican Republic,11,1467.52,1458.15,-9.37,El Salvador,573.62,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9686
+2023-06-27 20:00:00,121812,El Salvador,71,573.62,582.99,9.37,Dominican Republic,1467.52,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0314
 2023-06-27 20:30:00,121863,Puerto Rico,10,1478.75,1490.86,12.11,Cuba,1531.57,W,5,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4495
 2023-06-27 20:30:00,121863,Cuba,7,1531.57,1519.45,-12.11,Puerto Rico,1478.75,L,4,5,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5505
-2023-06-28 09:30:00,121815,Curaçao,41,961.36,969.05,7.68,Puerto Rico,1490.86,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1159
-2023-06-28 09:30:00,121815,Puerto Rico,10,1490.86,1483.18,-7.68,Curaçao,961.36,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8841
+2023-06-28 09:30:00,121815,Curaçao,41,961.36,969.05,7.68,Puerto Rico,1490.86,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1159
+2023-06-28 09:30:00,121815,Puerto Rico,10,1490.86,1483.18,-7.68,Curaçao,961.36,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8841
 2023-06-28 11:00:00,121865,Curaçao,41,969.05,988.36,19.31,Puerto Rico,1483.18,W,3,2,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.1221
 2023-06-28 11:00:00,121865,Puerto Rico,10,1483.18,1463.87,-19.31,Curaçao,969.05,L,2,3,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.8779
-2023-06-28 13:00:00,121816,Nicaragua,21,1213.72,1219.9,6.18,Venezuela,1590.26,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1908
-2023-06-28 13:00:00,121816,Venezuela,4,1590.26,1584.07,-6.18,Nicaragua,1213.72,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8092
+2023-06-28 13:00:00,121816,Nicaragua,21,1213.72,1219.9,6.18,Venezuela,1590.26,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1908
+2023-06-28 13:00:00,121816,Venezuela,4,1590.26,1584.07,-6.18,Nicaragua,1213.72,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8092
 2023-06-28 14:10:00,121866,Nicaragua,20,1219.9,1214.75,-5.15,Venezuela,1584.07,L,1,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.1982
 2023-06-28 14:10:00,121866,Venezuela,4,1584.07,1589.22,5.15,Nicaragua,1219.9,W,4,1,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.8018
-2023-06-28 16:30:00,121817,Mexico,3,1660.24,1656.54,-3.69,Dominican Republic,1458.15,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.6847
-2023-06-28 16:30:00,121817,Dominican Republic,11,1458.15,1461.84,3.69,Mexico,1660.24,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.3153
+2023-06-28 16:30:00,121817,Mexico,3,1660.24,1656.54,-3.69,Dominican Republic,1458.15,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.6847
+2023-06-28 16:30:00,121817,Dominican Republic,11,1458.15,1461.84,3.69,Mexico,1660.24,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.3153
 2023-06-28 17:10:00,121867,Mexico,3,1656.54,1637.54,-19.0,Dominican Republic,1461.84,L,2,6,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6786
 2023-06-28 17:10:00,121867,Dominican Republic,11,1461.84,1480.84,19.0,Mexico,1656.54,W,6,2,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3214
-2023-06-28 20:00:00,121818,El Salvador,70,582.99,592.45,9.46,Cuba,1519.45,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0268
-2023-06-28 20:00:00,121818,Cuba,7,1519.45,1509.99,-9.46,El Salvador,582.99,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9732
+2023-06-28 20:00:00,121818,El Salvador,70,582.99,592.45,9.46,Cuba,1519.45,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0268
+2023-06-28 20:00:00,121818,Cuba,7,1519.45,1509.99,-9.46,El Salvador,582.99,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9732
 2023-06-28 20:30:00,121864,Dominican Republic,10,1480.84,1481.74,0.9,El Salvador,592.45,W,6,2,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.968
 2023-06-28 20:30:00,121864,El Salvador,69,592.45,591.56,-0.9,Dominican Republic,1480.84,L,2,6,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.032
-2023-06-29 09:30:00,121819,Mexico,3,1637.54,1634.33,-3.21,Puerto Rico,1463.87,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.6607
-2023-06-29 09:30:00,121819,Puerto Rico,11,1463.87,1467.08,3.21,Mexico,1637.54,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.3393
+2023-06-29 09:30:00,121819,Mexico,3,1637.54,1634.33,-3.21,Puerto Rico,1463.87,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.6607
+2023-06-29 09:30:00,121819,Puerto Rico,11,1463.87,1467.08,3.21,Mexico,1637.54,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.3393
 2023-06-29 10:00:00,121868,El Salvador,70,591.56,590.7,-0.86,Cuba,1509.99,L,0,15,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0286
 2023-06-29 10:00:00,121868,Cuba,7,1509.99,1510.85,0.86,El Salvador,591.56,W,15,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9714
-2023-06-29 13:00:00,121820,Cuba,7,1510.85,1510.29,-0.56,Dominican Republic,1481.74,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5279
-2023-06-29 13:00:00,121820,Dominican Republic,10,1481.74,1482.29,0.56,Cuba,1510.85,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4721
+2023-06-29 13:00:00,121820,Cuba,7,1510.85,1510.29,-0.56,Dominican Republic,1481.74,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.5279
+2023-06-29 13:00:00,121820,Dominican Republic,10,1481.74,1482.29,0.56,Cuba,1510.85,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.4721
 2023-06-29 13:00:00,121870,Cuba,7,1510.29,1524.49,14.19,Dominican Republic,1482.29,W,12,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5268
 2023-06-29 13:00:00,121870,Dominican Republic,10,1482.29,1468.1,-14.19,Cuba,1510.29,L,0,12,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4732
 2023-06-29 15:05:00,121869,Mexico,3,1634.33,1641.92,7.59,Puerto Rico,1467.08,W,5,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6552
 2023-06-29 15:05:00,121869,Puerto Rico,11,1467.08,1459.49,-7.59,Mexico,1634.33,L,4,5,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3448
-2023-06-29 16:30:00,121821,Nicaragua,21,1214.75,1210.66,-4.09,Curaçao,988.36,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7045
-2023-06-29 16:30:00,121821,Curaçao,40,988.36,992.45,4.09,Nicaragua,1214.75,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2955
+2023-06-29 16:30:00,121821,Nicaragua,21,1214.75,1210.66,-4.09,Curaçao,988.36,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7045
+2023-06-29 16:30:00,121821,Curaçao,40,988.36,992.45,4.09,Nicaragua,1214.75,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2955
 2023-06-29 18:00:00,121871,Nicaragua,22,1210.66,1217.3,6.65,Curaçao,992.45,W,6,5,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6979
 2023-06-29 18:00:00,121871,Curaçao,39,992.45,985.8,-6.65,Nicaragua,1210.66,L,5,6,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3021
-2023-06-29 20:00:00,121822,Venezuela,4,1589.22,1579.65,-9.58,El Salvador,590.7,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9788
-2023-06-29 20:00:00,121822,El Salvador,70,590.7,600.27,9.58,Venezuela,1589.22,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0212
-2023-06-30 09:30:00,121823,Cuba,7,1524.49,1519.19,-5.29,Nicaragua,1217.3,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7647
-2023-06-30 09:30:00,121823,Nicaragua,21,1217.3,1222.6,5.29,Cuba,1524.49,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2353
+2023-06-29 20:00:00,121822,Venezuela,4,1589.22,1579.65,-9.58,El Salvador,590.7,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9788
+2023-06-29 20:00:00,121822,El Salvador,70,590.7,600.27,9.58,Venezuela,1589.22,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0212
+2023-06-30 09:30:00,121823,Cuba,7,1524.49,1519.19,-5.29,Nicaragua,1217.3,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.7647
+2023-06-30 09:30:00,121823,Nicaragua,21,1217.3,1222.6,5.29,Cuba,1524.49,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.2353
 2023-06-30 09:30:00,121872,Venezuela,4,1579.65,1580.15,0.5,El Salvador,600.27,W,4,3,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9772
 2023-06-30 09:30:00,121872,El Salvador,69,600.27,599.77,-0.5,Venezuela,1579.65,L,3,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0228
 2023-06-30 12:00:00,121873,Cuba,7,1519.19,1526.47,7.28,Nicaragua,1222.6,W,8,2,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.7574
 2023-06-30 12:00:00,121873,Nicaragua,20,1222.6,1215.32,-7.28,Cuba,1519.19,L,2,8,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.2426
-2023-06-30 13:00:00,121824,Dominican Republic,10,1468.1,1460.81,-7.28,Curaçao,985.8,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8642
-2023-06-30 13:00:00,121824,Curaçao,40,985.8,993.09,7.28,Dominican Republic,1468.1,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1358
+2023-06-30 13:00:00,121824,Dominican Republic,10,1468.1,1460.81,-7.28,Curaçao,985.8,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.8642
+2023-06-30 13:00:00,121824,Curaçao,40,985.8,993.09,7.28,Dominican Republic,1468.1,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.1358
 2023-06-30 16:20:00,121881,Dominican Republic,10,1460.81,1465.09,4.27,Curaçao,993.09,W,10,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.8575
 2023-06-30 16:20:00,121881,Curaçao,39,993.09,988.82,-4.27,Dominican Republic,1460.81,L,0,10,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.1425
-2023-06-30 16:30:00,121826,Venezuela,4,1580.15,1581.33,1.18,Mexico,1641.92,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.441
-2023-06-30 16:30:00,121826,Mexico,3,1641.92,1640.74,-1.18,Venezuela,1580.15,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.559
+2023-06-30 16:30:00,121826,Venezuela,4,1580.15,1581.33,1.18,Mexico,1641.92,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.441
+2023-06-30 16:30:00,121826,Mexico,3,1641.92,1640.74,-1.18,Venezuela,1580.15,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.559
 2023-06-30 17:00:00,121882,Venezuela,4,1581.33,1568.03,-13.3,Mexico,1640.74,L,1,11,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4432
 2023-06-30 17:00:00,121882,Mexico,3,1640.74,1654.03,13.3,Venezuela,1581.33,W,11,1,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5568
-2023-06-30 19:30:00,121883,Puerto Rico,11,1459.49,1450.21,-9.29,El Salvador,599.77,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9644
-2023-06-30 19:30:00,121883,El Salvador,69,599.77,609.06,9.29,Puerto Rico,1459.49,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0356
-2023-06-30 20:00:00,121825,Puerto Rico,11,1450.21,1440.97,-9.24,El Salvador,609.06,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9619
-2023-06-30 20:00:00,121825,El Salvador,69,609.06,618.3,9.24,Puerto Rico,1450.21,L,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0381
+2023-06-30 19:30:00,121883,Puerto Rico,11,1459.49,1450.21,-9.29,El Salvador,599.77,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.9644
+2023-06-30 19:30:00,121883,El Salvador,69,599.77,609.06,9.29,Puerto Rico,1459.49,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.0356
+2023-06-30 20:00:00,121825,Puerto Rico,11,1450.21,1440.97,-9.24,El Salvador,609.06,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.9619
+2023-06-30 20:00:00,121825,El Salvador,69,609.06,618.3,9.24,Puerto Rico,1450.21,D,0,0,Qualifier Tournament for the XIX Pan American Games - Torneo Clasificatorio para los XIX Juegos Panamericanos Group A 2023,20.0,0.0381
 2023-07-01 10:00:00,121859,Cuba,7,1526.47,1542.66,16.19,Venezuela,1568.03,W,11,4,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4602
 2023-07-01 10:00:00,121859,Venezuela,4,1568.03,1551.84,-16.19,Cuba,1526.47,L,4,11,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5398
 2023-07-01 13:30:00,121884,Venezuela,5,1551.84,1561.02,9.19,Dominican Republic,1465.09,W,8,7,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.5825
 2023-07-01 13:30:00,121884,Dominican Republic,10,1465.09,1455.9,-9.19,Venezuela,1551.84,L,7,8,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.4175
-2023-07-01 18:00:00,121885,Mexico,3,1654.03,1651.93,-2.11,Cuba,1542.66,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6053
-2023-07-01 18:00:00,121885,Cuba,7,1542.66,1544.77,2.11,Mexico,1654.03,L,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3947
+2023-07-01 18:00:00,121885,Mexico,3,1654.03,1651.93,-2.11,Cuba,1542.66,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.6053
+2023-07-01 18:00:00,121885,Cuba,7,1542.66,1544.77,2.11,Mexico,1654.03,D,0,0,XXIV Central American and Caribbean Games - Men's Baseball 2023,20.0,0.3947
 2023-07-03 11:00:00,115668,Hungary,49,836.05,833.96,-2.09,Poland,617.94,L,13,23,U-12 Baseball European Championship 2023 Qualifier,2.0,0.6978
 2023-07-03 11:00:00,115668,Poland,67,617.94,620.03,2.09,Hungary,836.05,W,23,13,U-12 Baseball European Championship 2023 Qualifier,2.0,0.3022
 2023-07-03 14:00:00,115669,Slovakia,36,1024.44,1023.3,-1.14,Ukraine,1151.3,L,1,12,U-12 Baseball European Championship 2023 Qualifier,2.0,0.3806
@@ -1743,10 +1743,10 @@
 2023-08-31 18:30:00,122638,Australia,9,1483.0,1480.29,-2.71,Chinese Taipei,1570.11,L,0,3,XXXI U-18 Baseball World Cup 2023,5.0,0.4172
 2023-09-01 10:30:00,122639,United States of America,2,1739.45,1740.75,1.31,Netherlands,1435.75,W,2,1,XXXI U-18 Baseball World Cup 2023,5.0,0.7623
 2023-09-01 10:30:00,122639,Netherlands,12,1435.75,1434.44,-1.31,United States of America,1739.45,L,1,2,XXXI U-18 Baseball World Cup 2023,5.0,0.2377
-2023-09-01 11:30:00,122642,Republic of Korea,6,1561.15,1560.59,-0.57,Puerto Rico,1440.97,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6133
-2023-09-01 11:30:00,122642,Puerto Rico,11,1440.97,1441.53,0.57,Republic of Korea,1561.15,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.3867
-2023-09-01 13:00:00,122640,Mexico,3,1649.75,1648.37,-1.38,Czechia,1326.27,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.7758
-2023-09-01 13:00:00,122640,Czechia,17,1326.27,1327.65,1.38,Mexico,1649.75,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.2242
+2023-09-01 11:30:00,122642,Republic of Korea,6,1561.15,1560.59,-0.57,Puerto Rico,1440.97,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6133
+2023-09-01 11:30:00,122642,Puerto Rico,11,1440.97,1441.53,0.57,Republic of Korea,1561.15,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.3867
+2023-09-01 13:00:00,122640,Mexico,3,1649.75,1648.37,-1.38,Czechia,1326.27,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.7758
+2023-09-01 13:00:00,122640,Czechia,17,1326.27,1327.65,1.38,Mexico,1649.75,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.2242
 2023-09-01 14:30:00,122641,Venezuela,4,1580.34,1575.97,-4.37,Panama,1492.86,L,4,13,XXXI U-18 Baseball World Cup 2023,5.0,0.5832
 2023-09-01 14:30:00,122641,Panama,8,1492.86,1497.24,4.37,Venezuela,1580.34,W,13,4,XXXI U-18 Baseball World Cup 2023,5.0,0.4168
 2023-09-01 18:30:00,122643,Japan,1,1910.33,1911.05,0.72,Spain,1327.53,W,10,0,XXXI U-18 Baseball World Cup 2023,5.0,0.9035
@@ -1795,16 +1795,16 @@
 2023-09-05 12:00:00,122664,Czechia,16,1320.95,1325.15,4.2,Australia,1477.42,W,5,2,XXXI U-18 Baseball World Cup 2023,5.0,0.3542
 2023-09-05 14:30:00,122665,United States of America,2,1741.82,1744.04,2.23,Venezuela,1571.73,W,4,1,XXXI U-18 Baseball World Cup 2023,5.0,0.6576
 2023-09-05 14:30:00,122665,Venezuela,5,1571.73,1569.51,-2.23,United States of America,1741.82,L,1,4,XXXI U-18 Baseball World Cup 2023,5.0,0.3424
-2023-09-05 18:30:00,122666,Chinese Taipei,4,1581.92,1581.31,-0.61,Puerto Rico,1452.04,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6221
-2023-09-05 18:30:00,122666,Puerto Rico,11,1452.04,1452.65,0.61,Chinese Taipei,1581.92,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.3779
+2023-09-05 18:30:00,122666,Chinese Taipei,4,1581.92,1581.31,-0.61,Puerto Rico,1452.04,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6221
+2023-09-05 18:30:00,122666,Puerto Rico,11,1452.04,1452.65,0.61,Chinese Taipei,1581.92,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.3779
 2023-09-05 18:30:00,122667,Japan,1,1915.8,1911.08,-4.72,Netherlands,1445.14,L,0,1,XXXI U-18 Baseball World Cup 2023,5.0,0.8589
 2023-09-05 18:30:00,122667,Netherlands,12,1445.14,1449.87,4.72,Japan,1915.8,W,1,0,XXXI U-18 Baseball World Cup 2023,5.0,0.1411
 2023-09-06 09:00:00,125491,Chinese Taipei,4,1581.31,1584.15,2.84,Puerto Rico,1452.65,W,16,2,XXXI U-18 Baseball World Cup 2023,5.0,0.621
 2023-09-06 09:00:00,125491,Puerto Rico,11,1452.65,1449.81,-2.84,Chinese Taipei,1581.31,L,2,16,XXXI U-18 Baseball World Cup 2023,5.0,0.379
-2023-09-06 11:30:00,125489,Republic of Korea,6,1565.01,1564.47,-0.54,Puerto Rico,1449.81,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6088
-2023-09-06 11:30:00,125489,Puerto Rico,12,1449.81,1450.35,0.54,Republic of Korea,1565.01,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.3912
-2023-09-06 14:00:00,125490,Mexico,3,1633.9,1632.57,-1.33,Czechia,1325.15,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.7658
-2023-09-06 14:00:00,125490,Czechia,16,1325.15,1326.48,1.33,Mexico,1633.9,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.2342
+2023-09-06 11:30:00,125489,Republic of Korea,6,1565.01,1564.47,-0.54,Puerto Rico,1449.81,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6088
+2023-09-06 11:30:00,125489,Puerto Rico,12,1449.81,1450.35,0.54,Republic of Korea,1565.01,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.3912
+2023-09-06 14:00:00,125490,Mexico,3,1633.9,1632.57,-1.33,Czechia,1325.15,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.7658
+2023-09-06 14:00:00,125490,Czechia,16,1325.15,1326.48,1.33,Mexico,1633.9,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.2342
 2023-09-07 09:00:00,125522,Republic of Korea,6,1564.47,1567.41,2.94,Puerto Rico,1450.35,W,8,1,XXXI U-18 Baseball World Cup 2023,5.0,0.6078
 2023-09-07 09:00:00,125522,Puerto Rico,11,1450.35,1447.41,-2.94,Republic of Korea,1564.47,L,1,8,XXXI U-18 Baseball World Cup 2023,5.0,0.3922
 2023-09-07 09:30:00,122669,Czechia,16,1326.48,1329.93,3.45,Spain,1318.47,W,4,0,XXXI U-18 Baseball World Cup 2023,5.0,0.5077
@@ -1829,8 +1829,8 @@
 2023-09-08 14:30:00,122676,Republic of Korea,6,1565.83,1563.46,-2.37,United States of America,1739.83,L,1,5,XXXI U-18 Baseball World Cup 2023,5.0,0.339
 2023-09-08 15:00:00,122677,Panama,8,1495.94,1498.18,2.24,Czechia,1328.36,W,4,1,XXXI U-18 Baseball World Cup 2023,5.0,0.6555
 2023-09-08 15:00:00,122677,Czechia,16,1328.36,1326.12,-2.24,Panama,1495.94,L,1,4,XXXI U-18 Baseball World Cup 2023,5.0,0.3445
-2023-09-08 18:00:00,122679,Australia,9,1470.58,1471.07,0.49,Venezuela,1573.15,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.4028
-2023-09-08 18:00:00,122679,Venezuela,5,1573.15,1572.66,-0.49,Australia,1470.58,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.5972
+2023-09-08 18:00:00,122679,Australia,9,1470.58,1471.07,0.49,Venezuela,1573.15,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.4028
+2023-09-08 18:00:00,122679,Venezuela,5,1573.15,1572.66,-0.49,Australia,1470.58,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.5972
 2023-09-08 18:30:00,122678,Chinese Taipei,4,1588.37,1591.13,2.76,Netherlands,1447.1,W,6,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6323
 2023-09-08 18:30:00,122678,Netherlands,12,1447.1,1444.34,-2.76,Chinese Taipei,1588.37,L,0,6,XXXI U-18 Baseball World Cup 2023,5.0,0.3677
 2023-09-09 09:00:00,122685,Panama,8,1498.18,1495.37,-2.81,Mexico,1631.75,L,2,8,XXXI U-18 Baseball World Cup 2023,5.0,0.3746
@@ -1839,12 +1839,12 @@
 2023-09-09 10:00:00,122680,Puerto Rico,11,1449.09,1453.24,4.15,United States of America,1742.2,W,4,3,XXXI U-18 Baseball World Cup 2023,5.0,0.2451
 2023-09-09 11:30:00,122683,Australia,9,1471.07,1473.19,2.12,Spain,1313.76,W,2,0,XXXI U-18 Baseball World Cup 2023,5.0,0.6465
 2023-09-09 11:30:00,122683,Spain,17,1313.76,1311.64,-2.12,Australia,1471.07,L,0,2,XXXI U-18 Baseball World Cup 2023,5.0,0.3535
-2023-09-09 14:00:00,125640,Australia,9,1473.19,1473.66,0.47,Venezuela,1572.66,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.4057
-2023-09-09 14:00:00,125640,Venezuela,5,1572.66,1572.19,-0.47,Australia,1473.19,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.5943
+2023-09-09 14:00:00,125640,Australia,9,1473.19,1473.66,0.47,Venezuela,1572.66,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.4057
+2023-09-09 14:00:00,125640,Venezuela,5,1572.66,1572.19,-0.47,Australia,1473.19,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.5943
 2023-09-09 14:00:00,122682,Republic of Korea,6,1563.46,1565.78,2.33,Netherlands,1444.34,W,3,1,XXXI U-18 Baseball World Cup 2023,5.0,0.6123
 2023-09-09 14:00:00,122682,Netherlands,12,1444.34,1442.02,-2.33,Republic of Korea,1563.46,L,1,3,XXXI U-18 Baseball World Cup 2023,5.0,0.3877
-2023-09-09 16:30:00,122681,Venezuela,5,1572.19,1571.09,-1.1,Czechia,1326.12,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.72
-2023-09-09 16:30:00,122681,Czechia,16,1326.12,1327.22,1.1,Venezuela,1572.19,L,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.28
+2023-09-09 16:30:00,122681,Venezuela,5,1572.19,1571.09,-1.1,Czechia,1326.12,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.72
+2023-09-09 16:30:00,122681,Czechia,16,1326.12,1327.22,1.1,Venezuela,1572.19,D,0,0,XXXI U-18 Baseball World Cup 2023,5.0,0.28
 2023-09-09 18:00:00,122684,Chinese Taipei,4,1591.13,1596.17,5.04,Japan,1913.75,W,5,2,XXXI U-18 Baseball World Cup 2023,5.0,0.2248
 2023-09-09 18:00:00,122684,Japan,1,1913.75,1908.71,-5.04,Chinese Taipei,1591.13,L,2,5,XXXI U-18 Baseball World Cup 2023,5.0,0.7752
 2023-09-10 09:00:00,125711,Australia,9,1473.66,1478.1,4.44,Venezuela,1571.09,W,8,1,XXXI U-18 Baseball World Cup 2023,5.0,0.4076
@@ -1959,16 +1959,16 @@
 2023-10-01 12:00:00,125916,Japan,1,1909.98,1911.24,1.26,Philippines,1094.74,W,6,0,XIX Asian Games 2022 | Men's Baseball,20.0,0.9581
 2023-10-01 12:00:00,115988,Netherlands,11,1457.16,1463.58,6.42,Germany,1226.01,W,5,4,Baseball European Championship 2023,20.0,0.7083
 2023-10-01 12:00:00,115988,Germany,20,1226.01,1219.59,-6.42,Netherlands,1457.16,L,4,5,Baseball European Championship 2023,20.0,0.2917
-2023-10-01 16:00:00,127019,Cuba,7,1544.77,1540.04,-4.73,Virgin Islands,611.61,L,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.9729
-2023-10-01 16:00:00,127019,Virgin Islands,69,611.61,616.33,4.73,Cuba,1544.77,L,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.0271
+2023-10-01 16:00:00,127019,Cuba,7,1544.77,1540.04,-4.73,Virgin Islands,611.61,D,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.9729
+2023-10-01 16:00:00,127019,Virgin Islands,69,611.61,616.33,4.73,Cuba,1544.77,D,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.0271
 2023-10-01 18:30:00,125917,Republic of Korea,5,1570.4,1574.26,3.86,Hong Kong,1071.99,W,10,0,XIX Asian Games 2022 | Men's Baseball,20.0,0.8713
 2023-10-01 18:30:00,125917,Hong Kong,33,1071.99,1068.13,-3.86,Republic of Korea,1570.4,L,0,10,XIX Asian Games 2022 | Men's Baseball,20.0,0.1287
 2023-10-01 18:30:00,125918,Chinese Taipei,4,1594.89,1596.37,1.48,Thailand,823.2,W,12,1,XIX Asian Games 2022 | Men's Baseball,20.0,0.9508
 2023-10-01 18:30:00,125918,Thailand,50,823.2,821.72,-1.48,Chinese Taipei,1594.89,L,1,12,XIX Asian Games 2022 | Men's Baseball,20.0,0.0492
 2023-10-01 18:30:00,115989,Great Britain,14,1404.71,1388.58,-16.13,Spain,1365.43,L,2,11,Baseball European Championship 2023,20.0,0.5376
 2023-10-01 18:30:00,115989,Spain,16,1365.43,1381.56,16.13,Great Britain,1404.71,W,11,2,Baseball European Championship 2023,20.0,0.4624
-2023-10-01 19:30:00,127020,Puerto Rico,12,1453.24,1449.68,-3.56,Curaçao,988.82,L,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.856
-2023-10-01 19:30:00,127020,Curaçao,40,988.82,992.37,3.56,Puerto Rico,1453.24,L,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.144
+2023-10-01 19:30:00,127020,Puerto Rico,12,1453.24,1449.68,-3.56,Curaçao,988.82,D,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.856
+2023-10-01 19:30:00,127020,Curaçao,40,988.82,992.37,3.56,Puerto Rico,1453.24,D,0,0,V Caribbean Baseball Cup 2023 - V Copa del Caribe de Béisbol 2023,10.0,0.144
 2023-10-02 12:00:00,125919,China,26,1151.06,1161.74,10.68,Philippines,1093.48,W,2,0,XIX Asian Games 2022 | Men's Baseball,20.0,0.555
 2023-10-02 12:00:00,125919,Philippines,31,1093.48,1082.8,-10.68,China,1151.06,L,0,2,XIX Asian Games 2022 | Men's Baseball,20.0,0.445
 2023-10-02 12:00:00,125920,Thailand,50,821.72,813.33,-8.39,Hong Kong,1068.13,L,0,8,XIX Asian Games 2022 | Men's Baseball,20.0,0.2798
@@ -3495,10 +3495,10 @@
 2025-07-31 18:30:00,170338,Chinese Taipei,4,1589.81,1592.31,2.5,Dominican Republic,1408.69,W,9,4,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.6671
 2025-07-31 18:30:00,170337,Cuba,11,1440.0,1444.29,4.29,Panama,1515.61,W,8,2,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.428
 2025-07-31 18:30:00,170337,Panama,7,1515.61,1511.32,-4.29,Cuba,1440.0,L,2,8,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.572
-2025-08-01 10:30:00,170339,Panama,7,1511.32,1509.81,-1.51,Germany,1147.14,L,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.8018
-2025-08-01 10:30:00,170339,Germany,27,1147.14,1148.65,1.51,Panama,1511.32,L,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.1982
-2025-08-01 10:30:00,170341,Australia,13,1418.57,1416.94,-1.63,South Africa,1012.71,L,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.826
-2025-08-01 10:30:00,170341,South Africa,35,1012.71,1014.34,1.63,Australia,1418.57,L,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.174
+2025-08-01 10:30:00,170339,Panama,7,1511.32,1509.81,-1.51,Germany,1147.14,D,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.8018
+2025-08-01 10:30:00,170339,Germany,27,1147.14,1148.65,1.51,Panama,1511.32,D,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.1982
+2025-08-01 10:30:00,170341,Australia,13,1418.57,1416.94,-1.63,South Africa,1012.71,D,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.826
+2025-08-01 10:30:00,170341,South Africa,35,1012.71,1014.34,1.63,Australia,1418.57,D,0,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.174
 2025-08-01 14:30:00,170340,Japan,1,1955.94,1956.7,0.76,Dominican Republic,1406.19,W,10,6,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.8918
 2025-08-01 14:30:00,170340,Dominican Republic,15,1406.19,1405.43,-0.76,Japan,1955.94,L,6,10,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.1082
 2025-08-01 14:30:00,170343,Cuba,11,1444.29,1447.27,2.98,Czechia,1335.73,W,8,0,WBSC U-12 Baseball World Cup 2025 presented by RAXUS,5.0,0.6027
@@ -3671,8 +3671,8 @@
 2025-09-07 14:00:00,173043,Japan,1,1945.14,1945.98,0.85,Cuba,1450.01,W,3,0,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.8699
 2025-09-07 14:30:00,173044,Germany,27,1152.86,1152.18,-0.68,United States of America,1752.61,L,3,9,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.091
 2025-09-07 14:30:00,173044,United States of America,2,1752.61,1753.29,0.68,Germany,1152.86,W,9,3,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.909
-2025-09-07 18:30:00,173045,South Africa,36,1010.61,1012.69,2.08,Republic of Korea,1635.75,L,0,0,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.0832
-2025-09-07 18:30:00,173045,Republic of Korea,3,1635.75,1633.67,-2.08,South Africa,1010.61,L,0,0,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.9168
+2025-09-07 18:30:00,173045,South Africa,36,1010.61,1012.69,2.08,Republic of Korea,1635.75,D,0,0,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.0832
+2025-09-07 18:30:00,173045,Republic of Korea,3,1635.75,1633.67,-2.08,South Africa,1010.61,D,0,0,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.9168
 2025-09-07 18:30:00,173046,Chinese Taipei,4,1593.83,1596.12,2.3,Panama,1506.86,W,2,1,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.5827
 2025-09-07 18:30:00,173046,Panama,8,1506.86,1504.56,-2.3,Chinese Taipei,1593.83,L,1,2,WBSC U-18 Baseball World Cup 2025 presented by RAXUS,5.0,0.4173
 2025-09-08 09:00:00,177826,Cuba,10,1449.16,1449.25,0.09,Aruba,575.76,W,8,5,VII Panamericano Sub-15 - Caribe I U-15 Pan American - Caribbean 2025,2.0,0.9662
@@ -3845,10 +3845,10 @@
 2025-09-23 18:30:00,178072,Pakistan,34,1011.7,1010.9,-0.8,Japan,1948.92,L,2,17,BFA XXXI Asian Baseball Championship 2025,20.0,0.0267
 2025-09-23 18:30:00,178073,Chinese Taipei,4,1601.35,1617.53,16.18,Republic of Korea,1642.32,W,10,0,BFA XXXI Asian Baseball Championship 2025,20.0,0.4608
 2025-09-23 18:30:00,178073,Republic of Korea,3,1642.32,1626.15,-16.18,Chinese Taipei,1601.35,L,0,10,BFA XXXI Asian Baseball Championship 2025,20.0,0.5392
-2025-09-24 10:30:00,168386,Lithuania,39,965.77,967.95,2.18,Greece,1081.42,L,0,0,Baseball European Championship 2025,20.0,0.3908
-2025-09-24 10:30:00,168386,Greece,31,1081.42,1079.24,-2.18,Lithuania,965.77,L,0,0,Baseball European Championship 2025,20.0,0.6092
-2025-09-24 12:00:00,168378,Hungary,50,816.35,821.85,5.5,Belgium,1138.68,L,0,0,Baseball European Championship 2025,20.0,0.225
-2025-09-24 12:00:00,168378,Belgium,26,1138.68,1133.18,-5.5,Hungary,816.35,L,0,0,Baseball European Championship 2025,20.0,0.775
+2025-09-24 10:30:00,168386,Lithuania,39,965.77,967.95,2.18,Greece,1081.42,D,0,0,Baseball European Championship 2025,20.0,0.3908
+2025-09-24 10:30:00,168386,Greece,31,1081.42,1079.24,-2.18,Lithuania,965.77,D,0,0,Baseball European Championship 2025,20.0,0.6092
+2025-09-24 12:00:00,168378,Hungary,50,816.35,821.85,5.5,Belgium,1138.68,D,0,0,Baseball European Championship 2025,20.0,0.225
+2025-09-24 12:00:00,168378,Belgium,26,1138.68,1133.18,-5.5,Hungary,816.35,D,0,0,Baseball European Championship 2025,20.0,0.775
 2025-09-24 12:30:00,178074,Pakistan,34,1010.9,999.64,-11.26,Philippines,1143.69,L,3,11,BFA XXXI Asian Baseball Championship 2025,20.0,0.3753
 2025-09-24 12:30:00,178074,Philippines,25,1143.69,1154.94,11.26,Pakistan,1010.9,W,11,3,BFA XXXI Asian Baseball Championship 2025,20.0,0.6247
 2025-09-24 12:30:00,178075,Republic of Korea,3,1626.15,1627.93,1.78,Palestine,906.32,W,9,0,BFA XXXI Asian Baseball Championship 2025,20.0,0.9406
@@ -4077,8 +4077,8 @@
 2025-12-05 09:30:00,181019,Malaysia,60,705.79,697.78,-8.02,Indonesia,968.71,L,0,10,33rd SEA Games 2025 | Men's Baseball,20.0,0.2672
 2025-12-05 10:00:00,181274,Singapore,89,306.34,331.74,25.4,Laos,751.49,W,13,1,33rd SEA Games 2025 | Men's Baseball,20.0,0.1534
 2025-12-05 10:00:00,181274,Laos,58,751.49,726.09,-25.4,Singapore,306.34,L,1,13,33rd SEA Games 2025 | Men's Baseball,20.0,0.8466
-2025-12-05 10:00:00,181486,Venezuela,5,1569.74,1565.67,-4.08,Curaçao,974.52,L,0,0,XXI Juegos Bolivarianos - Beisbol | XXI Bolivarian Games - Baseball 2025,10.0,0.9076
-2025-12-05 10:00:00,181486,Curaçao,37,974.52,978.59,4.08,Venezuela,1569.74,L,0,0,XXI Juegos Bolivarianos - Beisbol | XXI Bolivarian Games - Baseball 2025,10.0,0.0924
+2025-12-05 10:00:00,181486,Venezuela,5,1569.74,1565.67,-4.08,Curaçao,974.52,D,0,0,XXI Juegos Bolivarianos - Beisbol | XXI Bolivarian Games - Baseball 2025,10.0,0.9076
+2025-12-05 10:00:00,181486,Curaçao,37,974.52,978.59,4.08,Venezuela,1569.74,D,0,0,XXI Juegos Bolivarianos - Beisbol | XXI Bolivarian Games - Baseball 2025,10.0,0.0924
 2025-12-05 13:00:00,181487,Colombia,7,1518.67,1519.52,0.85,Peru,871.07,W,6,5,XXI Juegos Bolivarianos - Beisbol | XXI Bolivarian Games - Baseball 2025,10.0,0.9231
 2025-12-05 13:00:00,181487,Peru,48,871.07,870.23,-0.85,Colombia,1518.67,L,5,6,XXI Juegos Bolivarianos - Beisbol | XXI Bolivarian Games - Baseball 2025,10.0,0.0769
 2025-12-05 14:00:00,181510,Thailand,55,791.71,797.74,6.03,Vietnam,432.0,W,16,0,33rd SEA Games 2025 | Men's Baseball,20.0,0.7991
@@ -4329,17 +4329,17 @@
 2026-07-10 18:00:00,199991,Bulgaria,72,546.58,546.33,-0.25,Russia,1171.4,L,0,15,U-12 Baseball European Championship B Pool 2026,2.0,0.0833
 2026-07-10 18:00:00,189011,Czechia,20,1225.09,1226.88,1.79,Netherlands,1327.43,W,8,0,U-12 Baseball European Championship 2026,2.0,0.403
 2026-07-10 18:00:00,189011,Netherlands,17,1327.43,1325.64,-1.79,Czechia,1225.09,L,0,8,U-12 Baseball European Championship 2026,2.0,0.597
-2026-07-10 20:00:00,189013,Belgium,26,1135.32,1135.22,-0.1,France,1084.88,L,0,0,U-12 Baseball European Championship 2026,2.0,0.5482
-2026-07-10 20:00:00,189013,France,30,1084.88,1084.98,0.1,Belgium,1135.32,L,0,0,U-12 Baseball European Championship 2026,2.0,0.4518
-2026-07-11 08:00:00,189012,Great Britain,18,1310.19,1310.33,0.14,Spain,1384.24,L,0,0,U-12 Baseball European Championship 2026,2.0,0.4294
-2026-07-11 08:00:00,189012,Spain,14,1384.24,1384.1,-0.14,Great Britain,1310.19,L,0,0,U-12 Baseball European Championship 2026,2.0,0.5706
+2026-07-10 20:00:00,189013,Belgium,26,1135.32,1135.22,-0.1,France,1084.88,D,0,0,U-12 Baseball European Championship 2026,2.0,0.5482
+2026-07-10 20:00:00,189013,France,30,1084.88,1084.98,0.1,Belgium,1135.32,D,0,0,U-12 Baseball European Championship 2026,2.0,0.4518
+2026-07-11 08:00:00,189012,Great Britain,18,1310.19,1310.33,0.14,Spain,1384.24,D,0,0,U-12 Baseball European Championship 2026,2.0,0.4294
+2026-07-11 08:00:00,189012,Spain,14,1384.24,1384.1,-0.14,Great Britain,1310.19,D,0,0,U-12 Baseball European Championship 2026,2.0,0.5706
 2026-07-11 10:00:00,189015,Germany,22,1189.08,1190.37,1.29,Czechia,1226.88,W,6,4,U-12 Baseball European Championship 2026,2.0,0.4638
 2026-07-11 10:00:00,189015,Czechia,20,1226.88,1225.59,-1.29,Germany,1189.08,L,4,6,U-12 Baseball European Championship 2026,2.0,0.5362
 2026-07-11 11:00:00,199992,Poland,62,670.88,670.4,-0.48,Ukraine,1103.15,L,4,15,U-12 Baseball European Championship B Pool 2026,2.0,0.1599
 2026-07-11 11:00:00,199992,Ukraine,28,1103.15,1103.63,0.48,Poland,670.88,W,15,4,U-12 Baseball European Championship B Pool 2026,2.0,0.8401
 2026-07-11 15:00:00,199994,Belarus,56,767.96,767.44,-0.53,Russia,1171.65,L,5,27,U-12 Baseball European Championship B Pool 2026,2.0,0.1752
 2026-07-11 15:00:00,199994,Russia,24,1171.65,1172.17,0.53,Belarus,767.96,W,27,5,U-12 Baseball European Championship B Pool 2026,2.0,0.8248
-2026-07-11 15:30:00,189014,Italy,5,1658.21,1657.64,-0.56,Netherlands,1325.64,L,0,0,U-12 Baseball European Championship 2026,2.0,0.7818
-2026-07-11 15:30:00,189014,Netherlands,17,1325.64,1326.21,0.56,Italy,1658.21,L,0,0,U-12 Baseball European Championship 2026,2.0,0.2182
+2026-07-11 15:30:00,189014,Italy,5,1658.21,1657.64,-0.56,Netherlands,1325.64,D,0,0,U-12 Baseball European Championship 2026,2.0,0.7818
+2026-07-11 15:30:00,189014,Netherlands,17,1325.64,1326.21,0.56,Italy,1658.21,D,0,0,U-12 Baseball European Championship 2026,2.0,0.2182
 2026-07-11 18:00:00,199995,Bulgaria,72,546.33,546.01,-0.32,Austria,1100.57,L,0,27,U-12 Baseball European Championship B Pool 2026,2.0,0.1065
 2026-07-11 18:00:00,199995,Austria,29,1100.57,1100.89,0.32,Bulgaria,546.33,W,27,0,U-12 Baseball European Championship B Pool 2026,2.0,0.8935

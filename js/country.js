@@ -388,9 +388,6 @@ function showRecentGames(){
 
         tbody.appendChild(tr);
 
-        console.log(game);
-
-
     });
 
 }
@@ -430,8 +427,6 @@ function loadHistory(csv){
 }
 
 function loadTournamentNames(csv){
-
-    console.log(tournamentMap);
 
     const lines = csv.trim().split("\n");
 
