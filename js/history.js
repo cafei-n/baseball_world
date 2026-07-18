@@ -116,8 +116,8 @@ function setupDate(){
     let d =
         new Date(end);
 
-    d.setMonth(
-        d.getMonth()-1
+    d.setFullYear(
+        d.getFullYear()-1
     );
 
     let start =

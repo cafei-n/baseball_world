@@ -25,12 +25,12 @@ Promise.all([
 
     loadDailyRanking(dailyCsv);
 
+    setupDate();
+
     createTeamSelector();
 
     showCountry();
-
-    setupDate();
-
+    
     drawHistory();
 
 });
@@ -93,7 +93,7 @@ function setupDate(){
     let d =
         new Date(latest);
 
-    d.setMonth(d.getMonth()-1);
+    d.setFullYear(d.getFullYear()-1);
 
     document.getElementById("startDate").value =
         d.toISOString().substring(0,10);
