@@ -412,23 +412,23 @@ def prepare_history():
 
     if not exists:
 
-        writer.writerow(
-            [
-                "date",
-                "game_id",
-                "team",
-                "before_rank",
-                "before",
-                "after",
-                "change",
-                "opponent",
-                "opponent_before",
-                "result",
-                "tournament",
-                "importance",
-                "expected"
-            ]
-        )
+        writer.writerow([
+            "date",
+            "game_id",
+            "team",
+            "before_rank",
+            "before",
+            "after",
+            "change",
+            "opponent",
+            "opponent_before",
+            "result",
+            "my_score",
+            "opponent_score",
+            "tournament",
+            "importance",
+            "expected"
+        ])
 
     return f, writer
 
@@ -565,49 +565,41 @@ def process_game(
     ratings[away] += away_change
 
     # 履歴保存
-    history_writer.writerow(
-        [
-            game["date"],
-            game_id,
-            home,
-            home_before_rank,
-            round(home_before,2),
-            round(ratings[home],2),
-            round(home_change,2),
-            away,
-            round(away_before,2),
-            (
-                "W"
-                if home_score > away_score
-                else "L"
-            ),
-            tournament,
-            A,
-            round(home_C,4)
-        ]
-    )
+    history_writer.writerow([
+        game["date"],
+        game_id,
+        home,
+        home_before_rank,
+        round(home_before,2),
+        round(ratings[home],2),
+        round(home_change,2),
+        away,
+        round(away_before,2),
+        "W" if home_score > away_score else "L",
+        home_score,
+        away_score,
+        tournament,
+        A,
+        round(home_C,4)
+    ])
 
-    history_writer.writerow(
-        [
-            game["date"],
-            game_id,
-            away,
-            away_before_rank,
-            round(away_before,2),
-            round(ratings[away],2),
-            round(away_change,2),
-            home,
-            round(home_before,2),
-            (
-                "W"
-                if away_score > home_score
-                else "L"
-            ),
-            tournament,
-            A,
-            round(away_C,4)
-        ]
-    )
+    history_writer.writerow([
+        game["date"],
+        game_id,
+        away,
+        away_before_rank,
+        round(away_before,2),
+        round(ratings[away],2),
+        round(away_change,2),
+        home,
+        round(home_before,2),
+        "W" if away_score > home_score else "L",
+        away_score,
+        home_score,
+        tournament,
+        A,
+        round(away_C,4)
+    ])
 
     print(
         f"{home} {home_score}-{away_score} {away}"

@@ -5,6 +5,8 @@
 let dailyData = [];
 let nameMap = {};
 let chart = null;
+let historyData = [];
+let tournamentMap = {};
 
 
 const params = new URLSearchParams(window.location.search);
@@ -18,12 +20,18 @@ let currentTeam = params.get("team");
 Promise.all([
     fetch("data/ranking_daily.csv").then(r=>r.text()),
     fetch("data/team_name_ja.csv").then(r=>r.text()),
+    fetch("data/ranking_history.csv").then(r=>r.text()),
+    fetch("data/ranking_config.csv").then(r=>r.text())
 
-]).then(([dailyCsv,nameCsv])=>{
+]).then(([dailyCsv,nameCsv,historyCsv,configCsv])=>{
 
     loadNames(nameCsv);
 
+    loadTournamentNames(configCsv);
+
     loadDailyRanking(dailyCsv);
+
+    loadHistory(historyCsv);
 
     setupDate();
 
@@ -32,6 +40,8 @@ Promise.all([
     showCountry();
     
     drawHistory();
+
+    showRecentGames();
 
 });
 
@@ -287,4 +297,197 @@ function changeCountry(){
 
     drawHistory();
 
+    showRecentGames();
+
+}
+
+function showRecentGames(){
+
+    const tbody =
+        document.getElementById("recentGames");
+
+    tbody.innerHTML = "";
+
+    let games =
+        historyData
+        .filter(x=>x.team==currentTeam)
+        .sort((a,b)=>
+            new Date(b.date)-new Date(a.date)
+        )
+        .slice(0,10);
+
+    games.forEach(game=>{
+
+        const tr =
+            document.createElement("tr");
+
+        let resultClass="";
+
+        if(game.result=="W"){
+            resultClass="color:green;font-weight:bold;";
+        }
+        else if(game.result=="L"){
+            resultClass="color:red;font-weight:bold;";
+        }
+        else{
+            resultClass="color:gray;font-weight:bold;";
+        }
+
+        let pointClass="";
+
+        if(game.change>0){
+            pointClass="point-up";
+        }
+        else if(game.change<0){
+            pointClass="point-down";
+        }
+        else{
+            pointClass="point-same";
+        }
+
+        let pointText =
+            (game.change>=0?"+":"")
+            +game.change.toFixed(2);
+
+        tr.innerHTML=`
+
+            <td>${game.date.substring(0,10)}</td>
+
+            <td style="${resultClass}">
+                ${game.result}
+            </td>
+
+            <td>
+                ${game.my_score}-${game.opponent_score}
+            </td>
+
+            <td>
+                ${nameMap[game.opponent] ?? game.opponent}
+            </td>
+
+            <td>
+                <div>
+                    ${game.after.toFixed(2)}
+                </div>
+                <div class="${pointClass}">
+                    ${(game.change>=0?"+":"") + game.change.toFixed(2)}
+                </div>
+            </td>
+
+            <td>
+                <div style="font-size:14px;color:#666;">
+                    ${getAgeCategory(game.tournament)}
+                </div>
+
+                <div>
+                    ${getTournamentName(game.tournament)}
+                </div>
+            </td>
+
+        `;
+
+        tbody.appendChild(tr);
+
+        console.log(game);
+
+
+    });
+
+}
+
+function loadHistory(csv){
+
+    const lines = csv.trim().split("\n");
+
+    for(let i=1;i<lines.length;i++){
+
+        const c = lines[i].split(",");
+
+        historyData.push({
+
+            date:c[0],
+            game_id:c[1],
+            team:c[2],
+
+            before_rank:Number(c[3]),
+            before:Number(c[4]),
+            after:Number(c[5]),
+            change:Number(c[6]),
+
+            opponent:c[7],
+            opponent_before:Number(c[8]),
+
+            result:c[9],
+
+            my_score:Number(c[10]),
+            opponent_score:Number(c[11]),
+
+            tournament:c[12]
+        });
+
+    }
+
+}
+
+function loadTournamentNames(csv){
+
+    console.log(tournamentMap);
+
+    const lines = csv.trim().split("\n");
+
+    for(let i=1;i<lines.length;i++){
+
+        const c = lines[i].split(",");
+
+        tournamentMap[c[1].trim()] = c[3].trim();
+
+    }
+
+}
+
+function getTournamentName(name){
+
+    for(const keyword in tournamentMap){
+
+        let keys = keyword.split("|");
+
+        for(const key of keys){
+
+            if(name.includes(key.trim())){
+
+                return tournamentMap[keyword];
+
+            }
+        }
+    }
+
+    return name;
+}
+
+function getAgeCategory(name){
+
+    const ages = [
+        "U-23",
+        "U-18",
+        "U-15",
+        "U-12",
+        "U-10",
+        "U23",
+        "U18",
+        "U15",
+        "U12",
+        "U10",
+        "Juventud"
+    ];
+
+    for(const age of ages){
+
+        if(name.includes(age)){
+
+            return age.replace("U", "U-").replace("Juventud", "ユース");
+
+        }
+    }
+
+    return "";
 }
