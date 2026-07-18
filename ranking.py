@@ -326,6 +326,28 @@ def save_daily_ranking(ratings, date):
         DAILY_HISTORY_FILE
     )
 
+    # ⬇️【高速化修正】全行読み込みをやめ、末尾だけをピンポイントで読む
+    if file_exists and os.path.getsize(DAILY_HISTORY_FILE) > 0:
+        try:
+            with open(DAILY_HISTORY_FILE, "rb") as f:  # バイナリモードで開く
+                # ファイルの末尾から100バイト程度手前にシーク（移動）する
+                f.seek(0, os.SEEK_END)
+                file_size = f.tell()
+                seek_pos = max(0, file_size - 100)
+                f.seek(seek_pos)
+                
+                # 最後の行を切り出す
+                last_line = f.readlines()[-1].decode("utf-8-sig").strip()
+                if last_line:
+                    # カンマで区切って最初の要素（date）を取得
+                    latest_recorded_date = last_line.split(",")[0]
+                    
+                    # 既に記録されている日付と同じか古ければスキップ
+                    if latest_recorded_date and date <= latest_recorded_date:
+                        return
+        except Exception:
+            pass  # 万が一のエラー時は安全のため処理を続行
+
     with open(
         DAILY_HISTORY_FILE,
         "a",
@@ -804,6 +826,31 @@ def print_ranking(
 # =====================================
 
 if __name__ == "__main__":
+
+    # 1. ユーザーに処理モードを尋ねる
+    mode = input("データを一から計算し直しますか？ (y/n): ").strip().lower()
+
+    if mode == "y":
+        print("\n--- 初期化処理を実行します ---")
+        
+        # 削除対象のファイル一覧
+        files_to_delete = [
+            RANKING_FILE,        # 現在のランキングファイル
+            HISTORY_FILE,        # 試合計算済みの履歴ファイル
+            DAILY_HISTORY_FILE   # 日々のランキング推移ファイル
+        ]
+        
+        for file_path in files_to_delete:
+            if os.path.exists(file_path):
+                try:
+                    os.remove(file_path)
+                    print(f"削除しました: {file_path}")
+                except Exception as e:
+                    print(f"ファイル削除エラー ({file_path}): {e}")
+        
+        print("初期化が完了しました。一から計算を開始します。\n")
+    else:
+        print("\n既存のデータに追記します（計算済みの試合はスキップします）。\n")
 
     print(
         "WBSC世界ランキング更新開始"
