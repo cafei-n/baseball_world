@@ -156,22 +156,6 @@
         background:#f5f5f5;
     }
 
-    @media(max-width:800px){
-
-    .summary{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .chart-container{
-
-        height:350px;
-
-    }
-
-    }
-
     </style>
 
     </head>
@@ -317,7 +301,7 @@ Loading...
 
 <div class="chart-container">
 
-    <canvas id="Chart"></canvas>
+    <canvas id="chart"></canvas>
 
 </div>
 
@@ -423,17 +407,6 @@ Loading...
 </div>
 
 <script>
-
-document.getElementById("menuButton").onclick=function(){
-
-const menu=document.getElementById("menuList");
-
-menu.style.display=
-menu.style.display==="block"
-?"none"
-:"block";
-
-};
 
 </script>
 

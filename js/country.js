@@ -62,7 +62,7 @@ function drawHistory(){
 
     chart = drawRankingChart(
 
-        "Chart",
+        "chart",
 
         dailyData,
 
