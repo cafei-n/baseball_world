@@ -29,103 +29,75 @@ Promise.all([
 
     showCountry();
 
+    setupDate();
+
     drawHistory();
 
 });
 
 function drawHistory(){
 
+    let start =
+        document.getElementById("startDate").value;
+
+    let end =
+        document.getElementById("endDate").value;
+
     let type =
-        document.getElementById(
-            "graphType"
-        ).value;
+        document.getElementById("graphType").value;
 
     let data =
-        dailyData.filter(
-            x=>x.team==currentTeam
-        );
+        dailyData
+        .filter(x=>
+            x.team==currentTeam &&
+            x.date.substring(0,10)>=start &&
+            x.date.substring(0,10)<=end
+        )
+        .map(x=>({
+            x:new Date(x.date),
+            y:type=="rank"
+                ? x.rank
+                : x.point
+        }));
 
-    let labels =
-        data.map(x=>x.date);
+    chart = drawRankingChart(
 
-    let values;
+        "Chart",
 
-    if(type=="rank"){
+        dailyData,
 
-        values =
-            data.map(x=>x.rank);
+        nameMap,
 
-    }
+        [currentTeam],
 
-    else{
+        start,
 
-        values =
-            data.map(x=>x.point);
+        end,
 
-    }
+        type,
 
-    if(chart){
+        chart
 
-        chart.destroy();
-
-    }
-
-    chart = new Chart(
-
-        document.getElementById(
-            "historyChart"
-        ),
-
-        {
-
-            type:"line",
-
-            data:{
-
-                labels:labels,
-
-                datasets:[{
-
-                    label:
-                        type=="rank"
-                        ?
-                        "順位"
-                        :
-                        "ポイント",
-
-                    data:values,
-
-                    tension:0.2,
-
-                    borderWidth:2
-
-                }]
-
-            },
-
-            options:{
-
-                responsive:true,
-
-                maintainAspectRatio:true,
-
-                interaction:{
-                    mode:"nearest"
-                },
-
-                scales:{
-
-                    y:{
-
-                        reverse:
-                            type=="rank"
-
-                    }
-
-                }
-            }
-        }
     );
+
+}
+
+function setupDate(){
+
+    let latest =
+        getLatestDate();
+
+    document.getElementById("endDate").value =
+        latest.substring(0,10);
+
+    let d =
+        new Date(latest);
+
+    d.setMonth(d.getMonth()-1);
+
+    document.getElementById("startDate").value =
+        d.toISOString().substring(0,10);
+
 }
 
 // =====================================

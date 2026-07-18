@@ -257,83 +257,24 @@ function showHistory(){
             option=>option.value
         );
 
-    let datasets=[];
+    chart = drawRankingChart(
 
-    selected.forEach(team=>{
+        "chart",
 
-        let data =
-            dailyData
-            .filter(x=>
-                x.team==team &&
-                x.date.substring(0,10)>=start &&
-                x.date.substring(0,10)<=end
-            )
-            .map(x=>({
-                x:new Date(x.date),
-                y:
-                type=="rank"
-                ?
-                x.rank
-                :
-                x.point
-            }));
+        dailyData,
 
-        datasets.push({
-            label:
-            nameMap[team] ?? team,
-            data:data,
-            borderWidth:2,
-            fill:false
-        });
-    });
+        nameMap,
 
-    if(chart){
-        chart.destroy();
-    }
+        selected,
 
-    chart =
-    new Chart(
-        document
-        .getElementById("chart"),
-        {
-            type:"line",
+        start,
 
-            data:{
-                datasets:datasets
-            },
+        end,
 
-            options:{
-                responsive:true,
-                maintainAspectRatio:false,
-                interaction:{
-                    mode:"nearest",
-                    intersect:false
-                },
+        type,
 
-                scales:{
-                    x:{
-                        type:"time",
-                        time:{
-                            unit:"month"
-                        }
-                    },
+        chart
 
-                    y:{
-                        reverse:
-                        type=="rank",
-                        title:{
-                            display:true,
-                            text:
-                            type=="rank"
-                            ?
-                            "順位"
-                            :
-                            "ポイント"
-                        }
-                    }
-                }
-            }
-        }
     );
 }
 

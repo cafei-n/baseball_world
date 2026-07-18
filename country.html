@@ -9,6 +9,7 @@
     <title>country Ranking</title>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 
     <style>
 
@@ -109,10 +110,20 @@
     }
 
     .chart-container{
+        width:95%;
+        max-width:1400px;
+        aspect-ratio:16/9;
+        margin:40px auto 80px auto;
+        position:relative;
+    }
 
-        width:100%;
-        height:500px;
-        margin-bottom:40px;
+    @media(max-width:700px){
+        .control{
+            flex-direction:column;
+        }
+        .chart-container{
+            aspect-ratio:9/16;
+        }
     }
 
     .table-section{
@@ -265,9 +276,32 @@ Loading...
 
 <div class="control">
 
-    <label>表示</label>
+    <label>
+        開始日
+    </label>
 
-    <select id="graphType">
+    <input
+        type="date"
+        id="startDate"
+        onchange="drawHistory()"
+    >
+
+    <label>
+        終了日
+    </label>
+
+    <input
+        type="date"
+        id="endDate"
+        onchange="drawHistory()"
+    >
+
+    <label>
+        表示
+    </label>
+
+    <select id="graphType" 
+        onchange="drawHistory()">
 
         <option value="rank">
             順位
@@ -283,7 +317,7 @@ Loading...
 
 <div class="chart-container">
 
-    <canvas id="historyChart"></canvas>
+    <canvas id="Chart"></canvas>
 
 </div>
 
@@ -403,6 +437,7 @@ menu.style.display==="block"
 
 </script>
 
+<script src="js/chart.js"></script>
 <script src="js/country.js"></script>
 
 </body>
