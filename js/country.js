@@ -43,6 +43,10 @@ Promise.all([
 
     showRecentGames();
 
+    showTournamentStats();
+
+    showAgeStats();
+
 });
 
 function drawHistory(){
@@ -299,6 +303,10 @@ function changeCountry(){
 
     showRecentGames();
 
+    showTournamentStats();
+
+    showAgeStats();
+
 }
 
 function showRecentGames(){
@@ -320,6 +328,14 @@ function showRecentGames(){
 
         const tr =
             document.createElement("tr");
+
+        const age =
+            getAgeCategory(game.tournament);
+
+        const ageText =
+            age=="制限なし"
+            ? ""
+            : age;
 
         let resultClass="";
 
@@ -375,13 +391,8 @@ function showRecentGames(){
             </td>
 
             <td>
-                <div style="font-size:14px;color:#666;">
-                    ${getAgeCategory(game.tournament)}
-                </div>
-
-                <div>
-                    ${getTournamentName(game.tournament)}
-                </div>
+                <div>${ageText}</div>
+                <div>${getTournamentName(game.tournament)}</div>
             </td>
 
         `;
@@ -459,30 +470,307 @@ function getTournamentName(name){
     return name;
 }
 
+function getTournamentCategory(name){
+
+    if(name.includes("World Baseball Classic Qualifiers")){
+        return "WBC予選";
+    }
+
+    if(name.includes("World Baseball Classic")){
+        return "ワールド・ベースボール・クラシック";
+    }
+
+    if(name.includes("Premier12")){
+        return "プレミア12";
+    }
+
+    if(
+        name.includes("Olympic") ||
+        name.includes("Olympics")
+    ){
+        return "オリンピック";
+    }
+
+    if(
+        name.includes("World Cup")
+    ){
+        return "ワールドカップ";
+    }
+    if(
+        name.includes("European Championship") ||
+        name.includes("European Baseball Championship")
+    ){
+        return "欧州野球選手権";
+    }
+    if(
+        name.includes("Asian Baseball Championship") ||
+        name.includes("Asian Championship")
+    ){
+        return "アジア野球選手権";
+    }
+    if(
+        name.includes("Pan American Championship")
+    ){
+        return "パンアメリカン野球選手権";
+    }
+
+    return "その他";
+}
+
+function showTournamentStats(){
+
+    const tbody =
+        document.getElementById(
+            "tournamentStats"
+        );
+
+    tbody.innerHTML = "";
+
+    const stats = {};
+
+    historyData
+        .filter(x=>x.team==currentTeam)
+        .forEach(game=>{
+
+            const category =
+                getTournamentCategory(
+                    game.tournament
+                );
+
+            if(!stats[category]){
+
+                stats[category]={
+
+                    games:0,
+                    win:0,
+                    lose:0,
+                    draw:0,
+                    point:0
+
+                };
+
+            }
+
+            stats[category].games++;
+
+            if(game.result=="W"){
+                stats[category].win++;
+            }
+            else if(game.result=="L"){
+                stats[category].lose++;
+            }
+            else{
+                stats[category].draw++;
+            }
+
+            stats[category].point += game.change;
+
+        });
+
+    const order=[
+        "WBC予選",
+        "ワールド・ベースボール・クラシック",
+        "オリンピック",
+        "プレミア12",
+        "ワールドカップ",
+        "欧州野球選手権",
+        "アジア野球選手権",
+        "パンアメリカン野球選手権",
+        "その他"
+    ];
+
+    order.forEach(name=>{
+
+        if(!stats[name]){
+            return;
+        }
+
+        const s = stats[name];
+
+        const winRate =
+            s.games==0
+            ?0
+            :(s.win+s.draw*0.5)/s.games;
+
+        const tr =
+            document.createElement("tr");
+
+        let pointClass="";
+
+        if(s.point>0){
+            pointClass="point-up";
+        }
+        else if(s.point<0){
+            pointClass="point-down";
+        }
+        else{
+            pointClass="point-same";
+        }
+
+        tr.innerHTML=`
+
+            <td>${name}</td>
+
+            <td>${s.games}</td>
+
+            <td>${s.win}</td>
+
+            <td>${s.lose}</td>
+
+            <td>${s.draw}</td>
+
+            <td>${(winRate*100).toFixed(1)}%</td>
+
+            <td class="${pointClass}">
+                ${(s.point>=0?"+":"")}${s.point.toFixed(2)}
+            </td>
+
+        `;
+
+        tbody.appendChild(tr);
+
+    });
+
+}
+
 function getAgeCategory(name){
 
-    const ages = [
+    if(name.includes("U-23") || name.includes("U23")){
+        return "U-23";
+    }
+
+    if(name.includes("U-18") || name.includes("U18")){
+        return "U-18";
+    }
+
+    if(name.includes("U-15") || name.includes("U15")){
+        return "U-15";
+    }
+
+    if(name.includes("U-12") || name.includes("U12")){
+        return "U-12";
+    }
+
+    if(name.includes("U-10") || name.includes("U10")){
+        return "U-10";
+    }
+
+    if(name.includes("Youth") || name.includes("Juventud")){
+        return "ユース";
+    }
+
+    return "制限なし";
+}
+
+function showAgeStats(){
+
+    const tbody =
+        document.getElementById(
+            "ageStats"
+        );
+
+    tbody.innerHTML="";
+
+    const stats={};
+
+    historyData
+        .filter(x=>x.team==currentTeam)
+        .forEach(game=>{
+
+            const category=
+                getAgeCategory(
+                    game.tournament
+                );
+
+            if(!stats[category]){
+
+                stats[category]={
+
+                    games:0,
+                    win:0,
+                    lose:0,
+                    draw:0,
+                    point:0
+
+                };
+
+            }
+
+            stats[category].games++;
+
+            if(game.result=="W"){
+                stats[category].win++;
+            }
+            else if(game.result=="L"){
+                stats[category].lose++;
+            }
+            else{
+                stats[category].draw++;
+            }
+
+            stats[category].point+=game.change;
+
+        });
+
+    const order=[
+        "制限なし",
         "U-23",
         "U-18",
         "U-15",
         "U-12",
         "U-10",
-        "U23",
-        "U18",
-        "U15",
-        "U12",
-        "U10",
-        "Juventud"
+        "ユース"
     ];
 
-    for(const age of ages){
+    order.forEach(name=>{
 
-        if(name.includes(age)){
-
-            return age.replace("U", "U-").replace("Juventud", "ユース");
-
+        if(!stats[name]){
+            return;
         }
-    }
 
-    return "";
+        const s=stats[name];
+
+        const winRate=
+            s.games==0
+            ?0
+            :(s.win+s.draw*0.5)/s.games;
+
+        let pointClass="";
+
+        if(s.point>0){
+            pointClass="point-up";
+        }
+        else if(s.point<0){
+            pointClass="point-down";
+        }
+        else{
+            pointClass="point-same";
+        }
+
+        const tr=document.createElement("tr");
+
+        tr.innerHTML=`
+
+            <td>${name}</td>
+
+            <td>${s.games}</td>
+
+            <td>${s.win}</td>
+
+            <td>${s.lose}</td>
+
+            <td>${s.draw}</td>
+
+            <td>${(winRate*100).toFixed(1)}%</td>
+
+            <td class="${pointClass}">
+                ${(s.point>=0?"+":"")}${s.point.toFixed(2)}
+            </td>
+
+        `;
+
+        tbody.appendChild(tr);
+
+    });
+
 }
