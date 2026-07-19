@@ -198,13 +198,17 @@ function showSchedule(){
             const tr =
                 document.createElement("tr");
 
+            const awayTeam = aliasMap[game.away] ?? game.away;
+            const homeTeam = aliasMap[game.home] ?? game.home;
+
+            const awayName = nameMap[awayTeam] ?? awayTeam;
+            const homeName = nameMap[homeTeam] ?? homeTeam;
+
             tr.innerHTML = `
 
                 <td class="team">
-                    <a href="country.html?team=${encodeURIComponent(game.away)}">
-                    ${nameMap[
-                        aliasMap[game.away] ?? game.away
-                    ] ?? game.away}
+                    <a href="country.html?team=${encodeURIComponent(homeName)}">
+                    ${homeName}
                 </td>
 
                 <td class="score">
@@ -212,10 +216,9 @@ function showSchedule(){
                 </td>
 
                 <td class="team">
-                    <a href="country.html?team=${encodeURIComponent(game.home)}">
-                    ${nameMap[
-                        aliasMap[game.home] ?? game.home
-                    ] ?? game.home}
+                    <a href="country.html?team=${encodeURIComponent(awayTeam)}">
+                        ${awayName}
+                    </a>
                 </td>
 
                 <td class="stadium">
