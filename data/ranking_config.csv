@@ -1,5 +1,6 @@
 type,keyword,value,japanese
 importance,World Baseball Classic&Qualifiers,45,WBC予選
+importance,Exhibition,5,練習試合
 importance,WBC|World Baseball Classic,100,ワールド・ベースボール・クラシック
 importance,Premier12&Qualifier,50,プレミア12予選
 importance,Premier12,50,プレミア12
@@ -28,7 +29,7 @@ importance,Torneo Internacional,10,国際選手権
 importance,Juegos Bolivarianos,10,ボリバリアンゲームズ
 importance,ALBA Sports Game,10,アルバスポーツ大会
 importance,Japan Series,5,侍ジャパンシリーズ
-importance,Friendly,5,新全試合
+importance,Friendly,5,その他
 age,U-23,0.1,U-23
 age,U-18,0.1,U-18
 age,U-15,0.1,U-15
