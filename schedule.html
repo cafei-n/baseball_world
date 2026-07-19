@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <title>World Schedule</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+<body>
+
+    <header class="header">
+
+    <a href="index.html" class="logo">
+        世界野球ランキング
+    </a>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+<nav id="menu" class="menu">
+
+    <a href="index.html">
+        世界ランキング
+    </a>
+
+    <a href="history.html">
+        グラフ・アニメーション
+    </a>
+
+    <a href="country.html">
+        国別戦績
+    </a>
+
+    <a href="schedule.html">
+        試合日程・結果
+    </a>
+
+</nav>
+
+<div class="control">
+
+<button onclick="previousDate()">
+
+◀ 前の試合日
+
+</button>
+
+<input
+    type="date"
+    id="dateSelect"
+    onchange="showSchedule()">
+
+<button onclick="nextDate()">
+
+次の試合日 ▶
+
+</button>
+
+</div>
+
+<div id="scheduleList">
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/schedule.js"></script>
+
+</body>
+
+</html>

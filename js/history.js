@@ -2,10 +2,6 @@
 // グローバル
 // =====================================
 
-let dailyData = [];
-
-let nameMap = {};
-
 let chart;
 
 
@@ -38,48 +34,6 @@ Promise.all([
     showHistory();
 
 });
-
-// =====================================
-// 日本語名
-// =====================================
-
-function loadNames(csv){
-
-    const lines =
-        csv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-        const c =
-            lines[i].split(",");
-
-        nameMap[c[0].trim()]
-            =
-        c[1].trim();
-    }
-}
-
-// =====================================
-// daily読み込み
-// =====================================
-
-function loadDailyRanking(csv){
-
-    const lines =
-        csv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-
-        const c =
-            lines[i].split(",");
-
-        dailyData.push({
-            date:c[0],
-            rank:Number(c[1]),
-            team:c[2],
-            point:Number(c[3])
-        });
-    }
-}
 
 function showLastUpdate(){
 
@@ -131,18 +85,6 @@ function setupDate(){
     document.getElementById(
         "endDate"
     ).value=end;
-}
-
-// =====================================
-// 最新日
-// =====================================
-
-function getLatestDate(){
-
-    return dailyData
-        .map(x=>x.date)
-        .sort()
-        .pop();
 }
 
 // =====================================
@@ -340,23 +282,4 @@ function updateMovie(){
     video.load();
 
     video.play();
-}
-
-function toggleMenu(){
-
-    const menu =
-        document.getElementById("menu");
-
-    if(menu.style.display=="block"){
-
-        menu.style.display="none";
-
-    }
-
-    else{
-
-        menu.style.display="block";
-
-    }
-
 }

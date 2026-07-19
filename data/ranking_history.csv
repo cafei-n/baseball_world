@@ -4343,3 +4343,75 @@
 2026-07-11 15:30:00,189014,Netherlands,17,1325.64,1326.21,0.56,Italy,1658.21,D,0,0,U-12 Baseball European Championship 2026,2.0,0.2182
 2026-07-11 18:00:00,199995,Bulgaria,72,546.33,546.01,-0.32,Austria,1100.57,L,0,27,U-12 Baseball European Championship B Pool 2026,2.0,0.1065
 2026-07-11 18:00:00,199995,Austria,29,1100.57,1100.89,0.32,Bulgaria,546.33,W,27,0,U-12 Baseball European Championship B Pool 2026,2.0,0.8935
+2026-07-13 10:30:00,200671,Belgium,26,1135.22,1133.88,-1.34,Germany,1190.37,L,2,17,U-18 Baseball European Championship 2026,2.0,0.4473
+2026-07-13 10:30:00,200671,Germany,22,1190.37,1191.71,1.34,Belgium,1135.22,W,17,2,U-18 Baseball European Championship 2026,2.0,0.5527
+2026-07-13 10:30:00,200672,Austria,29,1100.89,1102.96,2.07,Great Britain,1310.33,W,14,4,U-18 Baseball European Championship 2026,2.0,0.3092
+2026-07-13 10:30:00,200672,Great Britain,18,1310.33,1308.26,-2.07,Austria,1100.89,L,4,14,U-18 Baseball European Championship 2026,2.0,0.6908
+2026-07-13 14:30:00,200673,Czechia,20,1225.59,1224.38,-1.21,Netherlands,1326.21,L,1,6,U-18 Baseball European Championship 2026,2.0,0.4046
+2026-07-13 14:30:00,200673,Netherlands,17,1326.21,1327.42,1.21,Czechia,1225.59,W,6,1,U-18 Baseball European Championship 2026,2.0,0.5954
+2026-07-13 14:30:00,200674,France,30,1084.98,1085.57,0.59,Hungary,821.85,W,8,7,U-18 Baseball European Championship 2026,2.0,0.733
+2026-07-13 14:30:00,200674,Hungary,51,821.85,821.26,-0.59,France,1084.98,L,7,8,U-18 Baseball European Championship 2026,2.0,0.267
+2026-07-13 19:30:00,200675,Spain,14,1384.1,1384.27,0.17,Poland,670.4,W,5,1,U-18 Baseball European Championship 2026,2.0,0.9393
+2026-07-13 19:30:00,200675,Poland,62,670.4,670.23,-0.17,Spain,1384.1,L,1,5,U-18 Baseball European Championship 2026,2.0,0.0607
+2026-07-13 19:30:00,200676,Israel,16,1331.86,1331.19,-0.67,Italy,1657.64,L,0,11,U-18 Baseball European Championship 2026,2.0,0.2227
+2026-07-13 19:30:00,200676,Italy,5,1657.64,1658.31,0.67,Israel,1331.86,W,11,0,U-18 Baseball European Championship 2026,2.0,0.7773
+2026-07-14 10:30:00,200677,Poland,62,670.23,669.91,-0.32,Czechia,1224.38,L,11,18,U-18 Baseball European Championship 2026,2.0,0.1065
+2026-07-14 10:30:00,200677,Czechia,20,1224.38,1224.7,0.32,Poland,670.23,W,18,11,U-18 Baseball European Championship 2026,2.0,0.8935
+2026-07-14 10:30:00,200678,Netherlands,17,1327.42,1328.39,0.97,Belgium,1133.88,W,11,1,U-18 Baseball European Championship 2026,2.0,0.6776
+2026-07-14 10:30:00,200678,Belgium,26,1133.88,1132.91,-0.97,Netherlands,1327.42,L,1,11,U-18 Baseball European Championship 2026,2.0,0.3224
+2026-07-14 14:30:00,200679,Great Britain,18,1308.26,1309.82,1.57,Israel,1331.19,W,14,4,U-18 Baseball European Championship 2026,2.0,0.478
+2026-07-14 14:30:00,200679,Israel,16,1331.19,1329.63,-1.57,Great Britain,1308.26,L,4,14,U-18 Baseball European Championship 2026,2.0,0.522
+2026-07-14 14:30:00,200680,Germany,22,1191.71,1193.61,1.89,Spain,1384.27,W,9,5,U-18 Baseball European Championship 2026,2.0,0.3232
+2026-07-14 14:30:00,200680,Spain,14,1384.27,1382.38,-1.89,Germany,1191.71,L,5,9,U-18 Baseball European Championship 2026,2.0,0.6768
+2026-07-14 19:30:00,200681,Hungary,51,821.26,822.91,1.64,Austria,1102.96,W,10,9,U-18 Baseball European Championship 2026,2.0,0.2533
+2026-07-14 19:30:00,200681,Austria,29,1102.96,1101.32,-1.64,Hungary,821.26,L,9,10,U-18 Baseball European Championship 2026,2.0,0.7467
+2026-07-14 19:30:00,200682,Italy,5,1658.31,1658.53,0.22,France,1085.57,W,6,5,U-18 Baseball European Championship 2026,2.0,0.9001
+2026-07-14 19:30:00,200682,France,30,1085.57,1085.35,-0.22,Italy,1658.31,L,5,6,U-18 Baseball European Championship 2026,2.0,0.0999
+2026-07-15 10:30:00,200683,Germany,22,1193.61,1195.2,1.59,Czechia,1224.7,W,10,2,U-18 Baseball European Championship 2026,2.0,0.4702
+2026-07-15 10:30:00,200683,Czechia,20,1224.7,1223.11,-1.59,Germany,1193.61,L,2,10,U-18 Baseball European Championship 2026,2.0,0.5298
+2026-07-15 10:30:00,200684,Great Britain,18,1309.82,1310.22,0.4,Hungary,822.91,W,11,1,U-18 Baseball European Championship 2026,2.0,0.8663
+2026-07-15 10:30:00,200684,Hungary,51,822.91,822.5,-0.4,Great Britain,1309.82,L,1,11,U-18 Baseball European Championship 2026,2.0,0.1337
+2026-07-15 14:30:00,200685,Netherlands,17,1328.39,1328.61,0.22,Poland,669.91,W,12,1,U-18 Baseball European Championship 2026,2.0,0.926
+2026-07-15 14:30:00,200685,Poland,62,669.91,669.69,-0.22,Netherlands,1328.39,L,1,12,U-18 Baseball European Championship 2026,2.0,0.074
+2026-07-15 14:30:00,200686,France,30,1085.35,1087.5,2.16,Israel,1329.63,W,7,1,U-18 Baseball European Championship 2026,2.0,0.2814
+2026-07-15 14:30:00,200686,Israel,16,1329.63,1327.47,-2.16,France,1085.35,L,1,7,U-18 Baseball European Championship 2026,2.0,0.7186
+2026-07-15 19:30:00,200687,Spain,14,1382.38,1383.21,0.83,Belgium,1132.91,W,10,0,U-18 Baseball European Championship 2026,2.0,0.7226
+2026-07-15 19:30:00,200687,Belgium,26,1132.91,1132.08,-0.83,Spain,1382.38,L,0,10,U-18 Baseball European Championship 2026,2.0,0.2774
+2026-07-15 19:30:00,200688,Italy,5,1658.53,1658.84,0.32,Austria,1101.32,W,12,4,U-18 Baseball European Championship 2026,2.0,0.8946
+2026-07-15 19:30:00,200688,Austria,29,1101.32,1101.0,-0.32,Italy,1658.53,L,4,12,U-18 Baseball European Championship 2026,2.0,0.1054
+2026-07-16 10:30:00,200689,Germany,22,1195.2,1196.7,1.5,Netherlands,1328.61,W,5,3,U-18 Baseball European Championship 2026,2.0,0.3747
+2026-07-16 10:30:00,200689,Netherlands,16,1328.61,1327.11,-1.5,Germany,1195.2,L,3,5,U-18 Baseball European Championship 2026,2.0,0.6253
+2026-07-16 10:30:00,200690,Spain,14,1383.21,1381.26,-1.95,Czechia,1223.11,L,0,15,U-18 Baseball European Championship 2026,2.0,0.6489
+2026-07-16 10:30:00,200690,Czechia,20,1223.11,1225.05,1.95,Spain,1383.21,W,15,0,U-18 Baseball European Championship 2026,2.0,0.3511
+2026-07-16 14:30:00,200691,France,30,1087.5,1089.04,1.54,Austria,1101.0,W,13,1,U-18 Baseball European Championship 2026,2.0,0.4871
+2026-07-16 14:30:00,200691,Austria,29,1101.0,1099.46,-1.54,France,1087.5,L,1,13,U-18 Baseball European Championship 2026,2.0,0.5129
+2026-07-16 14:30:00,200692,Belgium,26,1132.08,1132.46,0.38,Poland,669.69,W,5,2,U-18 Baseball European Championship 2026,2.0,0.855
+2026-07-16 14:30:00,200692,Poland,62,669.69,669.31,-0.38,Belgium,1132.08,L,2,5,U-18 Baseball European Championship 2026,2.0,0.145
+2026-07-16 19:30:00,200693,Israel,16,1327.47,1325.37,-2.1,Hungary,822.5,L,3,5,U-18 Baseball European Championship 2026,2.0,0.8741
+2026-07-16 19:30:00,200693,Hungary,51,822.5,824.6,2.1,Israel,1327.47,W,5,3,U-18 Baseball European Championship 2026,2.0,0.1259
+2026-07-16 19:30:00,200694,Italy,5,1658.84,1659.47,0.62,Great Britain,1310.22,W,16,6,U-18 Baseball European Championship 2026,2.0,0.7921
+2026-07-16 19:30:00,200694,Great Britain,18,1310.22,1309.6,-0.62,Italy,1658.84,L,6,16,U-18 Baseball European Championship 2026,2.0,0.2079
+2026-07-17 10:30:00,200695,Great Britain,18,1309.6,1307.78,-1.82,France,1089.04,L,9,12,U-18 Baseball European Championship 2026,2.0,0.6998
+2026-07-17 10:30:00,200695,France,30,1089.04,1090.86,1.82,Great Britain,1309.6,W,12,9,U-18 Baseball European Championship 2026,2.0,0.3002
+2026-07-17 10:30:00,200696,Netherlands,16,1327.11,1328.66,1.54,Spain,1381.26,W,7,3,U-18 Baseball European Championship 2026,2.0,0.4482
+2026-07-17 10:30:00,200696,Spain,14,1381.26,1379.72,-1.54,Netherlands,1327.11,L,3,7,U-18 Baseball European Championship 2026,2.0,0.5518
+2026-07-17 14:30:00,200697,Poland,62,669.31,668.96,-0.35,Germany,1196.7,L,2,14,U-18 Baseball European Championship 2026,2.0,0.1167
+2026-07-17 14:30:00,200697,Germany,22,1196.7,1197.05,0.35,Poland,669.31,W,14,2,U-18 Baseball European Championship 2026,2.0,0.8833
+2026-07-17 14:30:00,200698,Austria,29,1099.46,1101.15,1.69,Israel,1325.37,W,4,2,U-18 Baseball European Championship 2026,2.0,0.2959
+2026-07-17 14:30:00,200698,Israel,17,1325.37,1323.68,-1.69,Austria,1099.46,L,2,4,U-18 Baseball European Championship 2026,2.0,0.7041
+2026-07-17 19:30:00,200699,Czechia,20,1225.05,1226.29,1.24,Belgium,1132.46,W,11,6,U-18 Baseball European Championship 2026,2.0,0.5879
+2026-07-17 19:30:00,200699,Belgium,26,1132.46,1131.22,-1.24,Czechia,1225.05,L,6,11,U-18 Baseball European Championship 2026,2.0,0.4121
+2026-07-17 19:30:00,200700,Hungary,51,824.6,824.49,-0.12,Italy,1659.47,L,2,16,U-18 Baseball European Championship 2026,2.0,0.039
+2026-07-17 19:30:00,200700,Italy,5,1659.47,1659.58,0.12,Hungary,824.6,W,16,2,U-18 Baseball European Championship 2026,2.0,0.961
+2026-07-18 10:30:00,200701,Hungary,51,824.49,822.68,-1.81,Poland,668.96,L,6,10,U-18 Baseball European Championship 2026,2.0,0.6449
+2026-07-18 10:30:00,200701,Poland,62,668.96,670.77,1.81,Hungary,824.49,W,10,6,U-18 Baseball European Championship 2026,2.0,0.3551
+2026-07-18 10:30:00,200702,Belgium,26,1131.22,1133.25,2.03,Israel,1323.68,W,12,2,U-18 Baseball European Championship 2026,2.0,0.3233
+2026-07-18 10:30:00,200702,Israel,17,1323.68,1321.65,-2.03,Belgium,1131.22,L,2,12,U-18 Baseball European Championship 2026,2.0,0.6767
+2026-07-18 14:30:00,200703,Austria,29,1101.15,1100.39,-0.77,Spain,1379.72,L,0,12,U-18 Baseball European Championship 2026,2.0,0.2556
+2026-07-18 14:30:00,200703,Spain,14,1379.72,1380.48,0.77,Austria,1101.15,W,12,0,U-18 Baseball European Championship 2026,2.0,0.7444
+2026-07-18 14:30:00,200704,Czechia,20,1226.29,1228.02,1.73,Great Britain,1307.78,W,13,1,U-18 Baseball European Championship 2026,2.0,0.4224
+2026-07-18 14:30:00,200704,Great Britain,18,1307.78,1306.05,-1.73,Czechia,1226.29,L,1,13,U-18 Baseball European Championship 2026,2.0,0.5776
+2026-07-18 19:30:00,200705,Germany,22,1197.05,1198.25,1.2,France,1090.86,W,8,1,U-18 Baseball European Championship 2026,2.0,0.6005
+2026-07-18 19:30:00,200705,France,30,1090.86,1089.66,-1.2,Germany,1197.05,L,1,8,U-18 Baseball European Championship 2026,2.0,0.3995
+2026-07-18 19:30:00,200706,Italy,5,1659.58,1660.07,0.48,Netherlands,1328.66,W,4,3,U-18 Baseball European Championship 2026,2.0,0.7807
+2026-07-18 19:30:00,200706,Netherlands,16,1328.66,1328.18,-0.48,Italy,1659.58,L,3,4,U-18 Baseball European Championship 2026,2.0,0.2193

@@ -2,12 +2,8 @@
 // グローバル変数
 // =============================
 
-let dailyData = [];
-let nameMap = {};
 let chart = null;
 let historyData = [];
-let tournamentMap = {};
-
 
 const params = new URLSearchParams(window.location.search);
 let currentTeam = params.get("team");
@@ -114,48 +110,6 @@ function setupDate(){
 
 }
 
-// =====================================
-// 日本語名
-// =====================================
-
-function loadNames(csv){
-
-    const lines =
-        csv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-        const c =
-            lines[i].split(",");
-
-        nameMap[c[0].trim()]
-            =
-        c[1].trim();
-    }
-}
-
-// =====================================
-// daily読み込み
-// =====================================
-
-function loadDailyRanking(csv){
-
-    const lines =
-        csv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-
-        const c =
-            lines[i].split(",");
-
-        dailyData.push({
-            date:c[0],
-            rank:Number(c[1]),
-            team:c[2],
-            point:Number(c[3])
-        });
-    }
-}
-
 function showCountry(){
 
     if(!currentTeam){
@@ -207,15 +161,6 @@ function showCountry(){
     document.getElementById("worstPoint").textContent =
         Math.min(...history.map(x=>x.point)).toFixed(2);
 
-}
-
-
-function getLatestDate(){
-
-    return dailyData
-        .map(x=>x.date)
-        .sort()
-        .pop();
 }
 
 function createTeamSelector(){
@@ -274,20 +219,6 @@ function createTeamSelector(){
 
         select.appendChild(option);
     });
-}
-
-function toggleMenu(){
-
-    const menu =
-        document.getElementById("menu");
-
-    if(menu.style.display=="block"){
-        menu.style.display="none";
-    }
-
-    else{
-        menu.style.display="block";
-    }
 }
 
 function changeCountry(){
@@ -409,7 +340,7 @@ function loadHistory(csv){
 
     for(let i=1;i<lines.length;i++){
 
-        const c = lines[i].split(",");
+        const c = parseCSVLine(lines[i]);
 
         historyData.push({
 
@@ -435,39 +366,6 @@ function loadHistory(csv){
 
     }
 
-}
-
-function loadTournamentNames(csv){
-
-    const lines = csv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-
-        const c = lines[i].split(",");
-
-        tournamentMap[c[1].trim()] = c[3].trim();
-
-    }
-
-}
-
-function getTournamentName(name){
-
-    for(const keyword in tournamentMap){
-
-        let keys = keyword.split("|");
-
-        for(const key of keys){
-
-            if(name.includes(key.trim())){
-
-                return tournamentMap[keyword];
-
-            }
-        }
-    }
-
-    return name;
 }
 
 function getTournamentCategory(name){
@@ -631,35 +529,6 @@ function showTournamentStats(){
 
     });
 
-}
-
-function getAgeCategory(name){
-
-    if(name.includes("U-23") || name.includes("U23")){
-        return "U-23";
-    }
-
-    if(name.includes("U-18") || name.includes("U18")){
-        return "U-18";
-    }
-
-    if(name.includes("U-15") || name.includes("U15")){
-        return "U-15";
-    }
-
-    if(name.includes("U-12") || name.includes("U12")){
-        return "U-12";
-    }
-
-    if(name.includes("U-10") || name.includes("U10")){
-        return "U-10";
-    }
-
-    if(name.includes("Youth") || name.includes("Juventud")){
-        return "ユース";
-    }
-
-    return "制限なし";
 }
 
 function showAgeStats(){

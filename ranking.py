@@ -694,6 +694,9 @@ def update_ranking():
         if game_id in processed_games:
             continue
 
+        if game.get("status", "finished") != "finished":
+            continue
+
         # 日付が変わったら前日のランキング保存
         if current_date is not None and game["date"] != current_date:
 

@@ -2,8 +2,6 @@
 // グローバル変数
 // =====================================
 
-let dailyData = [];
-let nameMap = {};
 let currentDate = "";
 
 // =====================================
@@ -30,35 +28,6 @@ Promise.all([
     showLatestRanking(rankingCsv);
 
 });
-
-
-// 日本語読み込み
-
-function loadNames(nameCsv){
-
-    const lines=nameCsv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-        const cols=lines[i].split(",");
-        nameMap[cols[0].trim()]=cols[1].trim();
-    }
-}
-
-// daily読み込み
-function loadDailyRanking(dailyCsv){
-
-    const lines=dailyCsv.trim().split("\n");
-
-    for(let i=1;i<lines.length;i++){
-        const cols=lines[i].split(",");
-        dailyData.push({
-            date:cols[0],
-            rank:Number(cols[1]),
-            team:cols[2],
-            point:cols[3]
-        });
-    }
-}
 
 function showLastUpdate(){
 
@@ -295,23 +264,4 @@ function displayRanking(data){
 
         tbody.appendChild(tr);
     });
-}
-
-function toggleMenu(){
-
-    const menu =
-        document.getElementById("menu");
-
-    if(menu.style.display=="block"){
-
-        menu.style.display="none";
-
-    }
-
-    else{
-
-        menu.style.display="block";
-
-    }
-
 }
