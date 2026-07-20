@@ -265,6 +265,12 @@ for config in VIDEO_CONFIG:
         in df.groupby("date")
     }
 
+    ranking = sorted(
+        points.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )[:HISTORY_TOP]
+
     for d in all_dates:
 
         if d in date_groups:
@@ -274,14 +280,10 @@ for config in VIDEO_CONFIG:
                 points[row["team"]] = row["after"]
 
             ranking = sorted(
-
             points.items(),
-
             key=lambda x:x[1],
-
             reverse=True
-
-        )[:HISTORY_TOP]
+            )[:HISTORY_TOP]
 
         daily_points[d] = {
             team:point
@@ -618,6 +620,11 @@ for config in VIDEO_CONFIG:
             fps=20
         )
     )
+
+    # 現在の日時を取得
+    end = datetime.datetime.now()
+    # フォーマットして出力
+    print(end.strftime('%Y年%m月%d日 %H:%M:%S')) # 例: 2023年10月05日 14:30:45
 
     print(
         "完成:",

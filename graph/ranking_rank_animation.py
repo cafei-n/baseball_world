@@ -628,6 +628,11 @@ for config in VIDEO_CONFIG:
         )
     )
 
+    # 現在の日時を取得
+    end = datetime.datetime.now()
+    # フォーマットして出力
+    print(end.strftime('%Y年%m月%d日 %H:%M:%S')) # 例: 2023年10月05日 14:30:45
+
     print(
         "完成:",
         config["output"]

@@ -213,21 +213,32 @@ def get_importance(
     base = 5
     age = 1.0
 
-    for key,value in importance.items():
+    tournament_lower = tournament.lower()
 
-        keywords = key.split("|")
+    for key, value in importance.items():
 
-        for keyword in keywords:
+        # OR条件
+        patterns = key.split("|")
 
-            if keyword.lower() in tournament.lower():
+        for pattern in patterns:
 
+            # AND条件
+            words = pattern.split("&")
+
+            if all(
+                word.lower() in tournament_lower
+                for word in words
+            ):
                 base = value
                 break
+        else:
+            continue
 
-    for key,value in age_factor.items():
+        break
 
-        if key.lower() in tournament.lower():
+    for key, value in age_factor.items():
 
+        if key.lower() in tournament_lower:
             age = value
             break
 
@@ -282,11 +293,11 @@ def margin_factor(
     if diff <= 0:
         return 1.0
 
-    if diff >= 5:
+    if diff >= 10:
         return 1.5
 
     return 1.0 + (
-        diff * 0.1
+        diff * 0.05
     )
 
 # =====================================
