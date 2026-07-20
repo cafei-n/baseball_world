@@ -107,17 +107,23 @@ tournament_config = config_df[
 
 def get_tournament_name(tournament):
 
+    best_name = tournament
+    best_length = 0
+
     for _, row in tournament_config.iterrows():
 
         keywords = str(row["keyword"]).split("|")
 
         for keyword in keywords:
 
-            if keyword in tournament:
+            if keyword and keyword.lower() in tournament.lower():
 
-                return row["japanese"]
+                if len(keyword) > best_length:
 
-    return tournament
+                    best_name = row["japanese"]
+                    best_length = len(keyword)
+
+    return best_name
 
 age_config = config_df[
     config_df["type"] == "age"
@@ -125,13 +131,21 @@ age_config = config_df[
 
 def get_age_name(tournament):
 
+    best_name = ""
+    best_length = 0
+
     for _, row in age_config.iterrows():
 
-        if row["keyword"] in tournament:
+        keyword = str(row["keyword"])
 
-            return row["japanese"]
+        if keyword.lower() in tournament.lower():
 
-    return ""
+            if len(keyword) > best_length:
+
+                best_name = row["japanese"]
+                best_length = len(keyword)
+
+    return best_name
 
 # =========================
 # 履歴読み込み
