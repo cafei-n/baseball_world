@@ -30,7 +30,7 @@ TOURNAMENT_MARGIN_DAYS = 5
 # 動画設定
 # =========================
 
-END_DATE = "2026-07-15"
+END_DATE = datetime.datetime.now().strftime("%Y-%m-%d")
 
 
 VIDEO_CONFIG = [
