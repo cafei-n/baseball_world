@@ -23,7 +23,6 @@ https://www.wbscasia.org/en/events/2023-bfa-xi-u15-asian-baseball-championship/s
 https://www.wbscasia.org/en/events/xix-asian-games-2022-mens-baseball/schedule-and-results
 https://www.wbscasia.org/en/events/2023-bfa-xxx-asian-championship/schedule-and-results
 https://www.wbscamericas.org/en/events/iv-juegos-sudamericanos-de-la-juventud-panam-2026/schedule-and-results
-https://www.wbscamericas.org/en/events/2026-serie-clasificatoria-de-beisbol-femenino-womens-baseball-qualifying-series-2026/schedule-and-results
 https://www.wbscamericas.org/en/events/2026-copa-centroamericana-de-beisbol-masculino/schedule-and-results
 https://www.wbscamericas.org/en/events/2025-vii-campeonato-panamericano-sub-15-sudamerica/schedule-and-results
 https://www.wbscamericas.org/en/events/2025-vii-campeonato-panamericano-sub-15-caribe/schedule-and-results
@@ -36,7 +35,7 @@ https://www.wbscamericas.org/en/events/2025-juegos-bolivarianos-2026-mens-baseba
 https://www.wbscamericas.org/en/events/campeonato-panamericano-sub-15-u-15-pan-american-championship-2024/schedule-and-results
 https://www.wbscamericas.org/en/events/2024-campeonato-panamericano-u-18-pan-american-championship/schedule-and-results
 https://www.wbscamericas.org/en/events/2024-campeonato-panamericano-u-12-pan-american-championship/schedule-and-results
-https://www.wbscamericas.org/en/events/2024-vi-copa-de-beisbol-del-caribe/schedule-and-results
+##https://www.wbscamericas.org/en/events/2024-vi-copa-de-beisbol-del-caribe/schedule-and-results
 https://www.wbscamericas.org/en/events/2024-mens-baseball-south-american-championship-2024-campeonato-sudamericano-de-mayores-2024/schedule-and-results
 https://www.wbscamericas.org/en/events/2024-campeonato-panamericano-sub-10-u-10-pan-american-championship/schedule-and-results
 https://www.wbscamericas.org/en/events/2023-central-american-caribbean-games-qualifier/schedule-and-results
@@ -56,7 +55,6 @@ https://www.wbscamericas.org/en/events/2022-mens-baseball-south-american-champio
 https://www.wbscamericas.org/en/events/2022-u-18-mens-baseball-world-cup-qualifier/schedule-and-results
 https://www.wbscamericas.org/en/events/2022-u-10-international-championship/schedule-and-results
 https://www.wbscamericas.org/en/events/2022-iv-caribbean-baseball-cup/schedule-and-results
-https://www.wbsceurope.org/en/events/2025-mens-softball-european-championship/schedule-and-results
 https://www.wbsceurope.org/en/events/u12eurobaseball25-B-Pool/schedule-and-results
 https://www.wbsceurope.org/en/events/u12eurobaseball25/schedule-and-results
 https://www.wbsceurope.org/en/events/u18eurobaseball25-B-Pool-POL/schedule-and-results
@@ -94,8 +92,8 @@ https://www.wbscoceania.org/en/events/2025-U-23-mens-baseball-oceania-championsh
 https://www.wbscoceania.org/en/events/2025-u-15-mens-baseball-oceania-championship-2025/schedule-and-results
 https://www.wbscoceania.org/en/events/2024-u-12-baseball-wbsc-oceania-qualification-event/schedule-and-results
 https://www.wbscoceania.org/en/events/2024-u-18-baseball-wbsc-oceania-qualification-event/schedule-and-results
-https://www.wbscoceania.org/en/events/2022-u-23-mens-baseball-oceania-championship/schedule-and-results
-https://www.wbscoceania.org/en/events/2022-mens-baseball-pacific-mini-games/schedule-and-results
+##https://www.wbscoceania.org/en/events/2022-u-23-mens-baseball-oceania-championship/schedule-and-results
+##https://www.wbscoceania.org/en/events/2022-mens-baseball-pacific-mini-games/schedule-and-results
 https://www.wbscoceania.org/en/events/2022-u-18-mens-baseball-oceania-championship/schedule-and-results
 https://www.wbsceurope.org/en/events/2026-u12-eurobaseball-b-pool/schedule-and-results
 https://www.wbsceurope.org/en/events/2026-u-12-eurobaseball/schedule-and-results

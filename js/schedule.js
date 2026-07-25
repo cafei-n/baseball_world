@@ -207,8 +207,9 @@ function showSchedule(){
             tr.innerHTML = `
 
                 <td class="team">
-                    <a href="country.html?team=${encodeURIComponent(homeTeam)}">
-                    ${homeName}
+                    <a href="country.html?team=${encodeURIComponent(awayTeam)}">
+                        ${awayName}
+                    </a>
                 </td>
 
                 <td class="score">
@@ -216,8 +217,8 @@ function showSchedule(){
                 </td>
 
                 <td class="team">
-                    <a href="country.html?team=${encodeURIComponent(awayTeam)}">
-                        ${awayName}
+                    <a href="country.html?team=${encodeURIComponent(homeTeam)}">
+                        ${homeName}
                     </a>
                 </td>
 
