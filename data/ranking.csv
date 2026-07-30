@@ -28,20 +28,20 @@
 27,France,1125.28
 28,Austria,1119.36
 29,Croatia,1109.43
-30,Ukraine,1105.36
-31,China,1086.01
+30,China,1086.01
+31,Ukraine,1082.43
 32,Greece,1078.34
 33,Hong Kong,1058.79
 34,Pakistan,1043.9
-35,Slovakia,1015.53
+35,Slovakia,1028.65
 36,South Africa,1001.42
 37,Indonesia,994.93
 38,Curaçao,990.63
 39,Guam,982.63
 40,Sweden,960.51
-41,Ireland,949.73
-42,Palestine,946.96
-43,Lithuania,944.37
+41,Palestine,946.96
+42,Ireland,936.61
+43,Lithuania,930.44
 44,Sri Lanka,918.23
 45,Uganda,912.0
 46,Switzerland,904.95
@@ -52,30 +52,30 @@
 51,Palau,850.02
 52,Zimbabwe,848.0
 53,New Zealand,824.98
-54,Northern Mariana Islands,820.31
-55,Honduras,819.91
-56,Slovenia,816.63
-57,Ecuador,811.02
-58,El Salvador,808.95
-59,Guatemala,805.51
-60,Virgin Islands,805.38
-61,Bulgaria,803.35
-62,Norway,802.15
-63,Iran,801.64
-64,Serbia,800.78
-65,Chile,800.62
-66,Belarus,800.17
-67,Burkina Faso,800.0
-68,Kenya,800.0
-69,Nigeria,800.0
-70,Georgia,800.0
-71,Ghana,800.0
-72,Tanzania,800.0
-73,Benin,800.0
-74,Bahrain,800.0
-75,Haiti,800.0
-76,Denmark,799.36
-77,Poland,798.59
+54,Poland,821.52
+55,Northern Mariana Islands,820.31
+56,Honduras,819.91
+57,Norway,816.08
+58,Bulgaria,815.14
+59,Ecuador,811.02
+60,Serbia,810.26
+61,El Salvador,808.95
+62,Guatemala,805.51
+63,Virgin Islands,805.38
+64,Slovenia,804.84
+65,Iran,801.64
+66,Chile,800.62
+67,Belarus,800.17
+68,Burkina Faso,800.0
+69,Kenya,800.0
+70,Nigeria,800.0
+71,Georgia,800.0
+72,Ghana,800.0
+73,Tanzania,800.0
+74,Benin,800.0
+75,Bahrain,800.0
+76,Haiti,800.0
+77,Denmark,799.36
 78,Aruba,798.13
 79,Bahamas,797.9
 80,Costa Rica,797.41
@@ -93,5 +93,5 @@
 92,Türkiye,739.79
 93,Cambodia,736.6
 94,Afghanistan,729.18
-95,Finland,728.37
+95,Finland,718.89
 96,Malaysia,680.31
