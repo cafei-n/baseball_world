@@ -75,7 +75,44 @@
         <option value="4year">4年</option>
     </select>
 
-     <div id="lastUpdate" class="update-date"></div>
+</div>
+
+<div>
+
+    <label>
+        地域選択：
+    </label>
+
+    <select id="regionFilter" onchange="showDateRanking()">
+        <option value="">全地域</option>
+
+        <option value="Asia">アジア</option>
+        <option value="East Asia">東アジア</option>
+        <option value="Southeast Asia">東南アジア</option>
+        <option value="South Asia">南アジア</option>
+        <option value="West Asia">西アジア</option>
+
+        <option value="Europe">ヨーロッパ</option>
+        <option value="West Europe">西ヨーロッパ</option>
+        <option value="East Europe">東ヨーロッパ</option>
+        <option value="North Europe">北ヨーロッパ</option>
+        <option value="South Europe">南ヨーロッパ</option>
+
+        <option value="America">アメリカ</option>
+        <option value="North America">北米</option>
+        <option value="Central America">中米</option>
+        <option value="Caribbean">カリブ海</option>
+        <option value="South America">南米</option>
+
+        <option value="Africa">アフリカ</option>
+        <option value="East Africa">東アフリカ</option>
+        <option value="South Africa">南アフリカ</option>
+        <option value="West Africa">西アフリカ</option>
+
+        <option value="Oceania">オセアニア</option>
+    </select>
+
+    <div id="lastUpdate" class="update-date"></div>
 
 </div>
 
@@ -86,6 +123,9 @@
         <tr>
 
         <th>順位</th>
+        <th id="regionRankHeader" style="display:none;">
+            地域順位
+        </th>
         <th>国</th>
         <th>ポイント</th>
         <th>前回とのポイント差</th>

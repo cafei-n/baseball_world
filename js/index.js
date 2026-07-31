@@ -157,6 +157,51 @@ function displayRanking(data){
 
     tbody.innerHTML = "";
 
+    const region =
+    document.getElementById("regionFilter").value;
+    // 地域順位計算用（全世界データ）
+    const allData = [...data];
+
+    // 表示用データだけ絞る
+    if(region){
+        data = data.filter(row=>{
+            const tags =
+                regionMap[row.team] ?? "";
+            return tags.includes(region);
+        });
+    }
+
+    const regionRanking = {};
+
+    if(region){
+        const parentRegion = getParentRegion(region);
+        let rank = 1;
+        allData
+        .filter(row=>{
+            const tags =
+                regionMap[row.team] ?? "";
+            return tags.includes(parentRegion);
+        })
+        .sort((a,b)=>a.rank-b.rank)
+        .forEach(row=>{
+            regionRanking[row.team]=rank++;
+        });
+    }
+
+    document.getElementById("regionFilter")
+        .addEventListener("change",()=>{
+
+            const region =
+                document.getElementById("regionFilter").value;
+
+            document.getElementById("regionRankHeader")
+            .style.display =
+                region ? "" : "none";
+            displayRanking(rankingData);
+
+        });
+
+
     // 比較ランキング作成
     let compareRanking = {};
 
@@ -246,6 +291,12 @@ function displayRanking(data){
             <td class="rank">
                 ${row.rank}
             </td>
+                ${region?`
+            <td>
+                ${regionRanking[row.team] ?? "-"}
+            </td>
+            `:""
+                }
             <td>
                 <a href="country.html?team=${encodeURIComponent(row.team)}">
                 ${nameMap[row.team] ?? row.team}
@@ -264,4 +315,49 @@ function displayRanking(data){
 
         tbody.appendChild(tr);
     });
+}
+
+function getParentRegion(region){
+
+    if(
+        region.includes("Asia") &&
+        region!="Asia"
+    ){
+        return "Asia";
+    }
+
+    if(
+        region.includes("Europe") &&
+        region!="Europe"
+    ){
+        return "Europe";
+    }
+
+    if(
+        region.includes("America") &&
+        region!="America"
+    ){
+        return "America";
+    }
+
+    // カリビアンはアメリカ扱い
+    if(region.includes("Caribbean")){
+        return "America";
+    }
+
+    if(
+        region.includes("Oceania") &&
+        region!="Oceania"
+    ){
+        return "Oceania";
+    }
+
+    if(
+        region.includes("Africa") &&
+        region!="Africa"
+    ){
+        return "Africa";
+    }
+
+    return region;
 }

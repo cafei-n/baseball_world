@@ -117,6 +117,11 @@ function createTeamSelector(){
             "teamSelector"
         );
 
+    select.innerHTML = "";
+
+    const region =
+        document.getElementById("regionFilter").value;
+
     // 全チーム取得
     let teams =
         [...new Set(
@@ -143,7 +148,17 @@ function createTeamSelector(){
              order.indexOf(b);
     });
 
-    teams.forEach(team=>{
+    let filteredTeams = teams;
+
+    if(region){
+        filteredTeams = teams.filter(team=>{
+            const tags =
+                regionMap[team] ?? "";
+            return tags.includes(region);
+        });
+    }
+
+    filteredTeams.forEach(team=>{
 
         let option =
             document.createElement(
@@ -156,10 +171,12 @@ function createTeamSelector(){
             nameMap[team] ?? team;
 
         // TOP10を初期選択
-        if(
-            order.indexOf(team)<10
-        ){
-            option.selected=true;
+        if(region){
+            option.selected = true;
+        }else{
+            if(order.indexOf(team) < 10){
+                option.selected = true;
+            }
         }
 
         select.appendChild(option);
@@ -282,4 +299,20 @@ function updateMovie(){
     video.load();
 
     video.play();
+}
+
+function changeRegion(){
+
+    const select =
+        document.getElementById("teamSelector");
+
+    // 一度空にする
+    select.innerHTML = "";
+
+    // 国一覧を作り直す
+    createTeamSelector();
+
+    // グラフ更新
+    showHistory();
+
 }

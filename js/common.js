@@ -3,6 +3,7 @@
 // =====================================
 
 let nameMap = {};
+let regionMap = {};
 let tournamentMap = {};
 let dailyData = [];
 let aliasMap = {};
@@ -20,8 +21,12 @@ function loadNames(csv){
 
         const c = parseCSVLine(lines[i]);
 
-        nameMap[c[0].trim()] = c[1].trim();
+        nameMap[c[0]] = c[1];
+
+        regionMap[c[0]] = c[2];
+
     }
+
 }
 
 
