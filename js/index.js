@@ -3,6 +3,7 @@
 // =====================================
 
 let currentDate = "";
+let parentRegionMap = {};
 
 // =====================================
 // データ読み込み
@@ -14,14 +15,18 @@ Promise.all([
 
     fetch("data/ranking_daily.csv").then(r=>r.text()),
 
-    fetch("data/team_name_ja.csv").then(r=>r.text())
+    fetch("data/team_name_ja.csv").then(r=>r.text()),
+
+    fetch("js/region_parent.js").then(r=>r.json())
 
 ])
-.then(([rankingCsv,dailyCsv,nameCsv])=>{
+.then(([rankingCsv,dailyCsv,nameCsv,parentRegionJson])=>{
 
     loadNames(nameCsv);
 
     loadDailyRanking(dailyCsv);
+
+    parentRegionMap = parentRegionJson;
 
     showLastUpdate();
 
@@ -319,45 +324,6 @@ function displayRanking(data){
 
 function getParentRegion(region){
 
-    if(
-        region.includes("Asia") &&
-        region!="Asia"
-    ){
-        return "Asia";
-    }
+    return parentRegionMap[region] ?? region;
 
-    if(
-        region.includes("Europe") &&
-        region!="Europe"
-    ){
-        return "Europe";
-    }
-
-    if(
-        region.includes("America") &&
-        region!="America"
-    ){
-        return "America";
-    }
-
-    // カリビアンはアメリカ扱い
-    if(region.includes("Caribbean")){
-        return "America";
-    }
-
-    if(
-        region.includes("Oceania") &&
-        region!="Oceania"
-    ){
-        return "Oceania";
-    }
-
-    if(
-        region.includes("Africa") &&
-        region!="Africa"
-    ){
-        return "Africa";
-    }
-
-    return region;
 }
