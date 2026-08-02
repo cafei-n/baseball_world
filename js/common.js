@@ -105,37 +105,27 @@ function getTournamentName(name){
 
     for(const keyword in tournamentMap){
 
-        // AND条件
-        if(keyword.includes("&")){
+        // OR条件で分割（|が無ければ1要素だけ）
+        const patterns = keyword.split("|");
 
-            const keys = keyword.split("&");
+        for(const pattern of patterns){
 
-            if(keys.every(key => name.includes(key.trim()))){
-                return tournamentMap[keyword];
+            // AND条件
+            if(pattern.includes("&")){
+
+                const keys = pattern.split("&");
+
+                if(keys.every(key => name.includes(key.trim()))){
+                    return tournamentMap[keyword];
+                }
             }
-
-        }
-
-        // OR条件
-        else if(keyword.includes("|")){
-
-            const keys = keyword.split("|");
-
-            if(keys.some(key => name.includes(key.trim()))){
-                return tournamentMap[keyword];
+            // 単独文字列
+            else{
+                if(name.includes(pattern.trim())){
+                    return tournamentMap[keyword];
+                }
             }
-
         }
-
-        // 単独文字列
-        else{
-
-            if(name.includes(keyword)){
-                return tournamentMap[keyword];
-            }
-
-        }
-
     }
 
     return name;

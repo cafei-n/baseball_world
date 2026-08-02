@@ -492,7 +492,7 @@ def process_game(
         print(repr(away))
         print(home in ratings)
         print(away in ratings)
-        return
+        return False
 
     home_before = ratings[home]
 
@@ -642,6 +642,8 @@ def process_game(
         f" ({away_change:+.2f})"
     )
 
+    return True
+
 # =====================================
 # 新規試合処理
 # =====================================
@@ -720,13 +722,11 @@ def update_ranking():
 
         current_date = game["date"]
 
-        new_games += 1
-
         print(
             f"\n[{index}/{total}] 新規試合"
         )
 
-        process_game(
+        processed = process_game(
             game,
             ratings,
             alias,
@@ -736,9 +736,9 @@ def update_ranking():
             unknown_teams
         )
 
-        processed_games.add(
-            game_id
-        )
+        if processed:
+            processed_games.add(game_id)
+            new_games += 1
 
     # 最後の日付分を保存
     if current_date is not None and current_date != last_saved_date:
