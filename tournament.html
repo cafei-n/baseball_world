@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <title>大会情報 | World Baseball Ranking</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+
+<body>
+
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        世界野球ランキング
+    </a>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+<nav id="menu" class="menu">
+
+    <a href="index.html">
+        世界ランキング
+    </a>
+
+    <a href="history.html">
+        グラフ・アニメーション
+    </a>
+
+    <a href="country.html">
+        国別戦績
+    </a>
+
+    <a href="schedule.html">
+        試合日程・結果
+    </a>
+
+    <a href="tournament.html">
+        大会情報
+    </a>
+
+</nav>
+
+<h1>
+    大会情報
+</h1>
+
+<div>
+
+    <label>
+        年選択：
+    </label>
+
+    <select
+        id="yearSelect"
+        onchange="changeYear()">
+    </select>
+
+</div>
+
+<div>
+
+    <label>
+        大会選択：
+    </label>
+
+    <select
+        id="tournamentSelect"
+        onchange="showTournament()">
+    </select>
+
+</div>
+
+<div id="lastUpdate" class="update-date"></div>
+
+<h2>
+    大会概要
+</h2>
+
+<table>
+
+    <tbody id="tournamentInfo">
+    </tbody>
+
+</table>
+
+<h2>
+    試合結果
+</h2>
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>
+                日付
+            </th>
+
+            <th>
+                ビジター
+            </th>
+
+            <th>
+                スコア
+            </th>
+
+            <th>
+                ホーム
+            </th>
+
+            <th>
+                会場
+            </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="matchList">
+    </tbody>
+
+</table>
+
+<h2>
+    参加国ランキング
+</h2>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th onclick="sortTeams('startRank')">
+                開始順位
+            </th>
+
+            <th onclick="sortTeams('endRank')">
+                終了順位
+            </th>
+
+            <th onclick="sortTeams('country')">
+                国
+            </th>
+
+            <th onclick="sortTeams('startPoint')">
+                開始ポイント
+            </th>
+
+            <th onclick="sortTeams('endPoint')">
+                終了ポイント
+            </th>
+
+            <th onclick="sortTeams('change')">
+                ポイント変動
+            </th>
+            <th onclick="sortTeams('wins')">
+                勝敗
+            </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="teamRanking">
+
+    </tbody>
+
+</table>
+
+<h2>
+    順位推移
+</h2>
+
+<div>
+
+    <canvas
+        id="rankChart">
+    </canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/common.js"></script>
+
+<script src="js/tournament.js"></script>
+
+</body>
+
+</html>

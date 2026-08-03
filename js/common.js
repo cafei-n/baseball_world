@@ -103,33 +103,44 @@ function loadTournamentNames(csv){
 
 function getTournamentName(name){
 
+    let result = name;
+
     for(const keyword in tournamentMap){
 
-        // OR条件で分割（|が無ければ1要素だけ）
         const patterns = keyword.split("|");
 
         for(const pattern of patterns){
 
-            // AND条件
             if(pattern.includes("&")){
-
+                
                 const keys = pattern.split("&");
-
                 if(keys.every(key => name.includes(key.trim()))){
-                    return tournamentMap[keyword];
+                    result = tournamentMap[keyword];
+                    break;
                 }
             }
-            // 単独文字列
             else{
                 if(name.includes(pattern.trim())){
-                    return tournamentMap[keyword];
+                    result = tournamentMap[keyword];
+                    break;
                 }
             }
         }
+
+        if(result !== name){
+            break;
+        }
+    }
+    const age =
+        getAgeCategory(name);
+
+    if(
+        age !== "制限なし"
+    ){
+        return age + " " + result;
     }
 
-    return name;
-
+    return result;
 }
 
 
