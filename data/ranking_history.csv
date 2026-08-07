@@ -4579,3 +4579,57 @@
 2026-08-02 20:30:00,203981,Cuba,12,1450.0,1466.18,16.18,Dominican Republic,1675.12,W,9,6,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.2965
 2026-08-03 15:00:00,203964,Curaçao,39,981.95,1000.15,18.2,Mexico,1469.32,W,1,0,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.1335
 2026-08-03 15:00:00,203964,Mexico,10,1469.32,1451.12,-18.2,Curaçao,981.95,L,0,1,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.8665
+2026-08-04 10:00:00,188654,Israel,18,1291.79,1292.11,0.32,Türkiye,739.79,W,18,0,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.8927
+2026-08-04 10:00:00,188654,Türkiye,91,739.79,739.47,-0.32,Israel,1291.79,L,0,18,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.1073
+2026-08-04 10:00:00,188981,Ukraine,34,1054.12,1052.35,-1.77,Sweden,960.51,L,1,21,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.5889
+2026-08-04 10:00:00,188981,Sweden,40,960.51,962.28,1.77,Ukraine,1054.12,W,21,1,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.4111
+2026-08-04 11:00:00,203986,Puerto Rico,9,1484.48,1493.25,8.77,Colombia,1377.26,W,8,6,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.6014
+2026-08-04 11:00:00,203986,Colombia,15,1377.26,1368.49,-8.77,Puerto Rico,1484.48,L,6,8,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.3986
+2026-08-04 13:30:00,188655,Croatia,29,1109.43,1107.78,-1.65,Slovakia,1056.21,L,0,12,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.5509
+2026-08-04 13:30:00,188655,Slovakia,33,1056.21,1057.86,1.65,Croatia,1109.43,W,12,0,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.4491
+2026-08-04 14:00:00,188982,Belgium,26,1148.94,1149.56,0.62,Denmark,799.36,W,11,1,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.7927
+2026-08-04 14:00:00,188982,Denmark,75,799.36,798.74,-0.62,Belgium,1148.94,L,1,11,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.2073
+2026-08-04 15:00:00,203987,Panama,13,1416.02,1429.17,13.15,Cuba,1466.18,W,6,2,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.452
+2026-08-04 15:00:00,203987,Cuba,10,1466.18,1453.03,-13.15,Panama,1416.02,L,2,6,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.548
+2026-08-04 17:00:00,188656,Switzerland,46,904.95,904.55,-0.4,Spain,1390.4,L,3,16,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.1344
+2026-08-04 17:00:00,188656,Spain,14,1390.4,1390.8,0.4,Switzerland,904.95,W,16,3,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.8656
+2026-08-04 18:00:00,188983,Germany,19,1246.93,1247.61,0.68,Lithuania,928.53,W,10,0,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.7724
+2026-08-04 18:00:00,188983,Lithuania,43,928.53,927.85,-0.68,Germany,1246.93,L,0,10,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.2276
+2026-08-04 19:00:00,203989,Nicaragua,20,1246.34,1242.08,-4.26,Dominican Republic,1658.94,L,0,5,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.1703
+2026-08-04 19:00:00,203989,Dominican Republic,4,1658.94,1663.2,4.26,Nicaragua,1246.34,W,5,0,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.8297
+2026-08-05 10:00:00,188660,Greece,31,1078.34,1076.89,-1.45,Switzerland,904.55,L,4,6,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.6608
+2026-08-05 10:00:00,188660,Switzerland,46,904.55,906.0,1.45,Greece,1078.34,W,6,4,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.3392
+2026-08-05 10:00:00,188984,Denmark,75,798.74,797.92,-0.82,Ukraine,1052.35,L,3,15,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.2742
+2026-08-05 10:00:00,188984,Ukraine,34,1052.35,1053.18,0.82,Denmark,798.74,W,15,3,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.7258
+2026-08-05 11:00:00,203994,Cuba,11,1453.03,1462.68,9.65,Colombia,1368.49,W,3,0,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.5804
+2026-08-05 11:00:00,203994,Colombia,15,1368.49,1358.84,-9.65,Cuba,1453.03,L,0,3,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.4196
+2026-08-05 13:30:00,188658,Croatia,29,1107.78,1108.29,0.51,Türkiye,739.47,W,10,4,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.8043
+2026-08-05 13:30:00,188658,Türkiye,91,739.47,738.96,-0.51,Croatia,1107.78,L,4,10,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.1957
+2026-08-05 14:00:00,188985,Belgium,26,1149.56,1147.88,-1.68,Sweden,962.28,L,2,7,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.6723
+2026-08-05 14:00:00,188985,Sweden,40,962.28,963.96,1.68,Belgium,1149.56,W,7,2,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.3277
+2026-08-05 15:00:00,203993,Puerto Rico,9,1493.25,1474.43,-18.82,Nicaragua,1242.08,L,3,9,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.7239
+2026-08-05 15:00:00,203993,Nicaragua,20,1242.08,1260.9,18.82,Puerto Rico,1493.25,W,9,3,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.2761
+2026-08-05 17:00:00,188659,Slovakia,33,1057.86,1056.99,-0.87,Israel,1292.11,L,2,15,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.2893
+2026-08-05 17:00:00,188659,Israel,18,1292.11,1292.98,0.87,Slovakia,1057.86,W,15,2,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.7107
+2026-08-05 18:00:00,188986,Poland,51,850.89,850.35,-0.54,Germany,1247.61,L,1,15,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.1791
+2026-08-05 18:00:00,188986,Germany,20,1247.61,1248.15,0.54,Poland,850.89,W,15,1,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.8209
+2026-08-05 22:30:00,203997,Panama,13,1429.17,1444.09,14.92,Dominican Republic,1663.2,W,4,3,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.2894
+2026-08-05 22:30:00,203997,Dominican Republic,4,1663.2,1648.28,-14.92,Panama,1429.17,L,3,4,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.7106
+2026-08-06 10:00:00,200001,Israel,18,1292.98,1293.97,0.99,Croatia,1108.29,W,15,0,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.6701
+2026-08-06 10:00:00,200001,Croatia,29,1108.29,1107.3,-0.99,Israel,1292.98,L,0,15,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.3299
+2026-08-06 10:00:00,188987,Ukraine,34,1053.18,1051.95,-1.23,Belgium,1147.88,L,3,15,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.4101
+2026-08-06 10:00:00,188987,Belgium,26,1147.88,1149.11,1.23,Ukraine,1053.18,W,15,3,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.5899
+2026-08-06 11:00:00,204000,Cuba,11,1462.68,1448.31,-14.37,Nicaragua,1260.9,L,5,6,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.6845
+2026-08-06 11:00:00,204000,Nicaragua,19,1260.9,1275.28,14.37,Cuba,1462.68,W,6,5,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.3155
+2026-08-06 13:30:00,188664,Türkiye,91,738.96,738.28,-0.68,Slovakia,1056.99,L,1,11,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.2278
+2026-08-06 13:30:00,188664,Slovakia,33,1056.99,1057.68,0.68,Türkiye,738.96,W,11,1,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.7722
+2026-08-06 14:00:00,188988,Sweden,40,963.96,964.89,0.93,Denmark,797.92,W,9,2,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.6541
+2026-08-06 14:00:00,188988,Denmark,76,797.92,796.98,-0.93,Sweden,963.96,L,2,9,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.3459
+2026-08-06 15:00:00,203999,Panama,13,1444.09,1433.26,-10.83,Puerto Rico,1474.43,L,1,4,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.4709
+2026-08-06 15:00:00,203999,Puerto Rico,9,1474.43,1485.26,10.83,Panama,1444.09,W,4,1,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.5291
+2026-08-06 17:00:00,200000,Spain,14,1390.8,1391.29,0.48,Greece,1076.89,W,14,13,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.7694
+2026-08-06 17:00:00,200000,Greece,31,1076.89,1076.4,-0.48,Spain,1390.8,L,13,14,U-23 Baseball European Championship B Pool 2026 - Group Spain,2.0,0.2306
+2026-08-06 18:00:00,188989,Lithuania,43,927.85,926.13,-1.72,Poland,850.35,L,1,11,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.5738
+2026-08-06 18:00:00,188989,Poland,51,850.35,852.07,1.72,Lithuania,927.85,W,11,1,U-23 Baseball European Championship B Pool 2026 - Group Germany,2.0,0.4262
+2026-08-06 19:00:00,203998,Dominican Republic,4,1648.28,1654.22,5.95,Colombia,1358.84,W,5,1,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.7523
+2026-08-06 19:00:00,203998,Colombia,15,1358.84,1352.9,-5.95,Dominican Republic,1648.28,L,1,5,XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,20.0,0.2477
