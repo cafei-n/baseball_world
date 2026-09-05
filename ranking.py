@@ -51,6 +51,10 @@ DAILY_HISTORY_FILE = os.path.join(
     "ranking_daily.csv"
 )
 
+VIDEO_FLAG_FILE = os.path.join(
+    DATA_DIR,
+    "video_update.flag"
+)
 
 # =====================================
 # CSV読み込み
@@ -764,6 +768,16 @@ def update_ranking():
             game["date"]
             for game in results
         )
+
+        # ランキングに影響する新規試合があった場合動画更新フラグを作成
+        with open(
+            VIDEO_FLAG_FILE,
+            "w",
+            encoding="utf-8"
+        ) as f:
+            f.write("update")
+
+        print("動画更新フラグを作成しました")
 
     return ratings
 
