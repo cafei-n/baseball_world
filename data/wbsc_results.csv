@@ -2343,14 +2343,14 @@ BFA XIV U18 Asian Baseball Championship 2026,2026-09-09 13:30:00,Korea,Thailand,
 BFA XIV U18 Asian Baseball Championship 2026,2026-09-09 13:30:00,Japan,Philippines,0,0,0,0,0,0,Taipei Tianmu Baseball Stadium,"Shilin District, Taipei City",0,207386,scheduled
 BFA XIV U18 Asian Baseball Championship 2026,2026-09-09 18:30:00,"Hong Kong, China",Sri Lanka,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207387,scheduled
 BFA XIV U18 Asian Baseball Championship 2026,2026-09-09 18:30:00,Chinese Taipei,Singapore,0,0,0,0,0,0,Taipei Tianmu Baseball Stadium,"Shilin District, Taipei City",0,207388,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 13:30:00,B4,C4,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207389,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 13:30:00,B2,C2,0,0,0,0,0,0,Taipei Dome,Taipei,0,207391,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 18:30:00,B3,C3,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207390,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 18:30:00,B1,C1,0,0,0,0,0,0,Taipei Dome,Taipei,0,207392,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 13:30:00,C3,B4,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207393,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 13:30:00,C1,B2,0,0,0,0,0,0,Taipei Dome,Taipei,0,207395,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 18:30:00,B3,C4,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207394,scheduled
-BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 18:30:00,B1,C2,0,0,0,0,0,0,Taipei Dome,Taipei,0,207396,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 13:30:00,A4,B4,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207389,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 13:30:00,A2,B2,0,0,0,0,0,0,Taipei Dome,Taipei,0,207391,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 18:30:00,A3,B3,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207390,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-11 18:30:00,A1,B1,0,0,0,0,0,0,Taipei Dome,Taipei,0,207392,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 13:30:00,B3,A4,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207393,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 13:30:00,B1,A2,0,0,0,0,0,0,Taipei Dome,Taipei,0,207395,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 18:30:00,A3,B4,0,0,0,0,0,0,XinZhuang Baseball Stadium,New Taipei,0,207394,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-12 18:30:00,A1,B2,0,0,0,0,0,0,Taipei Dome,Taipei,0,207396,scheduled
 XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-21 12:00:00,Thailand,"Hong Kong, China",0,0,0,0,0,0,,,0,207818,scheduled
 XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-21 12:00:00,Palestine,Philippines,0,0,0,0,0,0,,,0,207819,scheduled
 XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-21 18:30:00,Korea,Chinese Taipei,0,0,0,0,0,0,,,0,207820,scheduled
@@ -2373,3 +2373,5 @@ XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-26 18:30:00,A1,B2,0,0,
 XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-26 18:30:00,B1,A2,0,0,0,0,0,0,,,0,207838,scheduled
 XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-27 12:00:00,S3,S4,0,0,0,0,0,0,,,0,207839,scheduled
 XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,2026-09-27 18:30:00,S1,S2,0,0,0,0,0,0,,,0,207840,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-13 13:30:00,3rd Place After Super Round,4th Place After Super Round,0,0,0,0,0,0,Taipei Dome,Taipei,0,208116,scheduled
+BFA XIV U18 Asian Baseball Championship 2026,2026-09-13 18:30:00,1st Place After Super Round,2nd Place After Super Round,0,0,0,0,0,0,Taipei Dome,Taipei,0,208117,scheduled
