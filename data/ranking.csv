@@ -1,11 +1,11 @@
 ﻿rank,team,point
-1,Japan,1918.52
+1,Japan,1916.85
 2,Venezuela,1811.54
 3,United States of America,1773.2
 4,Dominican Republic,1654.22
 5,Italy,1640.33
-6,Chinese Taipei,1622.55
-7,Republic of Korea,1567.77
+6,Chinese Taipei,1623.05
+7,Republic of Korea,1569.44
 8,Canada,1524.0
 9,Puerto Rico,1498.27
 10,Australia,1464.34
@@ -21,7 +21,7 @@
 20,Germany,1249.79
 21,Czechia,1239.19
 22,Argentina,1221.93
-23,Philippines,1202.29
+23,Philippines,1201.79
 24,Brazil,1175.61
 25,Russia,1173.5
 26,Belgium,1148.7
@@ -30,7 +30,7 @@
 29,Croatia,1106.08
 30,China,1090.47
 31,Greece,1078.22
-32,Hong Kong,1058.88
+32,Hong Kong,1059.92
 33,Slovakia,1057.93
 34,Ukraine,1053.09
 35,Pakistan,1041.12
@@ -42,10 +42,10 @@
 41,Palestine,946.96
 42,Ireland,930.12
 43,Lithuania,923.56
-44,Sri Lanka,916.63
+44,Sri Lanka,915.2
 45,Uganda,912.0
 46,Switzerland,904.55
-47,Thailand,894.01
+47,Thailand,892.97
 48,Peru,890.6
 49,American Samoa,880.0
 50,Hungary,863.04
@@ -86,7 +86,7 @@
 85,Bolivia,765.61
 86,Laos,761.28
 87,Nepal,759.38
-88,Singapore,753.19
+88,Singapore,754.62
 89,Vietnam,750.93
 90,Fiji,748.23
 91,Türkiye,737.68
