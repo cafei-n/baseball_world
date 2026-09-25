@@ -4749,3 +4749,27 @@
 2026-09-13 13:30:00,208116,Philippines,23,1201.28,1200.78,-0.5,Chinese Taipei,1622.54,L,0,13,BFA XIV U18 Asian Baseball Championship 2026,2.0,0.1657
 2026-09-13 18:30:00,208117,Republic of Korea,7,1569.95,1571.69,1.74,Japan,1917.36,W,2,0,BFA XIV U18 Asian Baseball Championship 2026,2.0,0.2086
 2026-09-13 18:30:00,208117,Japan,1,1917.36,1915.62,-1.74,Republic of Korea,1569.95,L,0,2,BFA XIV U18 Asian Baseball Championship 2026,2.0,0.7914
+2026-09-21 12:00:00,207818,Thailand,47,891.87,906.97,15.1,Hong Kong,1060.63,W,10,7,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.3435
+2026-09-21 12:00:00,207818,Hong Kong,32,1060.63,1045.53,-15.1,Thailand,891.87,L,7,10,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.6565
+2026-09-21 12:00:00,207819,Palestine,41,946.96,938.74,-8.22,Philippines,1200.78,L,0,12,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.2741
+2026-09-21 12:00:00,207819,Philippines,23,1200.78,1209.0,8.22,Palestine,946.96,W,12,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.7259
+2026-09-21 18:30:00,207820,Republic of Korea,7,1571.69,1585.42,13.73,Chinese Taipei,1623.04,W,5,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.4509
+2026-09-21 18:30:00,207820,Chinese Taipei,6,1623.04,1609.31,-13.73,Republic of Korea,1571.69,L,0,5,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.5491
+2026-09-21 18:30:00,207821,China,30,1090.47,1089.34,-1.13,Japan,1915.62,L,3,11,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.0404
+2026-09-21 18:30:00,207821,Japan,1,1915.62,1916.75,1.13,China,1090.47,W,11,3,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.9596
+2026-09-22 12:00:00,207823,Philippines,23,1209.0,1192.45,-16.55,China,1089.34,L,8,15,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.6128
+2026-09-22 12:00:00,207823,China,30,1089.34,1105.89,16.55,Philippines,1209.0,W,15,8,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.3872
+2026-09-22 12:00:00,207822,Chinese Taipei,6,1609.31,1611.21,1.9,Thailand,906.97,W,15,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.9368
+2026-09-22 12:00:00,207822,Thailand,46,906.97,905.07,-1.9,Chinese Taipei,1609.31,L,0,15,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.0632
+2026-09-22 18:30:00,207825,Japan,1,1916.75,1917.44,0.69,Palestine,938.74,W,15,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.9771
+2026-09-22 18:30:00,207825,Palestine,41,938.74,938.05,-0.69,Japan,1916.75,L,0,15,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.0229
+2026-09-22 18:30:00,207824,Hong Kong,34,1045.53,1042.17,-3.36,Republic of Korea,1585.42,L,0,13,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.1119
+2026-09-22 18:30:00,207824,Republic of Korea,7,1585.42,1588.78,3.36,Hong Kong,1045.53,W,13,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.8881
+2026-09-23 12:00:00,207826,Republic of Korea,7,1588.78,1590.8,2.03,Thailand,905.07,W,18,1,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.9324
+2026-09-23 12:00:00,207826,Thailand,46,905.07,903.04,-2.03,Republic of Korea,1588.78,L,1,18,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.0676
+2026-09-23 12:00:00,207827,Japan,1,1917.44,1919.01,1.57,Philippines,1192.45,W,7,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.9417
+2026-09-23 12:00:00,207827,Philippines,23,1192.45,1190.88,-1.57,Japan,1917.44,L,0,7,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.0583
+2026-09-23 18:30:00,207829,China,30,1105.89,1115.53,9.64,Palestine,938.05,W,9,1,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.6557
+2026-09-23 18:30:00,207829,Palestine,41,938.05,928.41,-9.64,China,1105.89,L,1,9,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.3443
+2026-09-23 18:30:00,207830,Chinese Taipei,6,1611.21,1614.24,3.04,Hong Kong,1042.17,W,11,0,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.8988
+2026-09-23 18:30:00,207830,Hong Kong,34,1042.17,1039.14,-3.04,Chinese Taipei,1611.21,L,0,11,XX Aichi-Nagoya Asian Games 2026 | Men's Baseball,20.0,0.1012
