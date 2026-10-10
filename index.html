@@ -155,8 +155,42 @@
 
 </table>
 
+<!-- 世界ランキングマップ -->
+<section id="worldMapSection" class="world-map-section">
+    <h2>世界ランキングマップ</h2>
+
+    <div class="world-map-controls">
+        <label for="worldMapYear">表示年：</label>
+        <select id="worldMapYear">
+        </select>
+        <span id="worldMapDate" class="world-map-date"></span>
+    </div>
+
+    <p class="world-map-help">
+        国をクリックすると、その国のページを開きます。
+    </p>
+
+    <div id="worldRankingMap" role="img" aria-label="年別の野球世界ランキング地図"></div>
+
+    <div class="world-map-legend">
+        <span>上位</span>
+        <span class="legend-color legend-rank-1"></span>
+        <span class="legend-color legend-rank-2"></span>
+        <span class="legend-color legend-rank-3"></span>
+        <span class="legend-color legend-rank-4"></span>
+        <span class="legend-color legend-rank-5"></span>
+        <span>下位</span>
+        <span class="legend-no-data"></span>
+        <span>データなし</span>
+    </div>
+
+    <p id="worldMapStatus" class="world-map-status"></p>
+</section>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/index.js"></script>
+<script src="js/world_map.js"></script>
 
 </body>
 

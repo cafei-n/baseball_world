@@ -589,3 +589,107 @@ schedule用
 
 
 }
+
+
+
+/* ===========================
+   世界ランキングマップ
+=========================== */
+
+.world-map-section {
+    margin: 50px auto 30px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    max-width: 1500px;
+    background: #ffffff;
+}
+
+.world-map-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.world-map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.world-map-controls label {
+    font-weight: bold;
+}
+
+.world-map-date {
+    color: #555555;
+    font-size: 14px;
+}
+
+.world-map-help {
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+#worldRankingMap {
+    width: 100%;
+    min-height: 300px;
+    height: min(65vw, 650px);
+}
+
+.world-map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555555;
+}
+
+.legend-color,
+.legend-no-data {
+    display: inline-block;
+    width: 24px;
+    height: 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 2px;
+}
+
+.legend-rank-1 { background: #08306b; }
+.legend-rank-2 { background: #2171b5; }
+.legend-rank-3 { background: #6baed6; }
+.legend-rank-4 { background: #c6dbef; }
+.legend-rank-5 { background: #edf3f8; }
+.legend-no-data { background: #e5e5e5; }
+
+.world-map-status {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #777777;
+    font-size: 12px;
+}
+
+@media(max-width:700px){
+
+    .world-map-section {
+        padding: 12px;
+        margin-top: 35px;
+    }
+
+    #worldRankingMap {
+        min-height: 250px;
+        height: 70vw;
+    }
+
+    .world-map-date {
+        width: 100%;
+        text-align: center;
+    }
+
+}

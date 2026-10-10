@@ -32,6 +32,11 @@ Promise.all([
 
     showLatestRanking(rankingCsv);
 
+    // 世界ランキングマップを初期化
+    if(typeof initWorldMap === "function"){
+        initWorldMap();
+    }
+
 });
 
 function showLastUpdate(){
