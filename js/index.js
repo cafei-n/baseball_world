@@ -88,11 +88,15 @@ function showLatestRanking(){
 
     document.getElementById("dateSelect").value = latest;
 
+    // ランキングニュースを生成
+    showRankingNews(latest);
+
     displayRanking(
         getRanking(latest)
     );
 
 }
+
 
 //日付指定ランキング読み込み
 function showDateRanking(){
@@ -325,5 +329,336 @@ function displayRanking(data){
 function getParentRegion(region){
 
     return parentRegionMap[region] ?? region;
+
+}
+
+
+ // =====================================
+ // ランキングニュース
+ // =====================================
+
+function showRankingNews(latestDate){
+
+    const newsList =
+        document.getElementById("rankingNewsList");
+
+    newsList.innerHTML = "";
+
+    // 日付一覧
+    const dates = [...new Set(
+        dailyData.map(x=>x.date)
+    )].sort();
+
+    // 前回のランキング日付
+    const previousDate = dates
+        .filter(date=>date < latestDate)
+        .pop();
+
+    const currentRanking = getRanking(latestDate);
+
+    const previousRanking = previousDate
+        ? getRanking(previousDate)
+        : [];
+
+    // 初回データなど、比較対象がない場合
+    if(
+        currentRanking.length == 0 ||
+        previousRanking.length == 0
+    ){
+        newsList.innerHTML =
+            "<li>現在、ランキングニュースはありません</li>";
+        return;
+    }
+
+    // チーム別ランキング
+    const currentMap = {};
+    const previousMap = {};
+
+    currentRanking.forEach(row=>{
+        currentMap[row.team] = row;
+    });
+
+    previousRanking.forEach(row=>{
+        previousMap[row.team] = row;
+    });
+
+    // 優先度の高いニュースを登録
+    const candidates = [];
+
+    function addNews(priority, team, title){
+
+        candidates.push({
+            priority,
+            team,
+            title
+        });
+
+    }
+
+    // -------------------------------------
+    // 1. 世界1位が交代
+    // -------------------------------------
+
+    const currentWorldFirst = currentRanking[0];
+    const previousWorldFirst = previousRanking[0];
+
+    if(
+        currentWorldFirst.team !== previousWorldFirst.team
+    ){
+
+        const name =
+            nameMap[currentWorldFirst.team] ??
+            currentWorldFirst.team;
+
+        const previousName =
+            nameMap[previousWorldFirst.team] ??
+            previousWorldFirst.team;
+
+        addNews(
+            1,
+            currentWorldFirst.team,
+            `${name}が世界一位へ。${previousName}から頂点を奪う`
+        );
+
+    }
+
+    // -------------------------------------
+    // 2・3. 過去最高順位の更新、初のTOP10入り
+    // -------------------------------------
+
+    currentRanking.forEach(row=>{
+
+        const oldRankings = dailyData.filter(x=>
+            x.team === row.team &&
+            x.date < latestDate
+        );
+
+        if(oldRankings.length === 0){
+            return;
+        }
+
+        const name =
+            nameMap[row.team] ?? row.team;
+
+        const bestRank = Math.min(
+            ...oldRankings.map(x=>x.rank)
+        );
+
+        const wasTop10 = oldRankings.some(x=>
+            x.rank <= 10
+        );
+
+        // 過去最高順位を更新
+        if(row.rank < bestRank){
+
+            addNews(
+                2,
+                row.team,
+                `${name}が${row.rank}位に。過去最高の${bestRank}位を上回る`
+            );
+
+        }
+
+        // 初のTOP10入り
+        else if(row.rank <= 10 && !wasTop10){
+
+            addNews(
+                3,
+                row.team,
+                `${name}が初の世界ランキングTOP10入り`
+            );
+
+        }
+
+    });
+
+    // -------------------------------------
+    // 4. 地域1位が交代
+    // -------------------------------------
+
+    const regionNames = {
+        "Asia": "アジア",
+        "East Asia": "東アジア",
+        "Southeast Asia": "東南アジア",
+        "South Asia": "南アジア",
+        "West Asia": "西アジア",
+
+        "Europe": "ヨーロッパ",
+        "West Europe": "西ヨーロッパ",
+        "East Europe": "東ヨーロッパ",
+        "North Europe": "北ヨーロッパ",
+        "South Europe": "南ヨーロッパ",
+
+        "America": "アメリカ",
+        "North America": "北米",
+        "Central America": "中米",
+        "Caribbean": "カリブ海",
+        "South America": "南米",
+
+        "Africa": "アフリカ",
+        "East Africa": "東アフリカ",
+        "South Africa": "南アフリカ",
+        "West Africa": "西アフリカ",
+
+        "Oceania": "オセアニア"
+    };
+
+    // team_name_ja.csvに登録されている地域を取得
+    const allRegions = new Set();
+
+    Object.values(regionMap).forEach(tags=>{
+
+        String(tags ?? "")
+            .split("|")
+            .map(tag=>tag.trim())
+            .filter(Boolean)
+            .forEach(tag=>allRegions.add(tag));
+
+    });
+
+    function getRegionalLeader(ranking, region){
+
+        return ranking
+            .filter(row=>{
+
+                const tags = String(
+                    regionMap[row.team] ?? ""
+                ).split("|").map(tag=>tag.trim());
+
+                return tags.includes(region);
+
+            })
+            .sort((a,b)=>a.rank-b.rank)[0];
+
+    }
+
+    allRegions.forEach(region=>{
+
+        const currentLeader =
+            getRegionalLeader(currentRanking, region);
+
+        const previousLeader =
+            getRegionalLeader(previousRanking, region);
+
+        if(
+            !currentLeader ||
+            !previousLeader ||
+            currentLeader.team === previousLeader.team
+        ){
+            return;
+        }
+
+        const name =
+            nameMap[currentLeader.team] ??
+            currentLeader.team;
+
+        const regionName =
+            regionNames[region] ?? region;
+
+        addNews(
+            4,
+            currentLeader.team,
+            `${regionName}1位が交代。${name}がトップへ`
+        );
+
+    });
+
+    // -------------------------------------
+    // 5～7. 順位・ポイントの変動
+    // -------------------------------------
+
+    currentRanking.forEach(row=>{
+
+        const oldRow = previousMap[row.team];
+
+        if(!oldRow){
+            return;
+        }
+
+        const name =
+            nameMap[row.team] ?? row.team;
+
+        const rankRise = oldRow.rank - row.rank;
+
+        const pointRise =
+            Number(row.point) - Number(oldRow.point);
+
+        // 5. 5ランク以上上昇
+        if(rankRise >= 5){
+
+            addNews(
+                5,
+                row.team,
+                `順位急上昇！ ${name}が一気に${rankRise}ランクアップ`
+            );
+
+        }
+
+        // 6. 1～4ランク上昇
+        else if(rankRise >= 1){
+
+            addNews(
+                6,
+                row.team,
+                `${name}が順位を上げる`
+            );
+
+        }
+
+        // 7. 10ポイント以上増加
+        if(pointRise >= 10){
+
+            addNews(
+                7,
+                row.team,
+                `${name}が大きくポイントを獲得。順位アップを狙い弾みをつける`
+            );
+
+        }
+
+    });
+
+    // -------------------------------------
+    // 優先度順に並べ、同じ国の重複を避ける
+    // -------------------------------------
+
+    candidates.sort((a,b)=>
+        a.priority - b.priority
+    );
+
+    const shownTeams = new Set();
+
+    const news = candidates.filter(item=>{
+
+        if(shownTeams.has(item.team)){
+            return false;
+        }
+
+        shownTeams.add(item.team);
+        return true;
+
+    }).slice(0,3);
+
+    // -------------------------------------
+    // ニュース表示
+    // -------------------------------------
+
+    if(news.length === 0){
+
+        newsList.innerHTML =
+            "<li>現在、ランキングニュースはありません</li>";
+
+        return;
+
+    }
+
+    news.forEach(item=>{
+
+        const li = document.createElement("li");
+        li.textContent = item.title;
+
+        newsList.appendChild(li);
+
+    });
 
 }
