@@ -357,12 +357,24 @@ function showRankingNews(latestDate){
         dailyData.map(x=>x.date)
     )].sort();
 
-    // 前回のランキング日付
-    const previousDate = dates
-        .filter(date=>date < latestDate)
+    // 選択日以前で最も新しいランキングデータの日付
+    const effectiveDate = dates
+        .filter(date=>date <= latestDate)
         .pop();
 
-    const currentRanking = getRanking(latestDate);
+    // 該当するランキングデータがない場合
+    if(!effectiveDate){
+        newsList.innerHTML =
+            "<li>現在、ランキングニュースはありません</li>";
+        return;
+    }
+
+    // 比較対象は、今回のランキングデータより前の日付
+    const previousDate = dates
+        .filter(date=>date < effectiveDate)
+        .pop();
+
+    const currentRanking = getRanking(effectiveDate);
 
     const previousRanking = previousDate
         ? getRanking(previousDate)
@@ -438,7 +450,7 @@ function showRankingNews(latestDate){
 
         const oldRankings = dailyData.filter(x=>
             x.team === row.team &&
-            x.date < latestDate
+            x.date < effectiveDate
         );
 
         if(oldRankings.length === 0){
@@ -462,7 +474,7 @@ function showRankingNews(latestDate){
             addNews(
                 2,
                 row.team,
-                `${name}が${row.rank}位に。過去最高だった${bestRank}位を上回り新記録となった`
+                `${name}が${row.rank}位に。過去最高だった${bestRank}位を上回る新記録`
             );
 
         }
