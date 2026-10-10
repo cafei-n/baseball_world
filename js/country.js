@@ -39,8 +39,10 @@ Promise.all([
 
     showRecentGames();
 
-    showTournamentStats();
+    setupYearSelector();
+    showYearGames();
 
+    showTournamentStats();
     showAgeStats();
 
 });
@@ -234,6 +236,8 @@ function changeCountry(){
 
     showRecentGames();
 
+    showYearGames();
+
     showTournamentStats();
 
     showAgeStats();
@@ -333,6 +337,156 @@ function showRecentGames(){
     });
 
 }
+
+
+function setupYearSelector(){
+
+    const select =
+        document.getElementById("gameYearSelector");
+
+    select.innerHTML = "";
+
+    // 試合データに存在する年を取得
+    const years = [
+        ...new Set(
+            historyData.map(game =>
+                game.date.substring(0, 4)
+            )
+        )
+    ];
+
+    // サイト閲覧時の現在年も選択肢に追加
+    const currentYear = String(
+        new Date().getFullYear()
+    );
+
+    if(!years.includes(currentYear)){
+        years.push(currentYear);
+    }
+
+    // 新しい年から順番に並べる
+    years.sort((a, b) => Number(b) - Number(a));
+
+    years.forEach(year => {
+
+        const option = document.createElement("option");
+
+        option.value = year;
+        option.textContent = year + "年";
+
+        if(year === currentYear){
+            option.selected = true;
+        }
+
+        select.appendChild(option);
+
+    });
+
+}
+
+
+function showYearGames(){
+
+    const tbody =
+        document.getElementById("yearGames");
+
+    const year =
+        document.getElementById("gameYearSelector").value;
+
+    tbody.innerHTML = "";
+
+    // 選択した国・年の試合を抽出し、日付の新しい順に並べる
+    const games = historyData
+        .filter(game =>
+            game.team === currentTeam &&
+            game.date.substring(0, 4) === year
+        )
+        .sort((a, b) =>
+            new Date(b.date) - new Date(a.date)
+        );
+
+    if(games.length === 0){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6">
+                    この年の試合結果はありません。
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    games.forEach(game => {
+
+        const tr = document.createElement("tr");
+
+        const age = getAgeCategory(game.tournament);
+
+        const ageText =
+            age === "制限なし" ? "" : age;
+
+        let resultClass = "";
+
+        if(game.result === "W"){
+            resultClass = "color:green;font-weight:bold;";
+        }
+        else if(game.result === "L"){
+            resultClass = "color:red;font-weight:bold;";
+        }
+        else{
+            resultClass = "color:gray;font-weight:bold;";
+        }
+
+        let pointClass = "";
+
+        if(game.change > 0){
+            pointClass = "point-up";
+        }
+        else if(game.change < 0){
+            pointClass = "point-down";
+        }
+        else{
+            pointClass = "point-same";
+        }
+
+        const pointText =
+            (game.change >= 0 ? "+" : "") +
+            game.change.toFixed(2);
+
+        tr.innerHTML = `
+            <td>${game.date.substring(0, 10)}</td>
+
+            <td style="${resultClass}">
+                ${game.result}
+            </td>
+
+            <td>
+                ${game.my_score}-${game.opponent_score}
+            </td>
+
+            <td>
+                ${nameMap[game.opponent] ?? game.opponent}
+            </td>
+
+            <td>
+                <div>${game.after.toFixed(2)}</div>
+                <div class="${pointClass}">${pointText}</div>
+            </td>
+
+            <td>
+                <div>${ageText}</div>
+                <div>${getTournamentName(game.tournament)}</div>
+            </td>
+        `;
+
+        tbody.appendChild(tr);
+
+    });
+
+}
+
 
 function loadHistory(csv){
 

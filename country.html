@@ -203,6 +203,36 @@ Loading...
 
 <div class="table-section">
 
+    <h2>年別試合結果</h2>
+
+    <div class="control">
+        <label for="gameYearSelector">表示年</label>
+        <select
+            id="gameYearSelector"
+            onchange="showYearGames()">
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>日付</th>
+                <th>結果</th>
+                <th>スコア</th>
+                <th>相手</th>
+                <th>ポイント変化</th>
+                <th>大会</th>
+            </tr>
+        </thead>
+
+        <tbody id="yearGames">
+        </tbody>
+    </table>
+
+</div>
+
+<div class="table-section">
+
 <h2>
 
 大会別成績
