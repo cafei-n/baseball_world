@@ -454,7 +454,7 @@ function showRankingNews(latestDate){
             addNews(
                 2,
                 row.team,
-                `${name}が${row.rank}位に。過去最高の${bestRank}位を上回る`
+                `${name}が${row.rank}位に。過去最高だった${bestRank}位を上回り新記録となった`
             );
 
         }
@@ -465,7 +465,7 @@ function showRankingNews(latestDate){
             addNews(
                 3,
                 row.team,
-                `${name}が初の世界ランキングTOP10入り`
+                `${name}が${row.rank}位になり初の世界ランキングTOP10入り。上位に新たな顔ぶれが加わる`
             );
 
         }
@@ -558,7 +558,7 @@ function showRankingNews(latestDate){
         addNews(
             4,
             currentLeader.team,
-            `${regionName}1位が交代。${name}がトップへ`
+            `${regionName}内ランキング1位が交代し${name}がトップへ。新たな地域の顔となる`
         );
 
     });
@@ -583,6 +583,10 @@ function showRankingNews(latestDate){
         const pointRise =
             Number(row.point) - Number(oldRow.point);
 
+        // 小数第1位に四捨五入
+        const roundedPointRise =
+            Math.round(pointRise * 10) / 10;
+
         // 5. 5ランク以上上昇
         if(rankRise >= 5){
 
@@ -600,7 +604,7 @@ function showRankingNews(latestDate){
             addNews(
                 6,
                 row.team,
-                `${name}が順位を上げる`
+                `${name}が順位を${rankRise}つ上げる`
             );
 
         }
@@ -611,7 +615,7 @@ function showRankingNews(latestDate){
             addNews(
                 7,
                 row.team,
-                `${name}が大きくポイントを獲得。順位アップを狙い弾みをつける`
+                `${name}が${roundedPointRise.toFixed(1)}ポイントを獲得し大きな上昇。順位アップを狙い弾みをつける`
             );
 
         }
