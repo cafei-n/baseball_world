@@ -235,6 +235,109 @@
 
 </div>
 
+<!-- 歴代記録 -->
+
+<h1>世界ランキング歴代記録</h1>
+
+<div id="historicalRecords" class="historical-records">
+
+<div class="record-card">
+    <h2>世界1位の通算在任期間</h2>
+    <div id="recordWorldNumberOne">
+        計算中...
+    </div>
+</div>
+
+<div class="record-card">
+    <h2>年間順位上昇記録</h2>
+    <div id="recordRankRise">
+        計算中...
+    </div>
+</div>
+
+<div class="record-card">
+    <h2>年間ポイント上昇記録</h2>
+    <div id="recordPointRise">
+        計算中...
+    </div>
+</div>
+
+<div class="record-card">
+    <h2>年間順位下降記録</h2>
+    <div id="recordRankFall">
+        計算中...
+    </div>
+</div>
+
+<div class="record-card">
+    <h2>年間ポイント下降記録</h2>
+    <div id="recordPointFall">
+        計算中...
+    </div>
+</div>
+
+</div>
+
+<style>
+.historical-records {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 20px 0 30px;
+}
+
+.record-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    min-width: 0;
+}
+
+.record-card h2 {
+    font-size: 1.1rem;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.record-country {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.record-value {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.record-detail {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.record-period {
+    margin-top: 8px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .historical-records {
+        grid-template-columns: 1fr;
+    }
+
+    .record-card {
+        padding: 14px;
+    }
+}
+</style>
+
 <script src="js/common.js"></script>
 <script src="js/chart.js"></script>
 <script src="js/history.js"></script>

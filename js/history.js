@@ -33,6 +33,8 @@ Promise.all([
 
     showHistory();
 
+    showHistoricalRecords();
+
 });
 
 function showLastUpdate(){
@@ -314,5 +316,412 @@ function changeRegion(){
 
     // グラフ更新
     showHistory();
+
+}
+
+
+ // =====================================
+ // 世界ランキング歴代記録
+ // =====================================
+
+function showHistoricalRecords(){
+
+    if(dailyData.length === 0){
+        return;
+    }
+
+    // 日付ごとのランキングを作成
+    const rankingByDate = {};
+
+    dailyData.forEach(row=>{
+
+        const date = row.date.substring(0,10);
+
+        if(!rankingByDate[date]){
+            rankingByDate[date] = [];
+        }
+
+        rankingByDate[date].push(row);
+
+    });
+
+    const dates = Object.keys(rankingByDate).sort();
+
+    if(dates.length === 0){
+        return;
+    }
+
+    // 順位順に整理
+    dates.forEach(date=>{
+
+        rankingByDate[date].sort(
+            (a,b)=>a.rank-b.rank
+        );
+
+    });
+
+    // =====================================
+    // ① 世界1位の通算在任期間
+    // =====================================
+
+    const leadershipPeriods = [];
+    let currentLeader = null;
+    let periodStart = null;
+
+    function closeLeadershipPeriod(endDate){
+
+        if(!currentLeader || !periodStart || !endDate){
+            return;
+        }
+
+        const start = new Date(periodStart + "T00:00:00Z");
+        const end = new Date(endDate + "T00:00:00Z");
+
+        const days = Math.round(
+            (end - start) / 86400000
+        ) + 1;
+
+        if(days > 0){
+
+            leadershipPeriods.push({
+                team: currentLeader,
+                start: periodStart,
+                end: endDate,
+                days: days
+            });
+
+        }
+
+    }
+
+    function addDays(date, days){
+
+        const d = new Date(date + "T00:00:00Z");
+
+        d.setUTCDate(d.getUTCDate() + days);
+
+        return d.toISOString().substring(0,10);
+    }
+
+    dates.forEach((date, index)=>{
+
+        const numberOne =
+            rankingByDate[date].find(row=>row.rank === 1);
+
+        const leader = numberOne ? numberOne.team : null;
+
+        if(leader !== currentLeader){
+
+            if(currentLeader){
+
+                // 新しい1位が始まる前日までを前の在任期間とする
+                const endDate = addDays(date, -1);
+
+                closeLeadershipPeriod(endDate);
+
+            }
+
+            currentLeader = leader;
+            periodStart = leader ? date : null;
+
+        }
+
+        // 最終日の処理
+        if(index === dates.length - 1 && currentLeader){
+
+            closeLeadershipPeriod(date);
+
+        }
+
+    });
+
+    // 国ごとに通算日数を合計
+    const totalLeadership = {};
+
+    leadershipPeriods.forEach(period=>{
+
+        if(!totalLeadership[period.team]){
+
+            totalLeadership[period.team] = {
+                team: period.team,
+                days: 0,
+                periods: []
+            };
+
+        }
+
+        totalLeadership[period.team].days += period.days;
+        totalLeadership[period.team].periods.push(period);
+
+    });
+
+    const leadershipRanking =
+        Object.values(totalLeadership)
+        .sort((a,b)=>b.days-a.days);
+
+    const worldNumberOneElement =
+        document.getElementById("recordWorldNumberOne");
+
+    if(leadershipRanking.length > 0){
+
+        const record = leadershipRanking[0];
+
+        const periodHtml = record.periods
+            .map(period=>
+                `<div>${period.start} ～ ${period.end}（${period.days.toLocaleString()}日）</div>`
+            )
+            .join("");
+
+        worldNumberOneElement.innerHTML = `
+            <div class="record-country">
+                ${nameMap[record.team] ?? record.team}
+            </div>
+            <div class="record-value">
+                通算 ${record.days.toLocaleString()} 日
+            </div>
+            <div class="record-detail">
+                世界1位だった期間（すべて）
+                <div class="record-period">
+                    ${periodHtml}
+                </div>
+            </div>
+        `;
+
+    }else{
+
+        worldNumberOneElement.textContent =
+            "世界1位の記録がありません。";
+
+    }
+
+    // =====================================
+    // ②～⑤ 年間順位・ポイント記録
+    // 各年の最終ランキングを前年と比較
+    // =====================================
+
+    const yearEndRanking = {};
+
+    dates.forEach(date=>{
+
+        const year = date.substring(0,4);
+
+        // 同じ年に複数の日付があれば最後の日付で上書き
+        yearEndRanking[year] = {
+            date: date,
+            rows: rankingByDate[date]
+        };
+
+    });
+
+    const years = Object.keys(yearEndRanking)
+        .map(Number)
+        .sort((a,b)=>a-b);
+
+    let bestRankRise = null;
+    let bestPointRise = null;
+    let bestRankFall = null;
+    let bestPointFall = null;
+
+    years.forEach(year=>{
+
+        const previousYear = String(year - 1);
+        const currentYear = String(year);
+
+        // 前年のランキングがなければ比較できない
+        if(!yearEndRanking[previousYear] ||
+           !yearEndRanking[currentYear]){
+            return;
+        }
+
+        const previousSnapshot =
+            yearEndRanking[previousYear];
+
+        const currentSnapshot =
+            yearEndRanking[currentYear];
+
+        const previousMap = {};
+
+        previousSnapshot.rows.forEach(row=>{
+
+            previousMap[row.team] = row;
+
+        });
+
+        currentSnapshot.rows.forEach(current=>{
+
+            const previous = previousMap[current.team];
+
+            // 両年に存在する国だけを比較
+            if(!previous){
+                return;
+            }
+
+            // 順位上昇：前年順位 - 今年順位
+            const rankRise = previous.rank - current.rank;
+
+            // 順位下降：今年順位 - 前年順位
+            const rankFall = current.rank - previous.rank;
+
+            // ポイント増減
+            const pointChange =
+                Math.round(
+                    (Number(current.point) -
+                     Number(previous.point)) * 100
+                ) / 100;
+
+            const recordBase = {
+                team: current.team,
+                previousYear: previousYear,
+                currentYear: currentYear,
+                previousDate: previousSnapshot.date,
+                currentDate: currentSnapshot.date,
+                previousRank: previous.rank,
+                currentRank: current.rank,
+                previousPoint: Number(previous.point),
+                currentPoint: Number(current.point)
+            };
+
+            if(rankRise > 0 &&
+               (!bestRankRise || rankRise > bestRankRise.value)){
+
+                bestRankRise = {
+                    ...recordBase,
+                    value: rankRise
+                };
+
+            }
+
+            if(pointChange > 0 &&
+               (!bestPointRise || pointChange > bestPointRise.value)){
+
+                bestPointRise = {
+                    ...recordBase,
+                    value: pointChange
+                };
+
+            }
+
+            if(rankFall > 0 &&
+               (!bestRankFall || rankFall > bestRankFall.value)){
+
+                bestRankFall = {
+                    ...recordBase,
+                    value: rankFall
+                };
+
+            }
+
+            if(pointChange < 0){
+
+                const fall = Math.abs(pointChange);
+
+                if(!bestPointFall || fall > bestPointFall.value){
+
+                    bestPointFall = {
+                        ...recordBase,
+                        value: fall
+                    };
+
+                }
+
+            }
+
+        });
+
+    });
+
+    // =====================================
+    // 記録カード表示
+    // =====================================
+
+    function displayAnnualRecord(elementId, record, type){
+
+        const element = document.getElementById(elementId);
+
+        if(!record){
+
+            element.innerHTML = `
+                <div class="record-detail">
+                    該当する記録がありません。
+                </div>
+            `;
+
+            return;
+        }
+
+        let valueText = "";
+        let detailText = "";
+
+        if(type === "rankRise"){
+
+            valueText = `${record.value} 順位上昇`;
+
+            detailText =
+                `${record.previousRank}位 → ${record.currentRank}位`;
+
+        }else if(type === "rankFall"){
+
+            valueText = `${record.value} 順位下降`;
+
+            detailText =
+                `${record.previousRank}位 → ${record.currentRank}位`;
+
+        }else if(type === "pointRise"){
+
+            valueText = `+${record.value.toFixed(2)} ポイント`;
+
+            detailText =
+                `${record.previousPoint.toFixed(2)} → ${record.currentPoint.toFixed(2)} ポイント`;
+
+        }else{
+
+            valueText = `-${record.value.toFixed(2)} ポイント`;
+
+            detailText =
+                `${record.previousPoint.toFixed(2)} → ${record.currentPoint.toFixed(2)} ポイント`;
+
+        }
+
+        element.innerHTML = `
+            <div class="record-country">
+                ${nameMap[record.team] ?? record.team}
+            </div>
+            <div class="record-value">
+                ${valueText}
+            </div>
+            <div class="record-detail">
+                対象期間：${record.previousYear}年末 ～ ${record.currentYear}年末
+                <br>
+                比較日：${record.previousDate} → ${record.currentDate}
+                <br>
+                ${detailText}
+            </div>
+        `;
+
+    }
+
+    displayAnnualRecord(
+        "recordRankRise",
+        bestRankRise,
+        "rankRise"
+    );
+
+    displayAnnualRecord(
+        "recordPointRise",
+        bestPointRise,
+        "pointRise"
+    );
+
+    displayAnnualRecord(
+        "recordRankFall",
+        bestRankFall,
+        "rankFall"
+    );
+
+    displayAnnualRecord(
+        "recordPointFall",
+        bestPointFall,
+        "pointFall"
+    );
 
 }
