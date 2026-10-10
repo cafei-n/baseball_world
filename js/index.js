@@ -102,8 +102,7 @@ function showLatestRanking(){
 
 }
 
-
-//日付指定ランキング読み込み
+// 日付指定ランキング読み込み
 function showDateRanking(){
 
     let date =
@@ -118,6 +117,10 @@ function showDateRanking(){
 
     currentDate = date;
 
+    // 選択日付時点のランキングニュースを生成
+    showRankingNews(date);
+
+    // ランキング表示
     displayRanking(
         getRanking(date)
     );
