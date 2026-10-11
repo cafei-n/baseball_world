@@ -1,4 +1,4 @@
-import csv
+﻿import csv
 import os
 import math
 from datetime import datetime
@@ -458,7 +458,8 @@ def process_game(
     importance,
     age_factor,
     history_writer,
-    unknown_teams
+    unknown_teams,
+    normalized_teams=None
 ):
 
     game_id = str(
@@ -473,29 +474,42 @@ def process_game(
         age_factor
     )
 
-    home = normalize_team(
-        game["home"],
-        alias
-    )
+    if normalized_teams is None:
+        home = normalize_team(
+            game["home"],
+            alias
+        )
 
-    away = normalize_team(
-        game["away"],
-        alias
-    )
+        away = normalize_team(
+            game["away"],
+            alias
+        )
+    else:
+        home, away = normalized_teams
 
 # =========================
 # 未登録チームチェック
 # =========================
 
     if home not in ratings or away not in ratings:
+        missing_teams = []
+
+        if home not in ratings:
+            missing_teams.append(home)
+
+        if away not in ratings:
+            missing_teams.append(away)
+
+        unknown_teams.update(missing_teams)
+
         print(
-            f"スキップ: 未登録チーム {repr(home)} vs {repr(away)}"
+            f"除外理由: ランキング未登録チーム（クラブ等の可能性） "
+            f"{home} vs {away}"
         )
-        print("-----")
-        print(repr(home))
-        print(repr(away))
-        print(home in ratings)
-        print(away in ratings)
+        print(
+            "  未登録: "
+            + ", ".join(missing_teams)
+        )
         return False
 
     home_before = ratings[home]
@@ -658,14 +672,23 @@ def update_ranking():
     alias = load_alias()
     importance, age_factor = load_config()
     processed_games = load_processed_games()
+    unknown_teams.clear()
 
     print(
-        f"計算済み試合数: {len(processed_games)}"
+        f"計算済み試合数（履歴ファイル内）: {len(processed_games)}"
     )
 
     history_file, history_writer = prepare_history()
 
     new_games = 0
+
+    # 除外・処理理由ごとの件数
+    counts = {
+        "already_processed": 0,
+        "unfinished": 0,
+        "unregistered_team": 0,
+        "calculated": 0
+    }
 
     results = []
 
@@ -683,17 +706,10 @@ def update_ranking():
             )
         )
 
-# 試合日順に並べ替え
+    # 試合日順に並べ替え
     results.sort(
-        key=lambda x: x["date"]
+        key=lambda x: x.get("date", "")
     )
-
-    #for game in results[-10:]:
-    #    print(
-    #        game["home"],
-    #        "vs",
-    #        game["away"]
-    #    )
 
     total = len(results)
     current_date = None
@@ -705,16 +721,55 @@ def update_ranking():
     ):
 
         game_id = str(
-            game["game_id"]
+            game.get("game_id", "")
+        ).strip()
+
+        # 1. 過去の実行ですでに計算済みの試合
+        if game_id in processed_games:
+            counts["already_processed"] += 1
+            continue
+
+        # 2. 未終了・予定試合
+        if game.get("status", "finished").strip().lower() != "finished":
+            counts["unfinished"] += 1
+            continue
+
+        # 3. ランキング対象チームか確認
+        # ratingsにはランキング対象の国・地域だけを登録しておき、
+        # 片方でも未登録ならクラブ戦等として計算対象外にする。
+        home = normalize_team(
+            game.get("home", ""),
+            alias
+        )
+        away = normalize_team(
+            game.get("away", ""),
+            alias
         )
 
-        if game_id in processed_games:
+        missing_teams = []
+
+        if home not in ratings:
+            missing_teams.append(home)
+
+        if away not in ratings:
+            missing_teams.append(away)
+
+        if missing_teams:
+            counts["unregistered_team"] += 1
+            unknown_teams.update(missing_teams)
+
+            print(
+                f"\n[{index}/{total}] 除外: ランキング未登録チーム "
+                f"{home} vs {away}"
+            )
+            print(
+                "  未登録チーム: "
+                + ", ".join(missing_teams)
+            )
             continue
 
-        if game.get("status", "finished") != "finished":
-            continue
-
-        # 日付が変わったら前日のランキング保存
+        # 日付が変わったら、直前の日付のランキングを保存。
+        # 未登録チームや予定試合だけの日付では保存しない。
         if current_date is not None and game["date"] != current_date:
 
             save_daily_ranking(
@@ -737,14 +792,16 @@ def update_ranking():
             importance,
             age_factor,
             history_writer,
-            unknown_teams
+            unknown_teams,
+            normalized_teams=(home, away)
         )
 
         if processed:
             processed_games.add(game_id)
             new_games += 1
+            counts["calculated"] += 1
 
-    # 最後の日付分を保存
+    # 最後に処理した日付分を保存
     if current_date is not None and current_date != last_saved_date:
 
         save_daily_ranking(
@@ -754,8 +811,15 @@ def update_ranking():
 
     history_file.close()
 
+    print("\n===== 試合処理結果 =====")
+    print(f"読み込んだ試合レコード数: {total}")
+    print(f"除外（計算済み）: {counts['already_processed']}")
+    print(f"除外（未終了・予定試合）: {counts['unfinished']}")
+    print(f"除外（ランキング未登録チーム／クラブ等の可能性）: {counts['unregistered_team']}")
+    print(f"新規計算成功: {counts['calculated']}")
+
     if unknown_teams:
-        print("\n未登録チーム一覧:")
+        print("\nランキング未登録チーム一覧（表記ゆれ・別名の可能性もあります）:")
         for team in sorted(unknown_teams):
             print("-", team)
 
@@ -764,12 +828,7 @@ def update_ranking():
     )
 
     if new_games > 0:
-        latest_date = max(
-            game["date"]
-            for game in results
-        )
-
-        # ランキングに影響する新規試合があった場合動画更新フラグを作成
+        # ランキングに影響する新規試合があった場合のみ動画更新フラグを作成
         with open(
             VIDEO_FLAG_FILE,
             "w",

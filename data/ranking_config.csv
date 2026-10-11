@@ -8,19 +8,18 @@ importance,World Cup,50,ワールドカップ
 importance,Olympic,50,オリンピック
 importance,Central American & Caribbean Games|Central American and Caribbean Games,20,中米&カリビアンゲームズ
 importance,Juegos Centroamericanos y del Caribe,20,中米カリブ競技大会
-importance,European Championship& B Pool|European Baseball Championship& B Pool,20,欧州野球選手権Bプール
+importance,European Championship& B Pool|European Baseball Championship& B Pool,10,欧州野球選手権Bプール
 importance,European Championship|European Baseball Championship,20,欧州野球選手権
 importance,Panamericano|Pan American Games,20,パンアメリカンゲームズ
-importance,West Asian Cup|West Asia Cup,20,西アジアカップ
 importance,Asian Baseball Championship,20,アジア野球選手権
-importance,South American Championship,20,南米野球選手権
+importance,South American Championship,10,南米野球選手権
 importance,Pan American Championship,20,パンアメリカン野球選手権
-importance,Caribbean Baseball Cup,20,カリビアン野球カップ
-importance,Pacific Mini Games,20,パシフィックミニゲームズ
+importance,Pacific Mini Games,10,パシフィックミニゲームズ
 importance,Asian Championship,20,アジア野球選手権
-importance,East Asia Cup,20,東アジアカップ
 importance,Asian Games,20,アジア大会
-importance,SEA Games,20,SEAゲームズ
+importance,West Asian Cup|West Asia Cup,10,西アジアカップ
+importance,East Asian Cup|East Asia Cup,10,東アジアカップ
+importance,SEA Games,10,SEAゲームズ
 importance,Copa Centroamericana de Béisbol Masculino,10,中米野球カップ
 importance,Juegos Sudamericanos de la Juventud,10,南米ユース大会
 importance,Campeonato Internacional,10,国際選手権

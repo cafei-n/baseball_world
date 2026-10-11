@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>サイト概要・計算方法 | 世界野球ランキング</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.9;
+        }
+
+        .about-lead {
+            font-size: 1.08rem;
+            background: #f3f6fa;
+            border-left: 5px solid #244a73;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin: 20px 0 30px;
+        }
+
+        .about-section {
+            margin: 34px 0;
+        }
+
+        .about-section h2 {
+            font-size: 1.4rem;
+            margin: 0 0 16px;
+            padding: 0 0 10px;
+            border-bottom: 2px solid #d8e0e8;
+        }
+
+        .about-section h3 {
+            font-size: 1.08rem;
+            margin: 24px 0 8px;
+        }
+
+        .formula {
+            overflow-x: auto;
+            background: #f7f8fa;
+            border: 1px solid #dfe3e8;
+            border-radius: 8px;
+            padding: 18px;
+            margin: 14px 0;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .formula-detail {
+            font-family: "Consolas", "Courier New", monospace;
+            overflow-wrap: anywhere;
+            font-size: 0.98rem;
+        }
+
+        .about-table-wrap {
+            overflow-x: auto;
+            margin: 14px 0;
+        }
+
+        .about-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 420px;
+        }
+
+        .about-table th,
+        .about-table td {
+            color: #000000;
+            border: 1px solid #d9dee5;
+            padding: 9px 12px;
+            text-align: left;
+        }
+
+        .about-table th {
+            background: #eef2f6;
+            white-space: nowrap;
+        }
+
+        .about-table td.number {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .about-note {
+            color: #4d5966;
+            font-size: 0.92rem;
+            background: #f7f8fa;
+            border-radius: 6px;
+            padding: 12px 15px;
+            margin: 14px 0;
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+
+        .about-card {
+            border: 1px solid #dce2e8;
+            border-radius: 8px;
+            padding: 16px;
+            background: #fff;
+        }
+
+        .about-card strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .about-small {
+            color: #606b76;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 14px;
+            }
+
+            .about-section h2 {
+                font-size: 1.22rem;
+            }
+
+            .formula {
+                font-size: 1rem;
+                padding: 14px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        世界野球ランキング
+    </a>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+</header>
+
+<nav id="menu" class="menu">
+    <a href="index.html">ランキング</a>
+    <a href="history.html">グラフ・アニメーション</a>
+    <a href="country.html">国別戦績</a>
+    <a href="schedule.html">試合日程・結果</a>
+    <a href="tournament.html">大会情報</a>
+    <a href="about.html">サイト概要・計算方法</a>
+</nav>
+
+<main class="about-container">
+
+    <h1>サイト概要・計算方法</h1>
+
+    <div class="about-lead">
+        このサイトでは、世界の国・地域の野球代表チームが国際試合で残した結果をもとに、独自の計算方式で世界ランキングを作成しています。
+        <br>
+        ランキングの目的は、大会の格や年代別大会の結果を的確に反映して、各国・地域の代表チームの実力を、試合結果からできるだけわかりやすく比較することです。
+    </div>
+
+    <section class="about-section">
+        <h2>ランキングの考え方</h2>
+
+        <p>
+            試合の勝敗、対戦相手のポイント、大会の重要度、得点差を考慮して、試合ごとにポイントを増減させます。
+            格上とみられる相手に勝利した場合はポイントを獲得しやすく、格下とみられる相手に敗れた場合はポイントを失いやすい仕組みです。
+        </p>
+
+        <p>
+            大会ごとに重要度を設定し、U-23、U-18、U-15、U-12、U-10などの年代別大会には補正係数を適用します。
+            これにより、フル代表チームの試合結果を大きく反映し、年代別大会の結果がランキングに与える影響を抑えています。
+        </p>
+    </section>
+
+    <section class="about-section">
+        <h2>ポイントの計算方法</h2>
+
+        <p>各試合のポイント増減は、次の式で計算します。</p>
+
+        <div class="formula">
+            ポイント増減 ＝ 大会係数 ×（試合結果係数 − 勝敗期待値）× 得点差補正
+        </div>
+
+        <div class="about-cards">
+            <div class="about-card">
+                <strong>大会係数（A）</strong>
+                大会の重要度と年代別補正係数を掛け合わせた値です。
+            </div>
+            <div class="about-card">
+                <strong>試合結果係数（B）</strong>
+                勝利は1.0、引き分けは0.5、敗戦は0.0です。
+            </div>
+            <div class="about-card">
+                <strong>勝敗期待値（C）</strong>
+                試合前の両チームのポイント差から計算します。
+            </div>
+            <div class="about-card">
+                <strong>得点差補正（M）</strong>
+                得点差が大きい試合ほど、ポイント増減を大きくします。
+            </div>
+        </div>
+
+        <h3>1. 勝敗期待値</h3>
+
+        <div class="formula formula-detail">
+            C = 1 ÷ (10 ^ ((相手の試合前ポイント − 自チームの試合前ポイント) ÷ 600) + 1)
+        </div>
+
+        <p>
+            両チームのポイントが同じ場合、勝敗期待値は0.5です。相手のポイントが自チームより高い場合は期待値が0.5より小さくなり、反対に自チームのポイントが高い場合は0.5より大きくなります。
+            この値と実際の試合結果との差によって、ポイントの増減が決まります。
+        </p>
+
+        <h3>2. 試合結果係数</h3>
+
+        <div class="about-table-wrap">
+            <table class="about-table">
+                <thead>
+                    <tr>
+                        <th>試合結果</th>
+                        <th>係数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>勝利</td><td class="number">1.0</td></tr>
+                    <tr><td>引き分け</td><td class="number">0.5</td></tr>
+                    <tr><td>敗戦</td><td class="number">0.0</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>3. 得点差補正</h3>
+
+        <div class="about-table-wrap">
+            <table class="about-table">
+                <thead>
+                    <tr>
+                        <th>得点差</th>
+                        <th>補正係数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0点差</td><td class="number">1.00</td></tr>
+                    <tr><td>1点差</td><td class="number">1.10</td></tr>
+                    <tr><td>2点差</td><td class="number">1.20</td></tr>
+                    <tr><td>3点差</td><td class="number">1.30</td></tr>
+                    <tr><td>4点差</td><td class="number">1.40</td></tr>
+                    <tr><td>5点差以上</td><td class="number">1.50</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="about-small">
+            得点差補正は勝敗の両チームに適用されます。引き分けの場合は得点差が0となるため、補正係数は1.00です。
+        </p>
+    </section>
+
+    <section class="about-section">
+        <h2>大会の重要度と年代別補正</h2>
+
+        <p>
+            大会係数は、大会の重要度を表す基本値に、年代別補正係数を掛けて求めます。
+            以下は主な大会係数です。
+        </p>
+
+        <div class="about-table-wrap">
+            <table class="about-table">
+                <thead>
+                    <tr>
+                        <th>大会・区分</th>
+                        <th>設定係数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>ワールド・ベースボール・クラシック（WBC）</td><td class="number">100</td></tr>
+                    <tr><td>WBC予選</td><td class="number">80</td></tr>
+                    <tr><td>プレミア12</td><td class="number">50</td></tr>
+                    <tr><td>オリンピック</td><td class="number">50</td></tr>
+                    <tr><td>ワールドカップ</td><td class="number">50</td></tr>
+                    <tr><td>プレミア12予選</td><td class="number">40</td></tr>
+                    <tr><td>地域別の主要大会</td><td class="number">20</td></tr>
+                    <tr><td>その他の国際大会など</td><td class="number">10</td></tr>
+                    <tr><td>練習試合・その他の親善試合</td><td class="number">5</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>年代別大会の補正係数</h3>
+
+        <div class="about-table-wrap">
+            <table class="about-table">
+                <thead>
+                    <tr>
+                        <th>年代</th>
+                        <th>補正係数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>U-23</td><td class="number">0.1</td></tr>
+                    <tr><td>U-18</td><td class="number">0.1</td></tr>
+                    <tr><td>U-15</td><td class="number">0.1</td></tr>
+                    <tr><td>U-12</td><td class="number">0.1</td></tr>
+                    <tr><td>U-10</td><td class="number">0.1</td></tr>
+                    <tr><td>ユース大会</td><td class="number">0.1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            例えば、基本係数50の大会がU-18大会として判定された場合、大会係数は50 × 0.1 = 5となります。
+        </p>
+
+    </section>
+
+    <section class="about-section">
+        <h2>ランキングの更新とデータについて</h2>
+
+        <ul>
+            <li>収集した国際試合の結果をもとに、試合日順にポイントを計算します。</li>
+            <li>試合前のポイントを使って勝敗期待値を計算し、試合後に両チームのポイントを更新します。</li>
+            <li>ランキングに登録されていないチームを含む試合は、ポイント計算の対象になりません。</li>
+            <li>収集している試合は、2020年以降のWBSC公式記載の試合とWBC関連試合となります</li>
+        </ul>
+
+        <p class="about-small">
+            データの収集状況や大会の開催状況によって、掲載される試合・ランキングの更新時期が異なる場合があります。
+        </p>
+    </section>
+
+</main>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
