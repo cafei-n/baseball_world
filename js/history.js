@@ -495,7 +495,87 @@ function showHistoricalRecords(){
     }
 
     // =====================================
-    // ②～⑤ 年間順位・ポイント記録
+    // ② 歴代最高ポイント
+    // 全期間のランキングデータから最高値を取得
+    // =====================================
+
+    const validPointRows = dailyData.filter(row =>
+        Number.isFinite(Number(row.point))
+    );
+
+    const highestPointElement =
+        document.getElementById("recordHighestPoint");
+
+    if(validPointRows.length > 0){
+
+        const highestPoint = validPointRows.reduce(
+            (max, row) => Math.max(max, Number(row.point)),
+            -Infinity
+        );
+
+        // 最高ポイントを記録した国・日付を取得
+        const highestPointRows = validPointRows.filter(row =>
+            Number(row.point) === highestPoint
+        );
+
+        // 同じ国が複数日に記録している場合は、最初と最後の日付をまとめる
+        const highestPointByTeam = {};
+
+        highestPointRows.forEach(row=>{
+
+            const date = row.date.substring(0,10);
+
+            if(!highestPointByTeam[row.team]){
+                highestPointByTeam[row.team] = {
+                    team: row.team,
+                    dates: []
+                };
+            }
+
+            if(!highestPointByTeam[row.team].dates.includes(date)){
+                highestPointByTeam[row.team].dates.push(date);
+            }
+
+        });
+
+        highestPointElement.innerHTML =
+            Object.values(highestPointByTeam)
+            .map(record=>{
+
+                record.dates.sort();
+
+                const periodText =
+                    record.dates.length === 1
+                    ? record.dates[0]
+                    : `${record.dates[0]} ～ ${record.dates[record.dates.length - 1]}`;
+
+                return `
+                    <div class="record-country">
+                        ${nameMap[record.team] ?? record.team}
+                    </div>
+                    <div class="record-value">
+                        ${highestPoint.toLocaleString("ja-JP", {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        })} ポイント
+                    </div>
+                    <div class="record-detail">
+                        記録時期：${periodText}
+                    </div>
+                `;
+
+            })
+            .join("");
+
+    }else{
+
+        highestPointElement.textContent =
+            "ポイント記録がありません。";
+
+    }
+
+    // =====================================
+    // ③～⑥ 年間順位・ポイント記録
     // 各年の最終ランキングを前年と比較
     // =====================================
 
