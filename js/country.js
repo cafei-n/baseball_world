@@ -45,6 +45,8 @@ Promise.all([
     showTournamentStats();
     showAgeStats();
 
+    setupOpponentSelector();
+
 });
 
 function drawHistory(){
@@ -241,6 +243,8 @@ function changeCountry(){
     showTournamentStats();
 
     showAgeStats();
+
+    setupOpponentSelector();
 
 }
 
@@ -790,6 +794,404 @@ function showAgeStats(){
                 ${(s.point>=0?"+":"")}${s.point.toFixed(2)}
             </td>
 
+        `;
+
+        tbody.appendChild(tr);
+
+    });
+
+}
+
+
+/* =================================
+   指定した国との対戦成績
+================================= */
+
+// 選択中の国と対戦相手の試合を取得
+function getOpponentGames(){
+
+    const opponent =
+        document.getElementById("opponentTeamSelector").value;
+
+    if(!opponent){
+        return [];
+    }
+
+    return historyData
+        .filter(game =>
+            game.team === currentTeam &&
+            game.opponent === opponent
+        )
+        .sort((a, b) =>
+            b.date.localeCompare(a.date)
+        );
+
+}
+
+
+// 対戦相手の選択肢を作成
+function setupOpponentSelector(){
+
+    const select =
+        document.getElementById("opponentTeamSelector");
+
+    if(!select){
+        return;
+    }
+
+    const previousOpponent = select.value;
+    select.innerHTML = "";
+
+    const opponents = [
+        ...new Set(
+            historyData
+                .filter(game =>
+                    game.team === currentTeam &&
+                    game.opponent &&
+                    game.opponent !== currentTeam
+                )
+                .map(game => game.opponent)
+        )
+    ];
+
+    opponents.sort((a, b) =>
+        (nameMap[a] ?? a).localeCompare(
+            nameMap[b] ?? b,
+            "ja"
+        )
+    );
+
+    if(opponents.length === 0){
+
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "対戦データがありません";
+        select.appendChild(option);
+
+        showOpponentStats();
+        return;
+    }
+
+    opponents.forEach(opponent => {
+
+        const option = document.createElement("option");
+
+        option.value = opponent;
+        option.textContent = nameMap[opponent] ?? opponent;
+
+        select.appendChild(option);
+
+    });
+
+    // 以前の相手が選択可能なら維持
+    select.value = opponents.includes(previousOpponent)
+        ? previousOpponent
+        : opponents[0];
+
+    showOpponentStats();
+
+}
+
+
+// 対戦成績をまとめて更新
+function showOpponentStats(){
+
+    const games = getOpponentGames();
+
+    // 直近5試合
+    renderOpponentGameRows(
+        "opponentRecentGames",
+        games.slice(0, 5),
+        "直近の対戦結果はありません。"
+    );
+
+    // 年別成績
+    setupOpponentYearSelector(games);
+    showOpponentYearGames();
+
+    // 大会別成績
+    renderOpponentStats(
+        "opponentTournamentStats",
+        games,
+        "tournament"
+    );
+
+    // 年代別成績
+    renderOpponentStats(
+        "opponentAgeStats",
+        games,
+        "age"
+    );
+
+}
+
+
+// 年別表示の選択肢を作成
+function setupOpponentYearSelector(games){
+
+    const select =
+        document.getElementById("opponentYearSelector");
+
+    const previousYear = select.value;
+    select.innerHTML = "";
+
+    const years = [
+        ...new Set(
+            games.map(game => game.date.substring(0, 4))
+        )
+    ].sort((a, b) => Number(b) - Number(a));
+
+    if(years.length === 0){
+
+        const option = document.createElement("option");
+
+        option.value = String(new Date().getFullYear());
+        option.textContent = option.value + "年";
+
+        select.appendChild(option);
+        return;
+    }
+
+    years.forEach(year => {
+
+        const option = document.createElement("option");
+
+        option.value = year;
+        option.textContent = year + "年";
+
+        select.appendChild(option);
+
+    });
+
+    select.value = years.includes(previousYear)
+        ? previousYear
+        : years[0];
+
+}
+
+
+// 選択した年の対戦結果を表示
+function showOpponentYearGames(){
+
+    const year =
+        document.getElementById("opponentYearSelector").value;
+
+    const games = getOpponentGames()
+        .filter(game =>
+            game.date.substring(0, 4) === year
+        );
+
+    renderOpponentGameRows(
+        "opponentYearGames",
+        games,
+        "この年の対戦結果はありません。"
+    );
+
+}
+
+
+// 試合結果のテーブルを作成
+function renderOpponentGameRows(
+    tbodyId,
+    games,
+    emptyMessage
+){
+
+    const tbody = document.getElementById(tbodyId);
+
+    tbody.innerHTML = "";
+
+    if(games.length === 0){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6">${emptyMessage}</td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    games.forEach(game => {
+
+        const tr = document.createElement("tr");
+
+        const age = getAgeCategory(game.tournament);
+        const ageText = age === "制限なし" ? "" : age;
+
+        let resultClass = "color:gray;font-weight:bold;";
+
+        if(game.result === "W"){
+            resultClass = "color:green;font-weight:bold;";
+        }
+        else if(game.result === "L"){
+            resultClass = "color:red;font-weight:bold;";
+        }
+
+        let pointClass = "point-same";
+
+        if(game.change > 0){
+            pointClass = "point-up";
+        }
+        else if(game.change < 0){
+            pointClass = "point-down";
+        }
+
+        const pointText =
+            (game.change >= 0 ? "+" : "") +
+            game.change.toFixed(2);
+
+        tr.innerHTML = `
+            <td>${game.date.substring(0, 10)}</td>
+
+            <td style="${resultClass}">
+                ${game.result}
+            </td>
+
+            <td>
+                ${game.my_score}-${game.opponent_score}
+            </td>
+
+            <td>
+                ${nameMap[game.opponent] ?? game.opponent}
+            </td>
+
+            <td>
+                <div>${game.after.toFixed(2)}</div>
+                <div class="${pointClass}">${pointText}</div>
+            </td>
+
+            <td>
+                <div>${ageText}</div>
+                <div>${getTournamentName(game.tournament)}</div>
+            </td>
+        `;
+
+        tbody.appendChild(tr);
+
+    });
+
+}
+
+
+// 大会別・年代別の集計テーブル
+function renderOpponentStats(tbodyId, games, type){
+
+    const tbody = document.getElementById(tbodyId);
+
+    tbody.innerHTML = "";
+
+    const stats = {};
+
+    games.forEach(game => {
+
+        const category = type === "tournament"
+            ? getTournamentCategory(game.tournament)
+            : getAgeCategory(game.tournament);
+
+        if(!stats[category]){
+
+            stats[category] = {
+                games: 0,
+                win: 0,
+                lose: 0,
+                draw: 0,
+                point: 0
+            };
+
+        }
+
+        stats[category].games++;
+
+        if(game.result === "W"){
+            stats[category].win++;
+        }
+        else if(game.result === "L"){
+            stats[category].lose++;
+        }
+        else{
+            stats[category].draw++;
+        }
+
+        stats[category].point += game.change;
+
+    });
+
+    const order = type === "tournament"
+        ? [
+            "WBC予選",
+            "ワールド・ベースボール・クラシック",
+            "オリンピック",
+            "プレミア12",
+            "ワールドカップ",
+            "欧州野球選手権",
+            "アジア野球選手権",
+            "パンアメリカン野球選手権",
+            "その他"
+        ]
+        : [
+            "制限なし",
+            "U-23",
+            "U-18",
+            "U-15",
+            "U-12",
+            "U-10",
+            "ユース"
+        ];
+
+    const categories = [
+        ...order.filter(name => stats[name]),
+        ...Object.keys(stats).filter(
+            name => !order.includes(name)
+        )
+    ];
+
+    if(categories.length === 0){
+
+        const label = type === "tournament"
+            ? "大会別"
+            : "年代別";
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="7">
+                    ${label}の対戦データはありません。
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    categories.forEach(name => {
+
+        const s = stats[name];
+
+        const winRate = s.games === 0
+            ? 0
+            : (s.win + s.draw * 0.5) / s.games;
+
+        let pointClass = "point-same";
+
+        if(s.point > 0){
+            pointClass = "point-up";
+        }
+        else if(s.point < 0){
+            pointClass = "point-down";
+        }
+
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td>${name}</td>
+            <td>${s.games}</td>
+            <td>${s.win}</td>
+            <td>${s.lose}</td>
+            <td>${s.draw}</td>
+            <td>${(winRate * 100).toFixed(1)}%</td>
+            <td class="${pointClass}">
+                ${(s.point >= 0 ? "+" : "")}${s.point.toFixed(2)}
+            </td>
         `;
 
         tbody.appendChild(tr);

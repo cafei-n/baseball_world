@@ -299,6 +299,92 @@ Loading...
 
 </div>
 
+<div class="table-section">
+
+    <h2>国を指定して対戦成績を見る</h2>
+
+    <div class="control">
+        <label for="opponentTeamSelector">対戦相手</label>
+        <select id="opponentTeamSelector" onchange="showOpponentStats()">
+        </select>
+    </div>
+
+    <div class="table-section">
+        <h2>直近5試合</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>日付</th>
+                    <th>結果</th>
+                    <th>スコア</th>
+                    <th>相手</th>
+                    <th>ポイント変化</th>
+                    <th>大会</th>
+                </tr>
+            </thead>
+            <tbody id="opponentRecentGames"></tbody>
+        </table>
+    </div>
+
+    <div class="table-section">
+        <h2>年別成績</h2>
+        <div class="control">
+            <label for="opponentYearSelector">表示年</label>
+            <select id="opponentYearSelector" onchange="showOpponentYearGames()"></select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>日付</th>
+                    <th>結果</th>
+                    <th>スコア</th>
+                    <th>相手</th>
+                    <th>ポイント変化</th>
+                    <th>大会</th>
+                </tr>
+            </thead>
+            <tbody id="opponentYearGames"></tbody>
+        </table>
+    </div>
+
+    <div class="table-section">
+        <h2>大会別成績</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>大会</th>
+                    <th>試合</th>
+                    <th>勝</th>
+                    <th>敗</th>
+                    <th>分</th>
+                    <th>勝率</th>
+                    <th>ポイント増減</th>
+                </tr>
+            </thead>
+            <tbody id="opponentTournamentStats"></tbody>
+        </table>
+    </div>
+
+    <div class="table-section">
+        <h2>年代別成績</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>年代</th>
+                    <th>試合</th>
+                    <th>勝</th>
+                    <th>敗</th>
+                    <th>分</th>
+                    <th>勝率</th>
+                    <th>ポイント増減</th>
+                </tr>
+            </thead>
+            <tbody id="opponentAgeStats"></tbody>
+        </table>
+    </div>
+
+</div>
+
 <script>
 
 </script>
