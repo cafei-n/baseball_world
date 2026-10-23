@@ -5469,3 +5469,15 @@
 2026-10-11 12:00:00,203881,Italy,6,1626.44,1636.16,9.72,Germany,1256.0,W,5,0,WBSC Premier12 2027 Barcelona Qualifier presented by RAXUS,40.0,0.8056
 2026-10-11 19:00:00,203882,Colombia,17,1303.28,1334.89,31.61,Spain,1444.39,W,8,3,WBSC Premier12 2027 Barcelona Qualifier presented by RAXUS,40.0,0.3678
 2026-10-11 19:00:00,203882,Spain,12,1444.39,1412.78,-31.61,Colombia,1303.28,L,3,8,WBSC Premier12 2027 Barcelona Qualifier presented by RAXUS,40.0,0.6322
+2026-10-22 08:30:00,210030,United States of America,3,1802.59,1802.79,0.2,Brazil,1174.35,W,4,0,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.9177
+2026-10-22 08:30:00,210030,Brazil,24,1174.35,1174.15,-0.2,United States of America,1802.59,L,0,4,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.0823
+2026-10-22 08:30:00,210033,Mexico,10,1464.44,1462.77,-1.67,Nicaragua,1283.28,L,4,9,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.6671
+2026-10-22 08:30:00,210033,Nicaragua,19,1283.28,1284.95,1.67,Mexico,1464.44,W,9,4,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.3329
+2026-10-22 11:30:00,210032,Venezuela,2,1818.33,1818.71,0.38,Cuba,1428.04,W,5,4,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.8172
+2026-10-22 11:30:00,210032,Cuba,13,1428.04,1427.66,-0.38,Venezuela,1818.33,L,4,5,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.1828
+2026-10-22 11:30:00,210035,Puerto Rico,9,1500.24,1501.17,0.93,Panama,1441.57,W,2,1,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.5561
+2026-10-22 11:30:00,210035,Panama,12,1441.57,1440.64,-0.93,Puerto Rico,1500.24,L,1,2,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.4439
+2026-10-22 15:00:00,210034,Dominican Republic,4,1676.21,1676.39,0.18,Curaçao,1001.54,W,13,7,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.9302
+2026-10-22 15:00:00,210034,Curaçao,36,1001.54,1001.36,-0.18,Dominican Republic,1676.21,L,7,13,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.0698
+2026-10-22 15:00:00,211502,Puerto Rico,9,1501.17,1502.37,1.19,Canada,1520.67,W,5,2,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.4813
+2026-10-22 15:00:00,211502,Canada,8,1520.67,1519.48,-1.19,Puerto Rico,1501.17,L,2,5,XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2.0,0.5187
