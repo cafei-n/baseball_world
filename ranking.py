@@ -1,6 +1,8 @@
 ﻿import csv
 import os
 import math
+import json
+import hashlib
 from datetime import datetime
 
 
@@ -55,6 +57,24 @@ VIDEO_FLAG_FILE = os.path.join(
     DATA_DIR,
     "video_update.flag"
 )
+
+# 試合データの前回比較用スナップショット
+MATCH_SNAPSHOT_FILE = os.path.join(
+    DATA_DIR,
+    "match_data_snapshot.json"
+)
+
+# ランキング計算に影響する試合情報だけを比較する
+MATCH_COMPARE_FIELDS = [
+    "game_id",
+    "tournament",
+    "date",
+    "home",
+    "away",
+    "home_score",
+    "away_score",
+    "status"
+]
 
 # =====================================
 # CSV読み込み
@@ -925,39 +945,169 @@ def result_text(my_score, opponent_score):
 # メイン処理
 # =====================================
 
-if __name__ == "__main__":
+# =====================================
+# 試合データ変更検知
+# =====================================
 
-    # 1. ユーザーに処理モードを尋ねる
-    mode = input("データを一から計算し直しますか？ (y/n): ").strip().lower()
+def create_match_data_snapshot():
 
-    if mode == "y":
-        print("\n--- 初期化処理を実行します ---")
-        
-        # 削除対象のファイル一覧
-        files_to_delete = [
-            RANKING_FILE,        # 現在のランキングファイル
-            HISTORY_FILE,        # 試合計算済みの履歴ファイル
-            DAILY_HISTORY_FILE   # 日々のランキング推移ファイル
-        ]
-        
-        for file_path in files_to_delete:
-            if os.path.exists(file_path):
-                try:
-                    os.remove(file_path)
-                    print(f"削除しました: {file_path}")
-                except Exception as e:
-                    print(f"ファイル削除エラー ({file_path}): {e}")
-        
-        print("初期化が完了しました。一から計算を開始します。\n")
-    else:
-        print("\n既存のデータに追記します（計算済みの試合はスキップします）。\n")
+    records = []
 
-    print(
-        "WBSC世界ランキング更新開始"
+    for result_file in RESULT_FILES:
+
+        source_name = os.path.basename(result_file)
+
+        if not os.path.exists(result_file):
+            records.append({
+                "source": source_name,
+                "exists": False,
+                "games": []
+            })
+            continue
+
+        games = []
+
+        with open(
+            result_file,
+            encoding="utf-8-sig",
+            newline=""
+        ) as f:
+
+            reader = csv.DictReader(f)
+
+            for row in reader:
+
+                game = {
+                    field: (row.get(field) or "").strip()
+                    for field in MATCH_COMPARE_FIELDS
+                }
+
+                games.append(game)
+
+        # CSVの行順が変わっただけでは変更扱いにしない
+        games.sort(
+            key=lambda game: (
+                game["game_id"],
+                game["date"],
+                game["home"],
+                game["away"]
+            )
+        )
+
+        records.append({
+            "source": source_name,
+            "exists": True,
+            "games": games
+        })
+
+    snapshot_text = json.dumps(
+        records,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":")
     )
 
+    return hashlib.sha256(
+        snapshot_text.encode("utf-8")
+    ).hexdigest()
+
+
+def load_match_data_snapshot():
+
+    if not os.path.exists(MATCH_SNAPSHOT_FILE):
+        return None
+
+    with open(
+        MATCH_SNAPSHOT_FILE,
+        encoding="utf-8"
+    ) as f:
+
+        data = json.load(f)
+
+    return data.get("hash")
+
+
+def save_match_data_snapshot(snapshot_hash):
+
+    # 一時ファイルに書いてから置き換え、途中終了で壊れないようにする
+    temp_file = MATCH_SNAPSHOT_FILE + ".tmp"
+
+    with open(
+        temp_file,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            {
+                "hash": snapshot_hash,
+                "updated_at": datetime.now().isoformat(timespec="seconds")
+            },
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    os.replace(
+        temp_file,
+        MATCH_SNAPSHOT_FILE
+    )
+
+
+def reset_ranking_files():
+
+    files_to_delete = [
+        RANKING_FILE,
+        HISTORY_FILE,
+        DAILY_HISTORY_FILE
+    ]
+
+    for file_path in files_to_delete:
+
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            print(f"初期化: {file_path}")
+
+
+# =====================================
+# メイン処理
+# =====================================
+
+if __name__ == "__main__":
+
+    print("WBSC世界ランキング更新開始")
+
+    # 今回の試合データを取得し、前回正常終了時の内容と比較
+    current_snapshot = create_match_data_snapshot()
+    previous_snapshot = load_match_data_snapshot()
+
+    full_recalculation = False
+
+    if previous_snapshot is None:
+
+        print(
+            "比較用スナップショットがありません。"
+            "今回は既存ランキングを引き継いで処理します。"
+        )
+
+    elif current_snapshot != previous_snapshot:
+
+        print("\n試合データの変更を検出しました")
+        print("ランキングを最初から再計算します。")
+
+        reset_ranking_files()
+        full_recalculation = True
+
+    else:
+
+        print(
+            "\n試合データに変更はありません。"
+            "未計算の試合だけを追加計算します。"
+        )
+
+    # ランキング計算
     ratings = update_ranking()
-    
+
     ranking = save_ranking(
         ratings
     )
@@ -965,6 +1115,14 @@ if __name__ == "__main__":
     print_ranking(
         ranking
     )
+
+    # 計算・ランキング保存が正常終了した場合だけ比較基準を更新
+    save_match_data_snapshot(
+        current_snapshot
+    )
+
+    if full_recalculation:
+        print("\n変更された試合データを反映して全件再計算しました。")
 
     print(
         "\nランキング更新完了"
