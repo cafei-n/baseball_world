@@ -2102,12 +2102,12 @@ WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-08 14:30:00,Panama,
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-08 18:00:00,Great Britain,South Africa,5,3,5,5,2,2,Estadio Rigoberto López Pérez,León,2:03,202325,finished
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-08 18:30:00,Venezuela,Korea,7,0,9,6,0,1,Estadio Roberto Clemente,Masaya,2:03,202326,finished
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-08 18:30:00,Nicaragua,Puerto Rico,3,2,10,5,1,0,Estadio Nacional Soberania,Managua,2.26,202327,finished
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 10:30:00,Chinese Taipei,Australia,0,0,0,0,0,0,Estadio Nacional Soberania,Managua,0,202328,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 12:00:00,Venezuela,Cuba,0,0,0,0,0,0,Estadio Roberto Clemente,Masaya,0,202329,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 14:30:00,Korea,Great Britain,0,0,0,0,0,0,Estadio Nacional Soberania,Managua,0,202330,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 18:00:00,Puerto Rico,Czechia,0,0,0,0,0,0,Estadio Rigoberto López Pérez,León,0,202331,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 18:30:00,Panama,Nicaragua,0,0,0,0,0,0,Estadio Roberto Clemente,Masaya,0,202332,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 18:30:00,South Africa,Japan,0,0,0,0,0,0,Estadio Nacional Soberania,Managua,0,202333,scheduled
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 10:30:00,Chinese Taipei,Australia,0,4,4,11,1,0,Estadio Nacional Soberania,Managua,2:31,202328,finished
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 12:00:00,Venezuela,Cuba,10,0,8,2,0,3,Estadio Roberto Clemente,Masaya,1:32,202329,finished
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 14:30:00,Korea,Great Britain,3,0,4,2,0,5,Estadio Nacional Soberania,Managua,2:12,202330,finished
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 18:00:00,Puerto Rico,Czechia,9,0,10,4,1,1,Estadio Rigoberto López Pérez,León,1:55,202331,finished
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 18:30:00,Panama,Nicaragua,4,0,4,5,1,3,Estadio Roberto Clemente,Masaya,2:04,202332,finished
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-09 18:30:00,South Africa,Japan,0,17,3,12,0,0,Estadio Nacional Soberania,Managua,1:58,202333,finished
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 10:30:00,Cuba,Great Britain,0,0,0,0,0,0,Estadio Nacional Soberania,Managua,0,202337,scheduled
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 12:00:00,Japan,Venezuela,0,0,0,0,0,0,Estadio Roberto Clemente,Masaya,0,202338,scheduled
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 14:30:00,Puerto Rico,Chinese Taipei,0,0,0,0,0,0,Estadio Nacional Soberania,Managua,0,202340,scheduled
@@ -3173,8 +3173,8 @@ WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-14 23:59:00,B5,A6,0
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-14 23:59:00,A1,B2,0,0,0,0,0,0,,,0,202467,scheduled
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-14 23:59:00,A2,B3,0,0,0,0,0,0,,,0,202468,scheduled
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-14 23:59:00,B1,A3,0,0,0,0,0,0,,,0,202469,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-15 23:59:00,3rd Place After Super Round,4th Place After Super Round,0,0,0,0,0,0,,,0,202470,scheduled
-WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-15 23:59:00,1st Place After Super Round,2nd Place After Super Round,0,0,0,0,0,0,,,0,202471,scheduled
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-15 12:00:00,3rd Place After Super Round,4th Place After Super Round,0,0,0,0,0,0,,,0,202470,scheduled
+WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-15 18:00:00,1st Place After Super Round,2nd Place After Super Round,0,0,0,0,0,0,,,0,202471,scheduled
 XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2026-10-23 15:00:00,Puerto Rico,Canada,5,3,9,5,1,0,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,,211502,finished
 XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2026-10-23 15:00:00,Panama,Puerto Rico,4,2,6,4,0,2,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,17:54,211503,finished
 XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2026-10-24 12:00:00,Canada,Puerto Rico,3,2,4,3,1,1,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,14:17,211504,finished
