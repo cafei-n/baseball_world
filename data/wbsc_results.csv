@@ -2114,10 +2114,10 @@ WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 14:30:00,Puerto 
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 18:00:00,Panama,Australia,3,10,6,8,1,0,Estadio Rigoberto López Pérez,León,2:43,202341,finished
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 18:30:00,Korea,South Africa,7,0,4,1,0,3,Estadio Roberto Clemente,Masaya,2:08,202342,finished
 WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-10 18:30:00,Nicaragua,Czechia,3,4,8,10,1,1,Estadio Nacional Soberania,Managua,2:45,202343,finished
-WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-26 12:00:00,Great Britain,Nicaragua,3,6,10,11,1,0,Panda Heritage Stadium,Zhongshan,3:15,203883,scheduled
-WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-26 18:30:00,China,Czechia,6,1,12,7,1,4,Panda Heritage Stadium,Zhongshan,2:45,203884,scheduled
-WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-27 12:00:00,Nicaragua,Czechia,0,0,0,0,0,0,Panda Heritage Stadium,Zhongshan,0,203885,scheduled
-WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-27 18:30:00,Great Britain,China,0,0,0,0,0,0,Panda Heritage Stadium,Zhongshan,0,203886,scheduled
+WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-26 12:00:00,Great Britain,Nicaragua,3,6,10,11,1,0,Panda Heritage Stadium,Zhongshan,3:15,203883,finished
+WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-26 18:30:00,China,Czechia,6,1,12,7,1,4,Panda Heritage Stadium,Zhongshan,2:45,203884,finished
+WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-27 12:00:00,Nicaragua,Czechia,4,2,9,5,0,2,Panda Heritage Stadium,Zhongshan,2:27,203885,scheduled
+WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-27 18:30:00,Great Britain,China,1,0,9,1,1,1,Panda Heritage Stadium,Zhongshan,2:27,203886,scheduled
 WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-28 12:00:00,Czechia,Great Britain,0,0,0,0,0,0,Panda Heritage Stadium,Zhongshan,0,203887,scheduled
 WBSC Premier12 2027 Zhongshan Qualifier presented by RAXUS,2026-11-28 18:30:00,Nicaragua,China,0,0,0,0,0,0,Panda Heritage Stadium,Zhongshan,0,203888,scheduled
 XXV Juegos Centroamericanos y del Caribe - Santo Domingo 2026 - Beisbol Masculino,2026-07-31 13:30:00,Colombia,Nicaragua,1,3,5,5,1,0,"Estadio Quisqueya ""Juan Marichal""",Santo Domingo,2:03,203961,finished
@@ -3176,9 +3176,9 @@ WBSC U-23 Baseball World Cup 2026 presented by RAXUS,2026-11-15 18:00:00,Venezue
 XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2026-10-23 15:00:00,Puerto Rico,Canada,5,3,9,5,1,0,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,,211502,finished
 XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2026-10-23 15:00:00,Panama,Puerto Rico,4,2,6,4,0,2,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,17:54,211503,finished
 XVI Campeonato Panamericano Sub-18 | XVI U-18 Pan American Championship - 2026,2026-10-24 12:00:00,Canada,Puerto Rico,3,2,4,3,1,1,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,14:17,211504,finished
-WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-27 09:30:00,Mariana Islands,Australia,0,0,0,0,0,0,Dededo Sports Complex,Dededo,0,210739,scheduled
-WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-27 12:00:00,Guam,Australia,0,0,0,0,0,0,Dededo Sports Complex,Dededo,0,210740,scheduled
-WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-27 14:30:00,Guam,Mariana Islands,0,0,0,0,0,0,Dededo Sports Complex,Dededo,0,210741,scheduled
+WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-27 09:30:00,Mariana Islands,Australia,1,22,2,7,10,0,Dededo Sports Complex,Dededo,2:20,210739,scheduled
+WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-27 12:00:00,Guam,Australia,4,7,4,7,3,0,Dededo Sports Complex,Dededo,2:06,210740,scheduled
+WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-27 14:30:00,Guam,Mariana Islands,3,15,1,11,8,1,Dededo Sports Complex,Dededo,2:10,210741,scheduled
 WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-28 11:00:00,Mariana Islands,Guam,0,0,0,0,0,0,Dededo Sports Complex,Dededo,0,211579,scheduled
 WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-28 14:00:00,Australia,Guam,0,0,0,0,0,0,Dededo Sports Complex,Dededo,0,211580,scheduled
 WBSC Oceania U-12 Men's Baseball Qualification Event 2026,2026-11-29 11:00:00,Australia,Mariana Islands,0,0,0,0,0,0,Dededo Sports Complex,Dededo,0,211581,scheduled
@@ -3239,12 +3239,12 @@ XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026
 XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-25 12:00:00,Argentina,Peru,4,22,3,19,3,1,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,2:12,212872,finished
 XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-25 14:30:00,Nicaragua,Puerto Rico,4,1,10,3,1,0,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,1:37,212873,finished
 XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-25 14:30:00,Curaçao,Brazil,1,0,6,1,0,0,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,1:10,212874,finished
-XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 09:30:00,United States of America,Panama,3,2,5,4,1,1,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,,212875,scheduled
-XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 09:30:00,Mexico,Venezuela,2,4,1,6,2,2,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,,212876,scheduled
-XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 12:00:00,Dominican Republic,Cuba,0,0,0,0,0,0,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,0,212877,scheduled
-XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 12:00:00,Brazil,Argentina,0,0,0,0,0,0,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,0,212878,scheduled
-XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 14:30:00,Curaçao,Puerto Rico,0,0,0,0,0,0,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,0,212879,scheduled
-XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 14:30:00,Nicaragua,Peru,0,0,0,0,0,0,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,0,212880,scheduled
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 09:30:00,United States of America,Panama,3,2,5,4,1,1,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,1:34,212875,finished
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 09:30:00,Mexico,Venezuela,9,8,10,9,2,6,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,undefined,212876,finished
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 12:00:00,Dominican Republic,Cuba,2,3,9,4,0,1,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,2:06,212877,finished
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 12:00:00,Brazil,Argentina,8,1,10,3,2,3,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,1:25,212878,finished
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 14:30:00,Curaçao,Puerto Rico,0,3,2,4,2,0,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,1:48,212879,finished
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-26 14:30:00,Nicaragua,Peru,8,0,9,1,1,6,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,1:35,212880,finished
 Baseball European Championship 2027,2027-09-04 10:00:00,Croatia,Austria,0,0,0,0,0,0,Regensburg Legionäre - Field 1,Regensburg,0,212761,scheduled
 Baseball European Championship 2027,2027-09-04 10:30:00,Netherlands,Slovakia,0,0,0,0,0,0,Armin-Wolf-Baseball-Arena-Regensburg,Regensburg,0,212752,scheduled
 Baseball European Championship 2027,2027-09-04 11:00:00,Israel,Switzerland,0,0,0,0,0,0,Ballpark Oberwiesenfeld Munich,Munich,0,212770,scheduled
@@ -3293,3 +3293,7 @@ Baseball European Championship 2027,2027-09-10 15:30:00,Loser q29,Loser r31,0,0,
 Baseball European Championship 2027,2027-09-10 19:30:00,Winner g35,Winner h37,0,0,0,0,0,0,Armin-Wolf-Baseball-Arena-Regensburg,Regensburg,0,212794,scheduled
 Baseball European Championship 2027,2027-09-11 12:00:00,Loser e38,Loser f40,0,0,0,0,0,0,Armin-Wolf-Baseball-Arena-Regensburg,Regensburg,0,212798,scheduled
 Baseball European Championship 2027,2027-09-11 17:00:00,Winner e38,Winner f40,0,0,0,0,0,0,Armin-Wolf-Baseball-Arena-Regensburg,Regensburg,0,212799,scheduled
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-27 09:00:00,Curaçao,Peru,15,0,15,3,0,7,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,1:20,212863,scheduled
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-27 09:30:00,Cuba,Venezuela,4,4,2,8,1,6,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,,212953,scheduled
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-27 11:30:00,Nicaragua,Argentina,0,0,0,0,0,0,Complejo Deportivo IPL Academy - Stadium 2,San Antonio de Guerra,0,212864,scheduled
+XXXV Campeonato Panamericano Sub-12 | U-12 Pan American Championship - 2026,2026-11-27 12:00:00,Mexico,United States of America,0,0,0,0,0,0,Complejo Deportivo IPL Academy - Stadium 1,San Antonio de Guerra,0,212954,scheduled
