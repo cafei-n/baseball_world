@@ -64,7 +64,12 @@ function showLastUpdate(){
 
 function getRanking(date){
 
-    let result = dailyData.filter(x => x.date <= date);
+    // 比較用の日付をYYYY-MM-DDに統一
+    const targetDate = date.substring(0, 10);
+
+    let result = dailyData.filter(x =>
+        x.date.substring(0, 10) <= targetDate
+    );
 
     if(result.length == 0){
         return [];
@@ -81,7 +86,6 @@ function getRanking(date){
 
 }
 
-// 最新ランキング読み込み
 function showLatestRanking(){
 
     let latest = dailyData
@@ -359,7 +363,9 @@ function showRankingNews(latestDate){
 
     // 選択日以前で最も新しいランキングデータの日付
     const effectiveDate = dates
-        .filter(date=>date <= latestDate)
+        .filter(date =>
+            date.substring(0, 10) <= latestDate.substring(0, 10)
+        )
         .pop();
 
     // 該当するランキングデータがない場合
@@ -369,16 +375,33 @@ function showRankingNews(latestDate){
         return;
     }
 
-    // 比較対象は、今回のランキングデータより前の日付
-    const previousDate = dates
-        .filter(date=>date < effectiveDate)
-        .pop();
+    // 比較対象は1か月前のランキング
+    // 実際のランキング更新日ではなく、ユーザーの選択日を基準にする
+    const [year, month, day] = latestDate
+        .substring(0, 10)
+        .split("-")
+        .map(Number);
+
+    // 1か月前の日付を計算（月末にも対応）
+    const compareDate = new Date(year, month - 2, 1);
+
+    const lastDay = new Date(
+        compareDate.getFullYear(),
+        compareDate.getMonth() + 1,
+        0
+    ).getDate();
+
+    compareDate.setDate(Math.min(day, lastDay));
+
+    const previousDate =
+        compareDate.getFullYear() + "-" +
+        String(compareDate.getMonth() + 1).padStart(2, "0") + "-" +
+        String(compareDate.getDate()).padStart(2, "0");
 
     const currentRanking = getRanking(effectiveDate);
 
-    const previousRanking = previousDate
-        ? getRanking(previousDate)
-        : [];
+    // 1か月前の日付時点で最新のランキングを取得
+    const previousRanking = getRanking(previousDate);
 
     // 初回データなど、比較対象がない場合
     if(
@@ -437,7 +460,7 @@ function showRankingNews(latestDate){
         addNews(
             1,
             currentWorldFirst.team,
-            `${name}が世界一位へ。${previousName}から頂点を奪う`
+            `${name}が世界ランキング一位へ。${previousName}から頂点を奪う`
         );
 
     }
@@ -474,7 +497,7 @@ function showRankingNews(latestDate){
             addNews(
                 2,
                 row.team,
-                `${name}が${row.rank}位に。過去最高だった${bestRank}位を上回る新記録`
+                `${name}が世界ランキング${row.rank}位に。過去最高だった${bestRank}位を上回る新記録`
             );
 
         }
@@ -485,7 +508,7 @@ function showRankingNews(latestDate){
             addNews(
                 3,
                 row.team,
-                `${name}が${row.rank}位になり初の世界ランキングTOP10入り。上位に新たな顔ぶれが加わる`
+                `${name}が${row.rank}位になり初の世界ランキングTOP10入り。上位陣に新たな顔ぶれが加わる`
             );
 
         }
@@ -578,7 +601,7 @@ function showRankingNews(latestDate){
         addNews(
             4,
             currentLeader.team,
-            `${regionName}内ランキング1位が交代し${name}がトップへ。新たな地域の顔となる`
+            `${regionName}内での世界ランキング首位が交代し${name}がトップとなる`
         );
 
     });
@@ -598,46 +621,72 @@ function showRankingNews(latestDate){
         const name =
             nameMap[row.team] ?? row.team;
 
+        // 順位変動
         const rankRise = oldRow.rank - row.rank;
 
+        // ポイント変動
         const pointRise =
             Number(row.point) - Number(oldRow.point);
 
-        // 小数第1位に四捨五入
         const roundedPointRise =
             Math.round(pointRise * 10) / 10;
 
-        // 5. 5ランク以上上昇
-        if(rankRise >= 5){
+        // ポイントが増加した国だけ順位上昇ニュース
+        if(pointRise > 0){
 
-            addNews(
-                5,
-                row.team,
-                `順位急上昇！ ${name}が一気に${rankRise}ランクアップ`
-            );
-
-        }
-
-        // 6. 1～4ランク上昇
-        else if(rankRise >= 1){
-
-            addNews(
-                6,
-                row.team,
-                `${name}が順位を${rankRise}つ上げる`
-            );
+            if(rankRise >= 5){
+                addNews(
+                    5,
+                    row.team,
+                    `順位急上昇！ ${name}が一気に${rankRise}ランクアップ`
+                );
+            }
+            else if(rankRise >= 1){
+                addNews(
+                    6,
+                    row.team,
+                    `${name}が順位を${rankRise}つ上げる！`
+                );
+            }
 
         }
 
-        // 7. 10ポイント以上増加
+        // ポイントが減少した国だけ順位下降ニュース
+        if(pointRise < 0){
+
+            if(rankRise <= -5){
+                addNews(
+                    5,
+                    row.team,
+                    `順位急下降！ ${name}が一気に${Math.abs(rankRise)}ランクダウン`
+                );
+            }
+            else if(rankRise <= -1){
+                addNews(
+                    6,
+                    row.team,
+                    `${name}が順位を${Math.abs(rankRise)}つダウンさせる`
+                );
+            }
+
+        }
+
+        // ポイント大幅増加
         if(pointRise >= 10){
-
             addNews(
                 7,
                 row.team,
-                `${name}が${roundedPointRise.toFixed(1)}ポイントを獲得し大きな上昇。順位アップを狙い弾みをつける`
+                `${name}が${roundedPointRise.toFixed(1)}ポイントを獲得！`
             );
+        }
 
+        // ポイント大幅減少
+        if(pointRise <= -10){
+            addNews(
+                7,
+                row.team,
+                `${name}が${Math.abs(roundedPointRise).toFixed(1)}ポイントを失う`
+            );
         }
 
     });
@@ -661,7 +710,7 @@ function showRankingNews(latestDate){
         shownTeams.add(item.team);
         return true;
 
-    }).slice(0,3);
+    }).slice(0,5);
 
     // -------------------------------------
     // ニュース表示
